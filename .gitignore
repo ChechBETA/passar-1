@@ -3,3 +3,4 @@
 */Library/*.*
 *.sln
 *.DS_Store*.log*.userprefs*.csproj*.pidb*.sln
+.DS_Store
