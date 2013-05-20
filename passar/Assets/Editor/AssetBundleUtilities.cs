@@ -3,7 +3,7 @@ using UnityEditor;
 
 public class ExportAssetBundles
 {
-	const string EXTENSION = ".passar";
+	const string EXTENSION = "passar";
 	
 	[MenuItem("passar/Asset Bundles/Convert Selected Prefab To AssetBundle")]
     static void ExportSingleResource ()
@@ -11,14 +11,12 @@ public class ExportAssetBundles
 		// Set Target Folder
 		string path = EditorUtility.SaveFilePanel ("Create new Asset Bundle", "", Selection.activeObject.name, EXTENSION );
 		
-		Debug.Log (path);
-		
 		// Check if path was define
 		if (path.Length != 0 && AssetDatabase.Contains(Selection.activeObject))
 		{
 			Object[] selection = Selection.GetFiltered(typeof(Object), SelectionMode.Unfiltered);
 			
-            BuildPipeline.BuildAssetBundle(Selection.activeObject, Selection.objects, path, BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.CompleteAssets | BuildAssetBundleOptions.DeterministicAssetBundle, BuildTarget.iPhone);
+            BuildPipeline.BuildAssetBundle(Selection.activeObject, Selection.objects, path, BuildAssetBundleOptions.CollectDependencies | BuildAssetBundleOptions.CompleteAssets | BuildAssetBundleOptions.DeterministicAssetBundle, BuildTarget.StandaloneWindows);
 			
 			Selection.objects = selection;
 		}
