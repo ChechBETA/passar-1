@@ -1,0 +1,254 @@
+fileFormatVersion: 2
+guid: 09c94d9d7754e4388b5734e55830b253
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Box001
+    100002: Calera
+    100004: Calera001
+    100006: Casa_008
+    100008: Casa_009
+    100010: Casa_010
+    100012: Casa_011
+    100014: Casa_012
+    100016: Casa_013
+    100018: Casa_04
+    100020: Cono
+    100022: Line001
+    100024: Line002
+    100026: Line008
+    100028: Line014
+    100030: Line020
+    100032: Line053
+    100034: Line054
+    100036: Line063
+    100038: Line066
+    100040: Line067
+    100042: Line068
+    100044: Line069
+    100046: Line070
+    100048: Line071
+    100050: Line072
+    100052: Line073
+    100054: Line074
+    100056: Line075
+    100058: Line076
+    100060: Line077
+    100062: Line078
+    100064: Line079
+    100066: Line080
+    100068: Line081
+    100070: Line082
+    100072: Line083
+    100074: //RootNode
+    100076: Macadamia
+    100078: Object001
+    100080: Peaje Patios
+    100082: Peaje Patios001
+    100084: Peaje Patios002
+    100086: Peaje Patios003
+    100088: Sphere002
+    400000: Box001
+    400002: Calera
+    400004: Calera001
+    400006: Casa_008
+    400008: Casa_009
+    400010: Casa_010
+    400012: Casa_011
+    400014: Casa_012
+    400016: Casa_013
+    400018: Casa_04
+    400020: Cono
+    400022: Line001
+    400024: Line002
+    400026: Line008
+    400028: Line014
+    400030: Line020
+    400032: Line053
+    400034: Line054
+    400036: Line063
+    400038: Line066
+    400040: Line067
+    400042: Line068
+    400044: Line069
+    400046: Line070
+    400048: Line071
+    400050: Line072
+    400052: Line073
+    400054: Line074
+    400056: Line075
+    400058: Line076
+    400060: Line077
+    400062: Line078
+    400064: Line079
+    400066: Line080
+    400068: Line081
+    400070: Line082
+    400072: Line083
+    400074: //RootNode
+    400076: Macadamia
+    400078: Object001
+    400080: Peaje Patios
+    400082: Peaje Patios001
+    400084: Peaje Patios002
+    400086: Peaje Patios003
+    400088: Sphere002
+    2300000: Box001
+    2300002: Calera
+    2300004: Calera001
+    2300006: Cono
+    2300008: Line002
+    2300010: Line014
+    2300012: Line020
+    2300014: Line053
+    2300016: Line054
+    2300018: Line063
+    2300020: Line066
+    2300022: Line067
+    2300024: Line068
+    2300026: Line069
+    2300028: Line070
+    2300030: Line071
+    2300032: Line072
+    2300034: Line073
+    2300036: Line074
+    2300038: Line075
+    2300040: Line076
+    2300042: Line077
+    2300044: Line078
+    2300046: Line079
+    2300048: Line080
+    2300050: Line081
+    2300052: Line082
+    2300054: Line083
+    2300056: Macadamia
+    2300058: Object001
+    2300060: Peaje Patios
+    2300062: Peaje Patios001
+    2300064: Peaje Patios002
+    2300066: Peaje Patios003
+    2300068: Sphere002
+    3300000: Box001
+    3300002: Calera
+    3300004: Calera001
+    3300006: Cono
+    3300008: Line002
+    3300010: Line014
+    3300012: Line020
+    3300014: Line053
+    3300016: Line054
+    3300018: Line063
+    3300020: Line066
+    3300022: Line067
+    3300024: Line068
+    3300026: Line069
+    3300028: Line070
+    3300030: Line071
+    3300032: Line072
+    3300034: Line073
+    3300036: Line074
+    3300038: Line075
+    3300040: Line076
+    3300042: Line077
+    3300044: Line078
+    3300046: Line079
+    3300048: Line080
+    3300050: Line081
+    3300052: Line082
+    3300054: Line083
+    3300056: Macadamia
+    3300058: Object001
+    3300060: Peaje Patios
+    3300062: Peaje Patios001
+    3300064: Peaje Patios002
+    3300066: Peaje Patios003
+    3300068: Sphere002
+    4300000: Box001
+    4300002: Line002
+    4300004: Cono
+    4300006: Macadamia
+    4300008: Line014
+    4300010: Peaje Patios
+    4300012: Peaje Patios001
+    4300014: Calera
+    4300016: Sphere002
+    4300018: Calera001
+    4300020: Object001
+    4300022: Line020
+    4300024: Line053
+    4300026: Line054
+    4300028: Line063
+    4300030: Line066
+    4300032: Line067
+    4300034: Line068
+    4300036: Line069
+    4300038: Line070
+    4300040: Line071
+    4300042: Line072
+    4300044: Line073
+    4300046: Line074
+    4300048: Line075
+    4300050: Line076
+    4300052: Line077
+    4300054: Line078
+    4300056: Line079
+    4300058: Line080
+    4300060: Line081
+    4300062: Line082
+    4300064: Line083
+    4300066: Peaje Patios002
+    4300068: Peaje Patios003
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

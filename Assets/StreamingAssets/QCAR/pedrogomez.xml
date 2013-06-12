@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget size="5000 5000" name="macadamia_square" />
+    <ImageTarget size="100 52.1875" name="macadamia_rect" />
+    <ImageTarget size="1125 1500" name="Macadamia" />
+  </Tracking>
+</QCARConfig>

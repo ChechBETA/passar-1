@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: b47774b28dcf145bdae27861cd99e4f9
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Carro
+    100002: Cubierta-Parqueo
+    100004: LowPoly-House
+    100006: Mesa-Terraza
+    100008: Parasol
+    100010: Parqueo
+    100012: Silla001
+    100014: //RootNode
+    100016: soccer_body001
+    100018: table001
+    100020: table003
+    100022: Terreno-ciruelo
+    400000: Carro
+    400002: Cubierta-Parqueo
+    400004: LowPoly-House
+    400006: Mesa-Terraza
+    400008: Parasol
+    400010: Parqueo
+    400012: Silla001
+    400014: //RootNode
+    400016: soccer_body001
+    400018: table001
+    400020: table003
+    400022: Terreno-ciruelo
+    2300000: Carro
+    2300002: Cubierta-Parqueo
+    2300004: LowPoly-House
+    2300006: Mesa-Terraza
+    2300008: Parasol
+    2300010: Parqueo
+    2300012: Silla001
+    2300014: soccer_body001
+    2300016: table001
+    2300018: table003
+    2300020: Terreno-ciruelo
+    3300000: Carro
+    3300002: Cubierta-Parqueo
+    3300004: LowPoly-House
+    3300006: Mesa-Terraza
+    3300008: Parasol
+    3300010: Parqueo
+    3300012: Silla001
+    3300014: soccer_body001
+    3300016: table001
+    3300018: table003
+    3300020: Terreno-ciruelo
+    4300000: Parqueo
+    4300002: Terreno-ciruelo
+    4300004: Carro
+    4300006: Mesa-Terraza
+    4300008: LowPoly-House
+    4300010: table001
+    4300012: soccer_body001
+    4300014: Parasol
+    4300016: Silla001
+    4300018: table003
+    4300020: Cubierta-Parqueo
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

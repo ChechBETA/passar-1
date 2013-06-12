@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{9277A8ED-BA40-3636-32A4-FA320011B1CA}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;UNITY_IPHONE_API;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="UnityEngine">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>/Applications/Unity/Unity.app/Contents/Frameworks/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CameraDevice.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CloudRecoBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DataSet.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DataSetLoadBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DataSetTrackableBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultInitializationErrorHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\GLErrorHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ICloudRecoEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ITrackableEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ITrackerEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\IUserDefinedTargetEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\IVideoBackgroundEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\IVirtualButtonEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Image.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ImageTarget.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ImageTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ImageTargetBuilder.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ImageTracker.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\BGRenderingBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\CameraDeviceImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\CloudRecoImageTargetImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\DataSetImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorDataSetTrackableBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorImageTargetBehaviours.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorMarkerBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorMultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorTrackableBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorVirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageTargetBuilderImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageTargetImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageTrackerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\MarkerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\MarkerTrackerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\MultiTargetImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\NullWebCamTexAdaptor.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\QCARMacros.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\QCARManagerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\QCARRendererImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\QCARUnityImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\StateManagerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TargetFinderImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TextureRenderer.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TrackableImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TrackableSourceImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TrackerManagerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\VirtualButtonImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamProfile.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamTexAdaptor.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamTexAdaptorImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\IQCARWrapper.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\QCARNativeWrapper.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\QCARNullWrapper.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\QCARWrapper.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Marker.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MarkerBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MarkerTracker.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MaskOutBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MultiTarget.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARManager.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARRenderer.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARRuntimeUtilities.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARUnity.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\SetBGCameraLayerBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\StateManager.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TargetFinder.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Trackable.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackableBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackableSource.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Tracker.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackerManager.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButton.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WebCamBehaviour.cs" />
+     <Compile Include="Assets\Scripts\Global\AppManager.cs" />
+     <Compile Include="Assets\Scripts\Global\AssetBundleManager.cs" />
+     <Compile Include="Assets\Scripts\Global\GlobalParams.cs" />
+     <Compile Include="Assets\Scripts\Global\LocalStorage.cs" />
+     <Compile Include="Assets\Scripts\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\LoadingScreen.cs" />
+     <Compile Include="Assets\Scripts\PersistenObject.cs" />
+     <Compile Include="Assets\Scripts\Project\Macadamia\BuildingFloor.cs" />
+     <Compile Include="Assets\Scripts\Project\Macadamia\InteriorCiruelos.cs" />
+     <Compile Include="Assets\Scripts\Project\ProjectManager.cs" />
+     <Compile Include="Assets\Scripts\Projects\DraggableItem.cs" />
+     <Compile Include="Assets\Scripts\Projects\LocalizationMacadamia.cs" />
+     <Compile Include="Assets\Scripts\ServerImages.cs" />
+     <Compile Include="Assets\Scripts\Services\ServiceBase.cs" />
+     <Compile Include="Assets\Scripts\StartLevel.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\AniSprite.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\UIButtonPassar3D.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\UICameraAreaRender.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\UIPassarButton.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\UIVerticalGradient.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\background.cs" />
+     <Compile Include="Assets\Scripts\UI\FooterBar.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu\UIProject.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu\UIProjectsList.cs" />
+     <Compile Include="Assets\Scripts\UI\MainMenu\UIWelcome.cs" />
+     <Compile Include="Assets\Scripts\UI\SliderComponent\ProjectItem.cs" />
+     <Compile Include="Assets\Scripts\UI\SliderComponent\ProjectItemsMenu.cs" />
+     <Compile Include="Assets\Scripts\UI\UI.cs" />
+     <Compile Include="Assets\Scripts\UI\UIProjectScene.cs" />
+     <Compile Include="Assets\Scripts\UI\core\DisplayObject.cs" />
+     <Compile Include="Assets\Scripts\UI\core\EZScreenPlacementHelper.cs" />
+     <Compile Include="Assets\Scripts\UI\core\IUIDisplayObject.cs" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
+     <None Include="Assets\Shaders\UnlitTransparentColor.shader" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Simple Texture .shader" />
+     <None Include="Assets\Shaders\VertexLitEmissive.shader" />
+     <None Include="Assets\Qualcomm Augmented Reality\Shaders\RenderVideoBackground.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\pedrogomez.xml" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Cutout.shader" />
+     <None Include="Assets\StreamingAssets\QCAR\unity.txt" />
+     <None Include="Assets\license.txt" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Shaders\VertexLitEmissiveTwoSided.shader" />
+     <None Include="Assets\Shaders\VertexLitEmissiveHeight.shader" />
+     <None Include="Assets\Fonts\CenturyGothicRegular\century_gothic_regular_50.txt" />
+     <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Qualcomm Augmented Reality\Shaders\DepthMask.shader" />
+     <None Include="Assets\Shaders\UnlitTransparent.shader" />
+     <None Include="Assets\license_3rdpartynotice.txt" />
+     <None Include="Assets\Fonts\CenturyGothicBold\century_gothic_60.txt" />
+     <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored.shader" />
+ <Reference Include="Assets\Plugins\P31RestKit">
+ <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass-vs.csproj">
+      <Project>{E63B917A-9816-0F29-B7FB-26AAFDFCDEAB}</Project>      <Name>Assembly-CSharp-firstpass-vs</Name>    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
