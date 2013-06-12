@@ -1,6 +1,0 @@
-/* Localized versions of Info.plist keys */
-
-CFBundleName = "vuforia-unity-android-ios-2-0-32";
-CFBundleShortVersionString = "InstallAnywhere 2010 Installer";
-CFBundleGetInfoString = "InstallAnywhere 2010 Installer";
-NSHumanReadableCopyright = "Copyright © 1997-2010 Flexera Software, Inc. and/or InstallShield Co. Inc.";
