@@ -9,10 +9,9 @@ public enum ServerType
 
 public enum ConnectionType
 {
-	Local,
-	Live,
-	Both,
-	None
+	Local = 0,
+	Live = 1,
+	None = 2
 }
 
 public class GlobalParams : MonoBehaviour {
@@ -62,7 +61,7 @@ public class GlobalParams : MonoBehaviour {
 public class DebugConnectionParameters
 {
 	public ServerType domain = ServerType.Local;
-	public ConnectionType connection = ConnectionType.Both;
+	public ConnectionType connection = ConnectionType.Local;
 	
 	public string ServicePath
 	{
@@ -104,13 +103,10 @@ public class DebugConnectionParameters
 			switch(connection)
 			{
 				case ConnectionType.Live:
-					return Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork;
-				
+					return (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork
+						|| Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork);
 				case ConnectionType.Local:
 					return Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork;
-				case ConnectionType.Both:
-					return (Application.internetReachability == NetworkReachability.ReachableViaLocalAreaNetwork
-							|| Application.internetReachability == NetworkReachability.ReachableViaCarrierDataNetwork);
 				default:
 					return false;
 			}

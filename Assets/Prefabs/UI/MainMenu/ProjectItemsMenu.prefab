@@ -149,7 +149,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 25.8209229, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -175,7 +175,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 25.8209229, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400002}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180, y: 280, z: 0}
+  m_LocalPosition: {x: 180, y: 305.820923, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -231,7 +231,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -160, y: -340, z: .100000001}
+  m_LocalPosition: {x: -240, y: -280, z: .0999755859}
   m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400006}
@@ -267,7 +267,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 281f2fbf93975024082a6316ac15aa0f, type: 2}
+  - {fileID: 2100000, guid: f9d49dd6b3ea84c019529c974a69d895, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -488,58 +488,52 @@ MonoBehaviour:
   buttonBack: {fileID: 11400016}
   projectItems:
   - name: MACADAMIA
+    id: 0
     subtitle: "Localizaci\xF3n"
     sortDescription: 
     description: "Casas con la mejor Ubicaci\xF3n."
     thumbnailURL: macadamia/images/localizacion.png
-    assetBundleURL: macadamia/localizacion.passar
-    assetBundleVersion: 3
-    scaleAsset: {x: 1, y: 1, z: 1}
+    assetBundles: []
     showMainLogo: 1
   - name: ETAPA CIRUELOS
+    id: 0
     subtitle: Exterior vivienda
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos.png
-    assetBundleURL: macadamia/exterior_ciruelos.passar
-    assetBundleVersion: 1
-    scaleAsset: {x: 2, y: 2, z: 2}
+    assetBundles: []
     showMainLogo: 0
   - name: ETAPA CIRUELOS
+    id: 0
     subtitle: Interior vivienda
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos_int.png
-    assetBundleURL: macadamia/interior_ciruelos.passar
-    assetBundleVersion: 1
-    scaleAsset: {x: .00999999978, y: .00999999978, z: .00999999978}
+    assetBundles: []
     showMainLogo: 0
   - name: ETAPA AVELLANOS
+    id: 0
     subtitle: Exterior vivienda
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos.png
-    assetBundleURL: macadamia/avellana_exterior.passar
-    assetBundleVersion: 1
-    scaleAsset: {x: .0199999996, y: .0199999996, z: .0199999996}
+    assetBundles: []
     showMainLogo: 0
   - name: ETAPA AVELLANOS
+    id: 0
     subtitle: Interior vivienda
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos_int.png
-    assetBundleURL: macadamia/avellana_interior.passar
-    assetBundleVersion: 1
-    scaleAsset: {x: .0199999996, y: .0199999996, z: .0199999996}
+    assetBundles: []
     showMainLogo: 0
   - name: "\xC1REAS COMUNES"
+    id: 0
     subtitle: (Interactivo)
     sortDescription: 
     description: 
     thumbnailURL: macadamia/images/areas_comunes.png
-    assetBundleURL: 
-    assetBundleVersion: 0
-    scaleAsset: {x: 0, y: 0, z: 0}
+    assetBundles: []
     showMainLogo: 0
 --- !u!114 &11400006
 MonoBehaviour:
@@ -646,12 +640,12 @@ MonoBehaviour:
   text: VOLVER
   offsetZ: 0
   characterSize: 18
-  characterSpacing: .699999988
+  characterSpacing: .850000024
   lineSpacing: .800000012
   anchor: 4
   alignment: 1
   tabSize: 4
-  font: {fileID: 4900000, guid: 19d9f27d2d8f42748a7cccd3fe1ebee1, type: 3}
+  font: {fileID: 4900000, guid: 23fcda6a07b20422d8d233c411c7047c, type: 3}
   color: {r: 1, g: 1, b: 1, a: 1}
   pixelPerfect: 0
   maxWidth: 0
@@ -877,8 +871,8 @@ MonoBehaviour:
   persistent: 0
   plane: 0
   winding: 1
-  width: 50
-  height: 50
+  width: 30
+  height: 30
   bleedCompensation: {x: 0, y: 0}
   anchor: 9
   pixelPerfect: 0
@@ -887,7 +881,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 516, y: 50}
