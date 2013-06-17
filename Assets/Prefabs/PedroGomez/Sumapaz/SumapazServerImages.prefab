@@ -1,0 +1,66 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: SumapazServerImages
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e664549e6ee3041dc8b564fefa1f8535, type: 3}
+  m_Name: 
+  portrait:
+    name: sumapaz/images/portrait.png
+    texture: {fileID: 2800000, guid: fca0e860ff0684990bb2161a2c302ae5, type: 3}
+  smallLogo:
+    name: sumapaz/images/small_logo.jpg
+    texture: {fileID: 2800000, guid: 21a3a1eda085d4d3bb3db89c20035a1b, type: 3}
+  images:
+  - name: sumapaz/images/localizacion.png
+    texture: {fileID: 2800000, guid: 5c6c1cb3e03334174aad232c11176486, type: 3}
+  - name: sumapaz/images/sede_social.png
+    texture: {fileID: 2800000, guid: 0bb72f5ee90e1409a9250497a64fbb48, type: 3}
+  - name: sumapaz/images/casa_bambu.png
+    texture: {fileID: 2800000, guid: 7978d23f67ae949b28e4008ee0959093, type: 3}
+  - name: sumapaz/images/casa_l.png
+    texture: {fileID: 2800000, guid: be59869c72e4c40e4a312c1e953c73bd, type: 3}
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

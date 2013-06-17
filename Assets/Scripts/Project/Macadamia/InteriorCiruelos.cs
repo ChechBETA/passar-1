@@ -16,10 +16,10 @@ public class InteriorCiruelos : MonoBehaviour
 	private const int DISABLED = 2;
 	
 	
-	private void Start()
+	private void Awake()
 	{
 		bgButton.Hide(true);
-		button.SetToggleState(DISABLED);
+
 		button.AddValueChangedDelegate((obj) => 
 		{
 			if(button.StateNum == DISABLED)
@@ -28,6 +28,18 @@ public class InteriorCiruelos : MonoBehaviour
 			OnFindObjectByFloorNumber( button.StateNum + 1 );
 		});
 		button.transform.parent = null;
+	}
+	
+	private void Start()
+	{
+		if(GlobalParams.Instance.IsApplicationDinamic)
+			button.SetToggleState(DISABLED);
+		else
+		{
+			button.Hide(false);
+			bgButton.Hide(false);
+			labelButton.Hide(false);
+		}
 	}
 	
 	public void AddChild(GameObject child)

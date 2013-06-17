@@ -1,0 +1,1529 @@
+fileFormatVersion: 2
+guid: cd6eea10904044697b136c388171c4c5
+ModelImporter:
+  serializedVersion: 15
+  fileIDToRecycleName:
+    100000: Cama_Sencilla_01
+    100002: Cama_Sencilla_02
+    100004: Cama_Sencilla_03
+    100006: //RootNode
+    100008: CasaPiscina:CasaPiscina:CasaPiscina:pCube1
+    100010: CasaPiscina:CasaPiscina:CasaPiscina:pCube2
+    100012: CasaPiscina:CasaPiscina:CasaPiscina:pCube3
+    100014: CasaPiscina:CasaPiscina:CasaPiscina:pCube4
+    100016: CasaPiscina:CasaPiscina:CasaPiscina:pCube5
+    100018: CasaPiscina:CasaPiscina:CasaPiscina:pCube6
+    100020: CasaPiscina:CasaPiscina:CasaPiscina:pCube7
+    100022: CasaPiscina:CasaPiscina:group2
+    100024: CasaPiscina:CasaPiscina:pCube1
+    100026: CasaPiscina:CasaPiscina:polySurface10
+    100028: CasaPiscina:CasaPiscina:polySurface101
+    100030: CasaPiscina:CasaPiscina:polySurface104
+    100032: CasaPiscina:CasaPiscina:polySurface105
+    100034: CasaPiscina:CasaPiscina:polySurface13
+    100036: CasaPiscina:CasaPiscina:polySurface15
+    100038: CasaPiscina:CasaPiscina:polySurface16
+    100040: CasaPiscina:CasaPiscina:polySurface17
+    100042: CasaPiscina:CasaPiscina:polySurface19
+    100044: CasaPiscina:CasaPiscina:polySurface22
+    100046: CasaPiscina:CasaPiscina:polySurface24
+    100048: CasaPiscina:CasaPiscina:polySurface26
+    100050: CasaPiscina:CasaPiscina:polySurface29
+    100052: CasaPiscina:CasaPiscina:polySurface31
+    100054: CasaPiscina:CasaPiscina:polySurface34
+    100056: CasaPiscina:CasaPiscina:polySurface35
+    100058: CasaPiscina:CasaPiscina:polySurface39
+    100060: CasaPiscina:CasaPiscina:polySurface41
+    100062: CasaPiscina:CasaPiscina:polySurface43
+    100064: CasaPiscina:CasaPiscina:polySurface46
+    100066: CasaPiscina:CasaPiscina:polySurface48
+    100068: CasaPiscina:CasaPiscina:polySurface51
+    100070: CasaPiscina:CasaPiscina:polySurface53
+    100072: CasaPiscina:CasaPiscina:polySurface55
+    100074: CasaPiscina:CasaPiscina:polySurface57
+    100076: CasaPiscina:CasaPiscina:polySurface60
+    100078: CasaPiscina:CasaPiscina:polySurface61
+    100080: CasaPiscina:CasaPiscina:polySurface64
+    100082: CasaPiscina:CasaPiscina:polySurface66
+    100084: CasaPiscina:CasaPiscina:polySurface68
+    100086: CasaPiscina:CasaPiscina:polySurface69
+    100088: CasaPiscina:CasaPiscina:polySurface7
+    100090: CasaPiscina:CasaPiscina:polySurface72
+    100092: CasaPiscina:CasaPiscina:polySurface75
+    100094: CasaPiscina:CasaPiscina:polySurface77
+    100096: CasaPiscina:CasaPiscina:polySurface78
+    100098: CasaPiscina:CasaPiscina:polySurface81
+    100100: CasaPiscina:CasaPiscina:polySurface82
+    100102: CasaPiscina:CasaPiscina:polySurface85
+    100104: CasaPiscina:CasaPiscina:polySurface86
+    100106: CasaPiscina:CasaPiscina:polySurface89
+    100108: CasaPiscina:CasaPiscina:polySurface9
+    100110: CasaPiscina:CasaPiscina:polySurface92
+    100112: CasaPiscina:CasaPiscina:polySurface94
+    100114: CasaPiscina:CasaPiscina:polySurface96
+    100116: CasaPiscina:CasaPiscina:polySurface99
+    100118: CasaPiscina:CasaPiscina:pTorus1
+    100120: CasaPiscina:CasaPiscina:pTorus2
+    100122: CasaPiscina:CasaPiscina:pTorus3
+    100124: CasaPiscina:CasaPiscina:pTorus4
+    100126: CasaPiscina:CasaPiscina:pTorus5
+    100128: CasaPiscina:CasaPiscina:pTorus6
+    100130: CasaPiscina:CasaPiscina:pTorus7
+    100132: CasaPiscina:CasaPiscina:pTorus8
+    100134: CasaPiscina:CasaPiscina:pTorus9
+    100136: CasaPiscina:CasaPiscina:transform1
+    100138: CasaPiscina:CasaPiscina:transform10
+    100140: CasaPiscina:CasaPiscina:transform11
+    100142: CasaPiscina:CasaPiscina:transform12
+    100144: CasaPiscina:CasaPiscina:transform13
+    100146: CasaPiscina:CasaPiscina:transform14
+    100148: CasaPiscina:CasaPiscina:transform15
+    100150: CasaPiscina:CasaPiscina:transform16
+    100152: CasaPiscina:CasaPiscina:transform17
+    100154: CasaPiscina:CasaPiscina:transform18
+    100156: CasaPiscina:CasaPiscina:transform19
+    100158: CasaPiscina:CasaPiscina:transform2
+    100160: CasaPiscina:CasaPiscina:transform20
+    100162: CasaPiscina:CasaPiscina:transform21
+    100164: CasaPiscina:CasaPiscina:transform22
+    100166: CasaPiscina:CasaPiscina:transform23
+    100168: CasaPiscina:CasaPiscina:transform24
+    100170: CasaPiscina:CasaPiscina:transform25
+    100172: CasaPiscina:CasaPiscina:transform26
+    100174: CasaPiscina:CasaPiscina:transform27
+    100176: CasaPiscina:CasaPiscina:transform28
+    100178: CasaPiscina:CasaPiscina:transform29
+    100180: CasaPiscina:CasaPiscina:transform3
+    100182: CasaPiscina:CasaPiscina:transform30
+    100184: CasaPiscina:CasaPiscina:transform31
+    100186: CasaPiscina:CasaPiscina:transform32
+    100188: CasaPiscina:CasaPiscina:transform33
+    100190: CasaPiscina:CasaPiscina:transform34
+    100192: CasaPiscina:CasaPiscina:transform35
+    100194: CasaPiscina:CasaPiscina:transform36
+    100196: CasaPiscina:CasaPiscina:transform37
+    100198: CasaPiscina:CasaPiscina:transform38
+    100200: CasaPiscina:CasaPiscina:transform39
+    100202: CasaPiscina:CasaPiscina:transform4
+    100204: CasaPiscina:CasaPiscina:transform40
+    100206: CasaPiscina:CasaPiscina:transform41
+    100208: CasaPiscina:CasaPiscina:transform42
+    100210: CasaPiscina:CasaPiscina:transform43
+    100212: CasaPiscina:CasaPiscina:transform44
+    100214: CasaPiscina:CasaPiscina:transform45
+    100216: CasaPiscina:CasaPiscina:transform5
+    100218: CasaPiscina:CasaPiscina:transform6
+    100220: CasaPiscina:CasaPiscina:transform7
+    100222: CasaPiscina:CasaPiscina:transform8
+    100224: CasaPiscina:CasaPiscina:transform9
+    100226: CasaPiscina:group12
+    100228: CasaPiscina:group13
+    100230: CasaPiscina:group15
+    100232: CasaPiscina:group16
+    100234: CasaPiscina:group8
+    100236: CasaPiscina:pasted__group49
+    100238: CasaPiscina:pasted__group50
+    100240: CasaPiscina:pasted__pasted__Box001
+    100242: CasaPiscina:pasted__pasted__Box001 1
+    100244: CasaPiscina:pasted__pasted__Plane001
+    100246: CasaPiscina:pasted__pasted__Plane001 1
+    100248: CasaPiscina:pasted__pasted__Plane002
+    100250: CasaPiscina:pasted__pasted__Plane002 1
+    100252: CasaPiscina:pasted__pasted__Plane003
+    100254: CasaPiscina:pasted__pasted__Plane003 1
+    100256: CasaPiscina:pasted__pasted__Plane006
+    100258: CasaPiscina:pasted__pasted__Plane006 1
+    100260: CasaPiscina:pasted__pasted__Plane007
+    100262: CasaPiscina:pasted__pasted__Plane007 1
+    100264: CasaPiscina:pasted__pasted__Plane008
+    100266: CasaPiscina:pasted__pasted__Plane008 1
+    100268: CasaPiscina:pCube18
+    100270: CasaPiscina:pCube19
+    100272: CasaPiscina:pCube2
+    100274: CasaPiscina:pCube20
+    100276: CasaPiscina:pCube21
+    100278: CasaPiscina:pCube22
+    100280: CasaPiscina:pCube23
+    100282: CasaPiscina:pCube24
+    100284: CasaPiscina:pCube25
+    100286: CasaPiscina:pCube26
+    100288: CasaPiscina:pCube27
+    100290: CasaPiscina:pCube28
+    100292: CasaPiscina:pCube72
+    100294: CasaPiscina:pCube73
+    100296: CasaPiscina:pCylinder1
+    100298: CasaPiscina:pCylinder1 1
+    100300: CasaPiscina:pCylinder2
+    100302: CasaPiscina:pCylinder2 1
+    100304: CasaPiscina:polySurface11
+    100306: CasaPiscina:polySurface13
+    100308: CasaPiscina:polySurface14
+    100310: CasaPiscina:polySurface15
+    100312: CasaPiscina:polySurface16
+    100314: CasaPiscina:polySurface17
+    100316: CasaPiscina:polySurface18
+    100318: CasaPiscina:polySurface19
+    100320: CasaPiscina:polySurface20
+    100322: CasaPiscina:polySurface21
+    100324: CasaPiscina:polySurface22
+    100326: CasaPiscina:polySurface23
+    100328: CasaPiscina:polySurface24
+    100330: CasaPiscina:polySurface25
+    100332: CasaPiscina:polySurface26
+    100334: CasaPiscina:polySurface27
+    100336: CasaPiscina:polySurface28
+    100338: CasaPiscina:polySurface29
+    100340: CasaPiscina:polySurface30
+    100342: CasaPiscina:polySurface31
+    100344: CasaPiscina:polySurface32
+    100346: CasaPiscina:polySurface33
+    100348: CasaPiscina:polySurface34
+    100350: CasaPiscina:polySurface35
+    100352: CasaPiscina:polySurface36
+    100354: CasaPiscina:polySurface37
+    100356: CasaPiscina:polySurface38
+    100358: CasaPiscina:polySurface39
+    100360: CasaPiscina:polySurface5
+    100362: CasaPiscina:polySurface7
+    100364: CasaPiscina:polySurface8
+    100366: CasaPiscina:pTorus1
+    100368: CasaPiscina:pTorus2
+    100370: CasaPiscina:pTorus3
+    100372: CasaPiscina:pTorus4
+    100374: CasaPiscina:pTorus5
+    100376: CasaPiscina:pTorus6
+    100378: CasaPiscina:pTorus7
+    100380: CasaPiscina:transform1
+    100382: CasaPiscina:transform10
+    100384: CasaPiscina:transform11
+    100386: CasaPiscina:transform12
+    100388: CasaPiscina:transform13
+    100390: CasaPiscina:transform14
+    100392: CasaPiscina:transform15
+    100394: CasaPiscina:transform16
+    100396: CasaPiscina:transform17
+    100398: CasaPiscina:transform18
+    100400: CasaPiscina:transform19
+    100402: CasaPiscina:transform2
+    100404: CasaPiscina:transform20
+    100406: CasaPiscina:transform21
+    100408: CasaPiscina:transform22
+    100410: CasaPiscina:transform23
+    100412: CasaPiscina:transform24
+    100414: CasaPiscina:transform25
+    100416: CasaPiscina:transform26
+    100418: CasaPiscina:transform27
+    100420: CasaPiscina:transform3
+    100422: CasaPiscina:transform4
+    100424: CasaPiscina:transform5
+    100426: CasaPiscina:transform6
+    100428: CasaPiscina:transform7
+    100430: CasaPiscina:transform8
+    100432: CasaPiscina:transform9
+    100434: CasaPiscina:Tube004
+    100436: CasaPiscina:Tube006
+    100438: Ground1
+    100440: group
+    100442: group10
+    100444: group11
+    100446: group12
+    100448: group14
+    100450: group15
+    100452: group17
+    100454: group20
+    100456: group21
+    100458: group22
+    100460: group24
+    100462: group26
+    100464: group27
+    100466: group29
+    100468: group30
+    100470: group31
+    100472: group32
+    100474: group33
+    100476: group4
+    100478: group5
+    100480: group6
+    100482: group7
+    100484: group8
+    100486: group9
+    100488: pasted__Box001
+    100490: pasted__Box012
+    100492: pasted__Box013
+    100494: pasted__Box014
+    100496: pasted__group16
+    100498: pasted__group49
+    100500: pasted__group50
+    100502: pasted__group79
+    100504: pasted__group80
+    100506: pasted__group82
+    100508: pasted__group83
+    100510: pasted__group84
+    100512: pasted__Object012
+    100514: pasted__pasted__Box001
+    100516: pasted__pasted__Box001 1
+    100518: pasted__pasted__Box001 2
+    100520: pasted__pasted__Box001 3
+    100522: pasted__pasted__Box001 4
+    100524: pasted__pasted__group11
+    100526: pasted__pasted__Plane001
+    100528: pasted__pasted__Plane001 1
+    100530: pasted__pasted__Plane001 2
+    100532: pasted__pasted__Plane001 3
+    100534: pasted__pasted__Plane001 4
+    100536: pasted__pasted__Plane002
+    100538: pasted__pasted__Plane002 1
+    100540: pasted__pasted__Plane002 2
+    100542: pasted__pasted__Plane002 3
+    100544: pasted__pasted__Plane002 4
+    100546: pasted__pasted__Plane003
+    100548: pasted__pasted__Plane003 1
+    100550: pasted__pasted__Plane003 2
+    100552: pasted__pasted__Plane003 3
+    100554: pasted__pasted__Plane003 4
+    100556: pasted__pasted__Plane006
+    100558: pasted__pasted__Plane006 1
+    100560: pasted__pasted__Plane006 2
+    100562: pasted__pasted__Plane006 3
+    100564: pasted__pasted__Plane006 4
+    100566: pasted__pasted__Plane007
+    100568: pasted__pasted__Plane007 1
+    100570: pasted__pasted__Plane007 2
+    100572: pasted__pasted__Plane007 3
+    100574: pasted__pasted__Plane007 4
+    100576: pasted__pasted__Plane008
+    100578: pasted__pasted__Plane008 1
+    100580: pasted__pasted__Plane008 2
+    100582: pasted__pasted__Plane008 3
+    100584: pasted__pasted__Plane008 4
+    100586: pasted__pasted__polySurface15
+    100588: pasted__pCube101
+    100590: pasted__pCube101 1
+    100592: pasted__pCube102
+    100594: pasted__pCube102 1
+    100596: pasted__pCube103
+    100598: pasted__pCube104
+    100600: pasted__pCube105
+    100602: pasted__pCube106
+    100604: pasted__polySurface1
+    100606: pasted__polySurface1 1
+    100608: pasted__polySurface1 2
+    100610: pasted__polySurface2
+    100612: pasted__polySurface3
+    100614: pasted__polySurface4
+    100616: pasted__polySurface604
+    100618: pasted__polySurface605
+    100620: pasted__transform1
+    100622: pasted__transform1 1
+    100624: pCube20
+    100626: pCube21
+    100628: pCube22
+    100630: pCube23
+    100632: pCube24
+    100634: pCube25
+    100636: pCube26
+    100638: pCube27
+    100640: pCube28
+    100642: pCube29
+    100644: pCube30
+    100646: pCube31
+    100648: pCube32
+    100650: pCube33
+    100652: pCube34
+    100654: pCube35
+    100656: pCube36
+    100658: pCube37
+    100660: pCube38
+    100662: pCube40
+    100664: pCube41
+    100666: pCube42
+    100668: pCube43
+    100670: pCube44
+    100672: pCube45
+    100674: pCube48
+    100676: pCube49
+    100678: pCube50
+    100680: pCube51
+    100682: pCube55
+    100684: pCube56
+    100686: pCube57
+    100688: pCube58
+    100690: pCube59
+    100692: pCube60
+    100694: pCube61
+    100696: pCube62
+    100698: pCube63
+    100700: pCube64
+    100702: pCube65
+    100704: pCube66
+    100706: pCube67
+    100708: pCube68
+    100710: pCube69
+    100712: pCube69 1
+    100714: pCube69 2
+    100716: pCube69 3
+    100718: pCube69 4
+    100720: pCube70
+    100722: pCube70 1
+    100724: pCube70 2
+    100726: pCube70 3
+    100728: pCube70 4
+    100730: pCube71
+    100732: pCylinder3
+    100734: polySurface11
+    100736: polySurface13
+    100738: polySurface16
+    100740: polySurface18
+    100742: polySurface21
+    100744: polySurface22
+    100746: polySurface23
+    100748: polySurface24
+    100750: polySurface25
+    100752: polySurface26
+    100754: polySurface27
+    100756: polySurface28
+    100758: polySurface29
+    100760: polySurface30
+    100762: polySurface31
+    100764: polySurface33
+    100766: polySurface34
+    100768: polySurface35
+    100770: polySurface36
+    100772: polySurface37
+    100774: polySurface39
+    100776: polySurface40
+    100778: polySurface41
+    100780: polySurface42
+    100782: polySurface45
+    100784: polySurface46
+    100786: polySurface48
+    100788: polySurface49
+    100790: polySurface50
+    100792: polySurface51
+    100794: polySurface53
+    100796: pPlane10
+    100798: pPlane11
+    100800: pPlane12
+    100802: pSphere1
+    100804: pSphere5
+    100806: pSphere6
+    100808: pSphere7
+    100810: transform10
+    100812: transform100
+    100814: transform101
+    100816: transform21
+    100818: transform22
+    100820: transform23
+    100822: transform24
+    100824: transform25
+    100826: transform26
+    100828: transform32
+    100830: transform33
+    100832: transform34
+    100834: transform35
+    100836: transform39
+    100838: transform40
+    100840: transform41
+    100842: transform42
+    100844: transform43
+    100846: transform44
+    100848: transform45
+    100850: transform46
+    100852: transform47
+    100854: transform48
+    100856: transform49
+    100858: transform50
+    100860: transform51
+    100862: transform52
+    100864: transform53
+    100866: transform54
+    100868: transform55
+    100870: transform56
+    100872: transform57
+    100874: transform58
+    100876: transform59
+    100878: transform6
+    100880: transform60
+    100882: transform61
+    100884: transform62
+    100886: transform63
+    100888: transform64
+    100890: transform65
+    100892: transform66
+    100894: transform67
+    100896: transform68
+    100898: transform69
+    100900: transform7
+    100902: transform70
+    100904: transform71
+    100906: transform72
+    100908: transform73
+    100910: transform74
+    100912: transform75
+    100914: transform76
+    100916: transform77
+    100918: transform78
+    100920: transform79
+    100922: transform8
+    100924: transform80
+    100926: transform81
+    100928: transform82
+    100930: transform83
+    100932: transform84
+    100934: transform85
+    100936: transform86
+    100938: transform87
+    100940: transform88
+    100942: transform89
+    100944: transform9
+    100946: transform90
+    100948: transform91
+    100950: transform92
+    100952: transform93
+    100954: transform94
+    100956: transform95
+    100958: transform96
+    100960: transform97
+    100962: transform98
+    100964: transform99
+    100966: VARIOS_OBJ1:Box006
+    100968: VARIOS_OBJ1:group1
+    100970: VARIOS_OBJ1:pCube1
+    100972: VARIOS_OBJ1:pCube2
+    100974: VARIOS_OBJ1:pCube3
+    100976: VARIOS_OBJ2:Sphere002
+    100978: VARIOS_OBJ2:Tube005
+    100980: VARIOS_OBJ3:Sphere002
+    100982: VARIOS_OBJ3:Tube004
+    100984: VARIOS_OBJ3:Tube005
+    100986: VARIOS_OBJ3:Tube006
+    100988: VARIOS_OBJ4:Cama_Doble_01
+    100990: VARIOS_OBJ6:Box001
+    100992: VARIOS_OBJ6:Box002
+    100994: VARIOS_OBJ6:Box003
+    100996: VARIOS_OBJ6:Box005
+    100998: VARIOS_OBJ6:Box007
+    101000: VARIOS_OBJ6:Cylinder001
+    101002: VARIOS_OBJ6:Cylinder002
+    101004: VARIOS_OBJ:Cama_Sencilla_01
+    400000: Cama_Sencilla_01
+    400002: Cama_Sencilla_02
+    400004: Cama_Sencilla_03
+    400006: //RootNode
+    400008: CasaPiscina:CasaPiscina:CasaPiscina:pCube1
+    400010: CasaPiscina:CasaPiscina:CasaPiscina:pCube2
+    400012: CasaPiscina:CasaPiscina:CasaPiscina:pCube3
+    400014: CasaPiscina:CasaPiscina:CasaPiscina:pCube4
+    400016: CasaPiscina:CasaPiscina:CasaPiscina:pCube5
+    400018: CasaPiscina:CasaPiscina:CasaPiscina:pCube6
+    400020: CasaPiscina:CasaPiscina:CasaPiscina:pCube7
+    400022: CasaPiscina:CasaPiscina:group2
+    400024: CasaPiscina:CasaPiscina:pCube1
+    400026: CasaPiscina:CasaPiscina:polySurface10
+    400028: CasaPiscina:CasaPiscina:polySurface101
+    400030: CasaPiscina:CasaPiscina:polySurface104
+    400032: CasaPiscina:CasaPiscina:polySurface105
+    400034: CasaPiscina:CasaPiscina:polySurface13
+    400036: CasaPiscina:CasaPiscina:polySurface15
+    400038: CasaPiscina:CasaPiscina:polySurface16
+    400040: CasaPiscina:CasaPiscina:polySurface17
+    400042: CasaPiscina:CasaPiscina:polySurface19
+    400044: CasaPiscina:CasaPiscina:polySurface22
+    400046: CasaPiscina:CasaPiscina:polySurface24
+    400048: CasaPiscina:CasaPiscina:polySurface26
+    400050: CasaPiscina:CasaPiscina:polySurface29
+    400052: CasaPiscina:CasaPiscina:polySurface31
+    400054: CasaPiscina:CasaPiscina:polySurface34
+    400056: CasaPiscina:CasaPiscina:polySurface35
+    400058: CasaPiscina:CasaPiscina:polySurface39
+    400060: CasaPiscina:CasaPiscina:polySurface41
+    400062: CasaPiscina:CasaPiscina:polySurface43
+    400064: CasaPiscina:CasaPiscina:polySurface46
+    400066: CasaPiscina:CasaPiscina:polySurface48
+    400068: CasaPiscina:CasaPiscina:polySurface51
+    400070: CasaPiscina:CasaPiscina:polySurface53
+    400072: CasaPiscina:CasaPiscina:polySurface55
+    400074: CasaPiscina:CasaPiscina:polySurface57
+    400076: CasaPiscina:CasaPiscina:polySurface60
+    400078: CasaPiscina:CasaPiscina:polySurface61
+    400080: CasaPiscina:CasaPiscina:polySurface64
+    400082: CasaPiscina:CasaPiscina:polySurface66
+    400084: CasaPiscina:CasaPiscina:polySurface68
+    400086: CasaPiscina:CasaPiscina:polySurface69
+    400088: CasaPiscina:CasaPiscina:polySurface7
+    400090: CasaPiscina:CasaPiscina:polySurface72
+    400092: CasaPiscina:CasaPiscina:polySurface75
+    400094: CasaPiscina:CasaPiscina:polySurface77
+    400096: CasaPiscina:CasaPiscina:polySurface78
+    400098: CasaPiscina:CasaPiscina:polySurface81
+    400100: CasaPiscina:CasaPiscina:polySurface82
+    400102: CasaPiscina:CasaPiscina:polySurface85
+    400104: CasaPiscina:CasaPiscina:polySurface86
+    400106: CasaPiscina:CasaPiscina:polySurface89
+    400108: CasaPiscina:CasaPiscina:polySurface9
+    400110: CasaPiscina:CasaPiscina:polySurface92
+    400112: CasaPiscina:CasaPiscina:polySurface94
+    400114: CasaPiscina:CasaPiscina:polySurface96
+    400116: CasaPiscina:CasaPiscina:polySurface99
+    400118: CasaPiscina:CasaPiscina:pTorus1
+    400120: CasaPiscina:CasaPiscina:pTorus2
+    400122: CasaPiscina:CasaPiscina:pTorus3
+    400124: CasaPiscina:CasaPiscina:pTorus4
+    400126: CasaPiscina:CasaPiscina:pTorus5
+    400128: CasaPiscina:CasaPiscina:pTorus6
+    400130: CasaPiscina:CasaPiscina:pTorus7
+    400132: CasaPiscina:CasaPiscina:pTorus8
+    400134: CasaPiscina:CasaPiscina:pTorus9
+    400136: CasaPiscina:CasaPiscina:transform1
+    400138: CasaPiscina:CasaPiscina:transform10
+    400140: CasaPiscina:CasaPiscina:transform11
+    400142: CasaPiscina:CasaPiscina:transform12
+    400144: CasaPiscina:CasaPiscina:transform13
+    400146: CasaPiscina:CasaPiscina:transform14
+    400148: CasaPiscina:CasaPiscina:transform15
+    400150: CasaPiscina:CasaPiscina:transform16
+    400152: CasaPiscina:CasaPiscina:transform17
+    400154: CasaPiscina:CasaPiscina:transform18
+    400156: CasaPiscina:CasaPiscina:transform19
+    400158: CasaPiscina:CasaPiscina:transform2
+    400160: CasaPiscina:CasaPiscina:transform20
+    400162: CasaPiscina:CasaPiscina:transform21
+    400164: CasaPiscina:CasaPiscina:transform22
+    400166: CasaPiscina:CasaPiscina:transform23
+    400168: CasaPiscina:CasaPiscina:transform24
+    400170: CasaPiscina:CasaPiscina:transform25
+    400172: CasaPiscina:CasaPiscina:transform26
+    400174: CasaPiscina:CasaPiscina:transform27
+    400176: CasaPiscina:CasaPiscina:transform28
+    400178: CasaPiscina:CasaPiscina:transform29
+    400180: CasaPiscina:CasaPiscina:transform3
+    400182: CasaPiscina:CasaPiscina:transform30
+    400184: CasaPiscina:CasaPiscina:transform31
+    400186: CasaPiscina:CasaPiscina:transform32
+    400188: CasaPiscina:CasaPiscina:transform33
+    400190: CasaPiscina:CasaPiscina:transform34
+    400192: CasaPiscina:CasaPiscina:transform35
+    400194: CasaPiscina:CasaPiscina:transform36
+    400196: CasaPiscina:CasaPiscina:transform37
+    400198: CasaPiscina:CasaPiscina:transform38
+    400200: CasaPiscina:CasaPiscina:transform39
+    400202: CasaPiscina:CasaPiscina:transform4
+    400204: CasaPiscina:CasaPiscina:transform40
+    400206: CasaPiscina:CasaPiscina:transform41
+    400208: CasaPiscina:CasaPiscina:transform42
+    400210: CasaPiscina:CasaPiscina:transform43
+    400212: CasaPiscina:CasaPiscina:transform44
+    400214: CasaPiscina:CasaPiscina:transform45
+    400216: CasaPiscina:CasaPiscina:transform5
+    400218: CasaPiscina:CasaPiscina:transform6
+    400220: CasaPiscina:CasaPiscina:transform7
+    400222: CasaPiscina:CasaPiscina:transform8
+    400224: CasaPiscina:CasaPiscina:transform9
+    400226: CasaPiscina:group12
+    400228: CasaPiscina:group13
+    400230: CasaPiscina:group15
+    400232: CasaPiscina:group16
+    400234: CasaPiscina:group8
+    400236: CasaPiscina:pasted__group49
+    400238: CasaPiscina:pasted__group50
+    400240: CasaPiscina:pasted__pasted__Box001
+    400242: CasaPiscina:pasted__pasted__Box001 1
+    400244: CasaPiscina:pasted__pasted__Plane001
+    400246: CasaPiscina:pasted__pasted__Plane001 1
+    400248: CasaPiscina:pasted__pasted__Plane002
+    400250: CasaPiscina:pasted__pasted__Plane002 1
+    400252: CasaPiscina:pasted__pasted__Plane003
+    400254: CasaPiscina:pasted__pasted__Plane003 1
+    400256: CasaPiscina:pasted__pasted__Plane006
+    400258: CasaPiscina:pasted__pasted__Plane006 1
+    400260: CasaPiscina:pasted__pasted__Plane007
+    400262: CasaPiscina:pasted__pasted__Plane007 1
+    400264: CasaPiscina:pasted__pasted__Plane008
+    400266: CasaPiscina:pasted__pasted__Plane008 1
+    400268: CasaPiscina:pCube18
+    400270: CasaPiscina:pCube19
+    400272: CasaPiscina:pCube2
+    400274: CasaPiscina:pCube20
+    400276: CasaPiscina:pCube21
+    400278: CasaPiscina:pCube22
+    400280: CasaPiscina:pCube23
+    400282: CasaPiscina:pCube24
+    400284: CasaPiscina:pCube25
+    400286: CasaPiscina:pCube26
+    400288: CasaPiscina:pCube27
+    400290: CasaPiscina:pCube28
+    400292: CasaPiscina:pCube72
+    400294: CasaPiscina:pCube73
+    400296: CasaPiscina:pCylinder1
+    400298: CasaPiscina:pCylinder1 1
+    400300: CasaPiscina:pCylinder2
+    400302: CasaPiscina:pCylinder2 1
+    400304: CasaPiscina:polySurface11
+    400306: CasaPiscina:polySurface13
+    400308: CasaPiscina:polySurface14
+    400310: CasaPiscina:polySurface15
+    400312: CasaPiscina:polySurface16
+    400314: CasaPiscina:polySurface17
+    400316: CasaPiscina:polySurface18
+    400318: CasaPiscina:polySurface19
+    400320: CasaPiscina:polySurface20
+    400322: CasaPiscina:polySurface21
+    400324: CasaPiscina:polySurface22
+    400326: CasaPiscina:polySurface23
+    400328: CasaPiscina:polySurface24
+    400330: CasaPiscina:polySurface25
+    400332: CasaPiscina:polySurface26
+    400334: CasaPiscina:polySurface27
+    400336: CasaPiscina:polySurface28
+    400338: CasaPiscina:polySurface29
+    400340: CasaPiscina:polySurface30
+    400342: CasaPiscina:polySurface31
+    400344: CasaPiscina:polySurface32
+    400346: CasaPiscina:polySurface33
+    400348: CasaPiscina:polySurface34
+    400350: CasaPiscina:polySurface35
+    400352: CasaPiscina:polySurface36
+    400354: CasaPiscina:polySurface37
+    400356: CasaPiscina:polySurface38
+    400358: CasaPiscina:polySurface39
+    400360: CasaPiscina:polySurface5
+    400362: CasaPiscina:polySurface7
+    400364: CasaPiscina:polySurface8
+    400366: CasaPiscina:pTorus1
+    400368: CasaPiscina:pTorus2
+    400370: CasaPiscina:pTorus3
+    400372: CasaPiscina:pTorus4
+    400374: CasaPiscina:pTorus5
+    400376: CasaPiscina:pTorus6
+    400378: CasaPiscina:pTorus7
+    400380: CasaPiscina:transform1
+    400382: CasaPiscina:transform10
+    400384: CasaPiscina:transform11
+    400386: CasaPiscina:transform12
+    400388: CasaPiscina:transform13
+    400390: CasaPiscina:transform14
+    400392: CasaPiscina:transform15
+    400394: CasaPiscina:transform16
+    400396: CasaPiscina:transform17
+    400398: CasaPiscina:transform18
+    400400: CasaPiscina:transform19
+    400402: CasaPiscina:transform2
+    400404: CasaPiscina:transform20
+    400406: CasaPiscina:transform21
+    400408: CasaPiscina:transform22
+    400410: CasaPiscina:transform23
+    400412: CasaPiscina:transform24
+    400414: CasaPiscina:transform25
+    400416: CasaPiscina:transform26
+    400418: CasaPiscina:transform27
+    400420: CasaPiscina:transform3
+    400422: CasaPiscina:transform4
+    400424: CasaPiscina:transform5
+    400426: CasaPiscina:transform6
+    400428: CasaPiscina:transform7
+    400430: CasaPiscina:transform8
+    400432: CasaPiscina:transform9
+    400434: CasaPiscina:Tube004
+    400436: CasaPiscina:Tube006
+    400438: Ground1
+    400440: group
+    400442: group10
+    400444: group11
+    400446: group12
+    400448: group14
+    400450: group15
+    400452: group17
+    400454: group20
+    400456: group21
+    400458: group22
+    400460: group24
+    400462: group26
+    400464: group27
+    400466: group29
+    400468: group30
+    400470: group31
+    400472: group32
+    400474: group33
+    400476: group4
+    400478: group5
+    400480: group6
+    400482: group7
+    400484: group8
+    400486: group9
+    400488: pasted__Box001
+    400490: pasted__Box012
+    400492: pasted__Box013
+    400494: pasted__Box014
+    400496: pasted__group16
+    400498: pasted__group49
+    400500: pasted__group50
+    400502: pasted__group79
+    400504: pasted__group80
+    400506: pasted__group82
+    400508: pasted__group83
+    400510: pasted__group84
+    400512: pasted__Object012
+    400514: pasted__pasted__Box001
+    400516: pasted__pasted__Box001 1
+    400518: pasted__pasted__Box001 2
+    400520: pasted__pasted__Box001 3
+    400522: pasted__pasted__Box001 4
+    400524: pasted__pasted__group11
+    400526: pasted__pasted__Plane001
+    400528: pasted__pasted__Plane001 1
+    400530: pasted__pasted__Plane001 2
+    400532: pasted__pasted__Plane001 3
+    400534: pasted__pasted__Plane001 4
+    400536: pasted__pasted__Plane002
+    400538: pasted__pasted__Plane002 1
+    400540: pasted__pasted__Plane002 2
+    400542: pasted__pasted__Plane002 3
+    400544: pasted__pasted__Plane002 4
+    400546: pasted__pasted__Plane003
+    400548: pasted__pasted__Plane003 1
+    400550: pasted__pasted__Plane003 2
+    400552: pasted__pasted__Plane003 3
+    400554: pasted__pasted__Plane003 4
+    400556: pasted__pasted__Plane006
+    400558: pasted__pasted__Plane006 1
+    400560: pasted__pasted__Plane006 2
+    400562: pasted__pasted__Plane006 3
+    400564: pasted__pasted__Plane006 4
+    400566: pasted__pasted__Plane007
+    400568: pasted__pasted__Plane007 1
+    400570: pasted__pasted__Plane007 2
+    400572: pasted__pasted__Plane007 3
+    400574: pasted__pasted__Plane007 4
+    400576: pasted__pasted__Plane008
+    400578: pasted__pasted__Plane008 1
+    400580: pasted__pasted__Plane008 2
+    400582: pasted__pasted__Plane008 3
+    400584: pasted__pasted__Plane008 4
+    400586: pasted__pasted__polySurface15
+    400588: pasted__pCube101
+    400590: pasted__pCube101 1
+    400592: pasted__pCube102
+    400594: pasted__pCube102 1
+    400596: pasted__pCube103
+    400598: pasted__pCube104
+    400600: pasted__pCube105
+    400602: pasted__pCube106
+    400604: pasted__polySurface1
+    400606: pasted__polySurface1 1
+    400608: pasted__polySurface1 2
+    400610: pasted__polySurface2
+    400612: pasted__polySurface3
+    400614: pasted__polySurface4
+    400616: pasted__polySurface604
+    400618: pasted__polySurface605
+    400620: pasted__transform1
+    400622: pasted__transform1 1
+    400624: pCube20
+    400626: pCube21
+    400628: pCube22
+    400630: pCube23
+    400632: pCube24
+    400634: pCube25
+    400636: pCube26
+    400638: pCube27
+    400640: pCube28
+    400642: pCube29
+    400644: pCube30
+    400646: pCube31
+    400648: pCube32
+    400650: pCube33
+    400652: pCube34
+    400654: pCube35
+    400656: pCube36
+    400658: pCube37
+    400660: pCube38
+    400662: pCube40
+    400664: pCube41
+    400666: pCube42
+    400668: pCube43
+    400670: pCube44
+    400672: pCube45
+    400674: pCube48
+    400676: pCube49
+    400678: pCube50
+    400680: pCube51
+    400682: pCube55
+    400684: pCube56
+    400686: pCube57
+    400688: pCube58
+    400690: pCube59
+    400692: pCube60
+    400694: pCube61
+    400696: pCube62
+    400698: pCube63
+    400700: pCube64
+    400702: pCube65
+    400704: pCube66
+    400706: pCube67
+    400708: pCube68
+    400710: pCube69
+    400712: pCube69 1
+    400714: pCube69 2
+    400716: pCube69 3
+    400718: pCube69 4
+    400720: pCube70
+    400722: pCube70 1
+    400724: pCube70 2
+    400726: pCube70 3
+    400728: pCube70 4
+    400730: pCube71
+    400732: pCylinder3
+    400734: polySurface11
+    400736: polySurface13
+    400738: polySurface16
+    400740: polySurface18
+    400742: polySurface21
+    400744: polySurface22
+    400746: polySurface23
+    400748: polySurface24
+    400750: polySurface25
+    400752: polySurface26
+    400754: polySurface27
+    400756: polySurface28
+    400758: polySurface29
+    400760: polySurface30
+    400762: polySurface31
+    400764: polySurface33
+    400766: polySurface34
+    400768: polySurface35
+    400770: polySurface36
+    400772: polySurface37
+    400774: polySurface39
+    400776: polySurface40
+    400778: polySurface41
+    400780: polySurface42
+    400782: polySurface45
+    400784: polySurface46
+    400786: polySurface48
+    400788: polySurface49
+    400790: polySurface50
+    400792: polySurface51
+    400794: polySurface53
+    400796: pPlane10
+    400798: pPlane11
+    400800: pPlane12
+    400802: pSphere1
+    400804: pSphere5
+    400806: pSphere6
+    400808: pSphere7
+    400810: transform10
+    400812: transform100
+    400814: transform101
+    400816: transform21
+    400818: transform22
+    400820: transform23
+    400822: transform24
+    400824: transform25
+    400826: transform26
+    400828: transform32
+    400830: transform33
+    400832: transform34
+    400834: transform35
+    400836: transform39
+    400838: transform40
+    400840: transform41
+    400842: transform42
+    400844: transform43
+    400846: transform44
+    400848: transform45
+    400850: transform46
+    400852: transform47
+    400854: transform48
+    400856: transform49
+    400858: transform50
+    400860: transform51
+    400862: transform52
+    400864: transform53
+    400866: transform54
+    400868: transform55
+    400870: transform56
+    400872: transform57
+    400874: transform58
+    400876: transform59
+    400878: transform6
+    400880: transform60
+    400882: transform61
+    400884: transform62
+    400886: transform63
+    400888: transform64
+    400890: transform65
+    400892: transform66
+    400894: transform67
+    400896: transform68
+    400898: transform69
+    400900: transform7
+    400902: transform70
+    400904: transform71
+    400906: transform72
+    400908: transform73
+    400910: transform74
+    400912: transform75
+    400914: transform76
+    400916: transform77
+    400918: transform78
+    400920: transform79
+    400922: transform8
+    400924: transform80
+    400926: transform81
+    400928: transform82
+    400930: transform83
+    400932: transform84
+    400934: transform85
+    400936: transform86
+    400938: transform87
+    400940: transform88
+    400942: transform89
+    400944: transform9
+    400946: transform90
+    400948: transform91
+    400950: transform92
+    400952: transform93
+    400954: transform94
+    400956: transform95
+    400958: transform96
+    400960: transform97
+    400962: transform98
+    400964: transform99
+    400966: VARIOS_OBJ1:Box006
+    400968: VARIOS_OBJ1:group1
+    400970: VARIOS_OBJ1:pCube1
+    400972: VARIOS_OBJ1:pCube2
+    400974: VARIOS_OBJ1:pCube3
+    400976: VARIOS_OBJ2:Sphere002
+    400978: VARIOS_OBJ2:Tube005
+    400980: VARIOS_OBJ3:Sphere002
+    400982: VARIOS_OBJ3:Tube004
+    400984: VARIOS_OBJ3:Tube005
+    400986: VARIOS_OBJ3:Tube006
+    400988: VARIOS_OBJ4:Cama_Doble_01
+    400990: VARIOS_OBJ6:Box001
+    400992: VARIOS_OBJ6:Box002
+    400994: VARIOS_OBJ6:Box003
+    400996: VARIOS_OBJ6:Box005
+    400998: VARIOS_OBJ6:Box007
+    401000: VARIOS_OBJ6:Cylinder001
+    401002: VARIOS_OBJ6:Cylinder002
+    401004: VARIOS_OBJ:Cama_Sencilla_01
+    2300000: CasaPiscina:CasaPiscina:polySurface101
+    2300002: CasaPiscina:CasaPiscina:polySurface104
+    2300004: CasaPiscina:CasaPiscina:polySurface105
+    2300006: CasaPiscina:CasaPiscina:polySurface15
+    2300008: CasaPiscina:CasaPiscina:polySurface17
+    2300010: CasaPiscina:CasaPiscina:polySurface19
+    2300012: CasaPiscina:CasaPiscina:polySurface22
+    2300014: CasaPiscina:CasaPiscina:polySurface24
+    2300016: CasaPiscina:CasaPiscina:polySurface26
+    2300018: CasaPiscina:CasaPiscina:polySurface29
+    2300020: CasaPiscina:CasaPiscina:polySurface31
+    2300022: CasaPiscina:CasaPiscina:polySurface34
+    2300024: CasaPiscina:CasaPiscina:polySurface35
+    2300026: CasaPiscina:CasaPiscina:polySurface39
+    2300028: CasaPiscina:CasaPiscina:polySurface41
+    2300030: CasaPiscina:CasaPiscina:polySurface43
+    2300032: CasaPiscina:CasaPiscina:polySurface46
+    2300034: CasaPiscina:CasaPiscina:polySurface48
+    2300036: CasaPiscina:CasaPiscina:polySurface51
+    2300038: CasaPiscina:CasaPiscina:polySurface53
+    2300040: CasaPiscina:CasaPiscina:polySurface55
+    2300042: CasaPiscina:CasaPiscina:polySurface57
+    2300044: CasaPiscina:CasaPiscina:polySurface60
+    2300046: CasaPiscina:CasaPiscina:polySurface66
+    2300048: CasaPiscina:CasaPiscina:polySurface7
+    2300050: CasaPiscina:CasaPiscina:polySurface72
+    2300052: CasaPiscina:CasaPiscina:polySurface75
+    2300054: CasaPiscina:CasaPiscina:polySurface89
+    2300056: CasaPiscina:CasaPiscina:polySurface9
+    2300058: CasaPiscina:CasaPiscina:polySurface92
+    2300060: CasaPiscina:CasaPiscina:polySurface94
+    2300062: CasaPiscina:CasaPiscina:polySurface96
+    2300064: CasaPiscina:CasaPiscina:polySurface99
+    2300066: CasaPiscina:pasted__pasted__Box001
+    2300068: CasaPiscina:pasted__pasted__Box001 1
+    2300070: CasaPiscina:pasted__pasted__Plane001
+    2300072: CasaPiscina:pasted__pasted__Plane001 1
+    2300074: CasaPiscina:pasted__pasted__Plane002
+    2300076: CasaPiscina:pasted__pasted__Plane002 1
+    2300078: CasaPiscina:pasted__pasted__Plane003
+    2300080: CasaPiscina:pasted__pasted__Plane003 1
+    2300082: CasaPiscina:pasted__pasted__Plane006
+    2300084: CasaPiscina:pasted__pasted__Plane006 1
+    2300086: CasaPiscina:pasted__pasted__Plane007
+    2300088: CasaPiscina:pasted__pasted__Plane007 1
+    2300090: CasaPiscina:pasted__pasted__Plane008
+    2300092: CasaPiscina:pasted__pasted__Plane008 1
+    2300094: CasaPiscina:pCube23
+    2300096: CasaPiscina:pCube72
+    2300098: CasaPiscina:pCube73
+    2300100: CasaPiscina:pCylinder2
+    2300102: CasaPiscina:pCylinder2 1
+    2300104: CasaPiscina:polySurface14
+    2300106: CasaPiscina:polySurface37
+    2300108: CasaPiscina:polySurface39
+    2300110: CasaPiscina:polySurface7
+    2300112: CasaPiscina:pTorus6
+    2300114: pasted__pasted__Box001
+    2300116: pasted__pasted__Box001 1
+    2300118: pasted__pasted__Box001 2
+    2300120: pasted__pasted__Box001 3
+    2300122: pasted__pasted__Box001 4
+    2300124: pasted__pasted__Plane001
+    2300126: pasted__pasted__Plane001 1
+    2300128: pasted__pasted__Plane001 2
+    2300130: pasted__pasted__Plane001 3
+    2300132: pasted__pasted__Plane001 4
+    2300134: pasted__pasted__Plane002
+    2300136: pasted__pasted__Plane002 1
+    2300138: pasted__pasted__Plane002 2
+    2300140: pasted__pasted__Plane002 3
+    2300142: pasted__pasted__Plane002 4
+    2300144: pasted__pasted__Plane003
+    2300146: pasted__pasted__Plane003 1
+    2300148: pasted__pasted__Plane003 2
+    2300150: pasted__pasted__Plane003 3
+    2300152: pasted__pasted__Plane003 4
+    2300154: pasted__pasted__Plane006
+    2300156: pasted__pasted__Plane006 1
+    2300158: pasted__pasted__Plane006 2
+    2300160: pasted__pasted__Plane006 3
+    2300162: pasted__pasted__Plane006 4
+    2300164: pasted__pasted__Plane007
+    2300166: pasted__pasted__Plane007 1
+    2300168: pasted__pasted__Plane007 2
+    2300170: pasted__pasted__Plane007 3
+    2300172: pasted__pasted__Plane007 4
+    2300174: pasted__pasted__Plane008
+    2300176: pasted__pasted__Plane008 1
+    2300178: pasted__pasted__Plane008 2
+    2300180: pasted__pasted__Plane008 3
+    2300182: pasted__pasted__Plane008 4
+    2300184: pasted__pasted__polySurface15
+    2300186: pasted__pCube101
+    2300188: pasted__pCube101 1
+    2300190: pasted__pCube102
+    2300192: pasted__pCube102 1
+    2300194: pasted__pCube103
+    2300196: pasted__pCube104
+    2300198: pasted__pCube105
+    2300200: pasted__pCube106
+    2300202: pCube31
+    2300204: pCube32
+    2300206: pCube33
+    2300208: pCube34
+    2300210: pCube35
+    2300212: pCube36
+    2300214: pCube37
+    2300216: pCube38
+    2300218: pCube40
+    2300220: pCube41
+    2300222: pCube42
+    2300224: pCube43
+    2300226: pCube45
+    2300228: pCube57
+    2300230: pCube58
+    2300232: pCube64
+    2300234: pCube65
+    2300236: pCube66
+    2300238: pCube67
+    2300240: pCube68
+    2300242: pCube69
+    2300244: pCube69 1
+    2300246: pCube69 2
+    2300248: pCube69 3
+    2300250: pCube69 4
+    2300252: pCube70
+    2300254: pCube70 1
+    2300256: pCube70 2
+    2300258: pCube70 3
+    2300260: pCube70 4
+    2300262: pCube71
+    2300264: polySurface16
+    2300266: polySurface36
+    2300268: polySurface37
+    2300270: polySurface39
+    2300272: polySurface40
+    2300274: polySurface41
+    2300276: polySurface42
+    2300278: polySurface45
+    2300280: polySurface46
+    2300282: polySurface48
+    2300284: polySurface50
+    2300286: polySurface51
+    2300288: polySurface53
+    2300290: pPlane10
+    2300292: pPlane11
+    2300294: pPlane12
+    2300296: pSphere5
+    2300298: pSphere6
+    2300300: pSphere7
+    2300302: VARIOS_OBJ2:Sphere002
+    2300304: VARIOS_OBJ2:Tube005
+    2300306: VARIOS_OBJ3:Sphere002
+    2300308: VARIOS_OBJ3:Tube005
+    3300000: CasaPiscina:CasaPiscina:polySurface101
+    3300002: CasaPiscina:CasaPiscina:polySurface104
+    3300004: CasaPiscina:CasaPiscina:polySurface105
+    3300006: CasaPiscina:CasaPiscina:polySurface15
+    3300008: CasaPiscina:CasaPiscina:polySurface17
+    3300010: CasaPiscina:CasaPiscina:polySurface19
+    3300012: CasaPiscina:CasaPiscina:polySurface22
+    3300014: CasaPiscina:CasaPiscina:polySurface24
+    3300016: CasaPiscina:CasaPiscina:polySurface26
+    3300018: CasaPiscina:CasaPiscina:polySurface29
+    3300020: CasaPiscina:CasaPiscina:polySurface31
+    3300022: CasaPiscina:CasaPiscina:polySurface34
+    3300024: CasaPiscina:CasaPiscina:polySurface35
+    3300026: CasaPiscina:CasaPiscina:polySurface39
+    3300028: CasaPiscina:CasaPiscina:polySurface41
+    3300030: CasaPiscina:CasaPiscina:polySurface43
+    3300032: CasaPiscina:CasaPiscina:polySurface46
+    3300034: CasaPiscina:CasaPiscina:polySurface48
+    3300036: CasaPiscina:CasaPiscina:polySurface51
+    3300038: CasaPiscina:CasaPiscina:polySurface53
+    3300040: CasaPiscina:CasaPiscina:polySurface55
+    3300042: CasaPiscina:CasaPiscina:polySurface57
+    3300044: CasaPiscina:CasaPiscina:polySurface60
+    3300046: CasaPiscina:CasaPiscina:polySurface66
+    3300048: CasaPiscina:CasaPiscina:polySurface7
+    3300050: CasaPiscina:CasaPiscina:polySurface72
+    3300052: CasaPiscina:CasaPiscina:polySurface75
+    3300054: CasaPiscina:CasaPiscina:polySurface89
+    3300056: CasaPiscina:CasaPiscina:polySurface9
+    3300058: CasaPiscina:CasaPiscina:polySurface92
+    3300060: CasaPiscina:CasaPiscina:polySurface94
+    3300062: CasaPiscina:CasaPiscina:polySurface96
+    3300064: CasaPiscina:CasaPiscina:polySurface99
+    3300066: CasaPiscina:pasted__pasted__Box001
+    3300068: CasaPiscina:pasted__pasted__Box001 1
+    3300070: CasaPiscina:pasted__pasted__Plane001
+    3300072: CasaPiscina:pasted__pasted__Plane001 1
+    3300074: CasaPiscina:pasted__pasted__Plane002
+    3300076: CasaPiscina:pasted__pasted__Plane002 1
+    3300078: CasaPiscina:pasted__pasted__Plane003
+    3300080: CasaPiscina:pasted__pasted__Plane003 1
+    3300082: CasaPiscina:pasted__pasted__Plane006
+    3300084: CasaPiscina:pasted__pasted__Plane006 1
+    3300086: CasaPiscina:pasted__pasted__Plane007
+    3300088: CasaPiscina:pasted__pasted__Plane007 1
+    3300090: CasaPiscina:pasted__pasted__Plane008
+    3300092: CasaPiscina:pasted__pasted__Plane008 1
+    3300094: CasaPiscina:pCube23
+    3300096: CasaPiscina:pCube72
+    3300098: CasaPiscina:pCube73
+    3300100: CasaPiscina:pCylinder2
+    3300102: CasaPiscina:pCylinder2 1
+    3300104: CasaPiscina:polySurface14
+    3300106: CasaPiscina:polySurface37
+    3300108: CasaPiscina:polySurface39
+    3300110: CasaPiscina:polySurface7
+    3300112: CasaPiscina:pTorus6
+    3300114: pasted__pasted__Box001
+    3300116: pasted__pasted__Box001 1
+    3300118: pasted__pasted__Box001 2
+    3300120: pasted__pasted__Box001 3
+    3300122: pasted__pasted__Box001 4
+    3300124: pasted__pasted__Plane001
+    3300126: pasted__pasted__Plane001 1
+    3300128: pasted__pasted__Plane001 2
+    3300130: pasted__pasted__Plane001 3
+    3300132: pasted__pasted__Plane001 4
+    3300134: pasted__pasted__Plane002
+    3300136: pasted__pasted__Plane002 1
+    3300138: pasted__pasted__Plane002 2
+    3300140: pasted__pasted__Plane002 3
+    3300142: pasted__pasted__Plane002 4
+    3300144: pasted__pasted__Plane003
+    3300146: pasted__pasted__Plane003 1
+    3300148: pasted__pasted__Plane003 2
+    3300150: pasted__pasted__Plane003 3
+    3300152: pasted__pasted__Plane003 4
+    3300154: pasted__pasted__Plane006
+    3300156: pasted__pasted__Plane006 1
+    3300158: pasted__pasted__Plane006 2
+    3300160: pasted__pasted__Plane006 3
+    3300162: pasted__pasted__Plane006 4
+    3300164: pasted__pasted__Plane007
+    3300166: pasted__pasted__Plane007 1
+    3300168: pasted__pasted__Plane007 2
+    3300170: pasted__pasted__Plane007 3
+    3300172: pasted__pasted__Plane007 4
+    3300174: pasted__pasted__Plane008
+    3300176: pasted__pasted__Plane008 1
+    3300178: pasted__pasted__Plane008 2
+    3300180: pasted__pasted__Plane008 3
+    3300182: pasted__pasted__Plane008 4
+    3300184: pasted__pasted__polySurface15
+    3300186: pasted__pCube101
+    3300188: pasted__pCube101 1
+    3300190: pasted__pCube102
+    3300192: pasted__pCube102 1
+    3300194: pasted__pCube103
+    3300196: pasted__pCube104
+    3300198: pasted__pCube105
+    3300200: pasted__pCube106
+    3300202: pCube31
+    3300204: pCube32
+    3300206: pCube33
+    3300208: pCube34
+    3300210: pCube35
+    3300212: pCube36
+    3300214: pCube37
+    3300216: pCube38
+    3300218: pCube40
+    3300220: pCube41
+    3300222: pCube42
+    3300224: pCube43
+    3300226: pCube45
+    3300228: pCube57
+    3300230: pCube58
+    3300232: pCube64
+    3300234: pCube65
+    3300236: pCube66
+    3300238: pCube67
+    3300240: pCube68
+    3300242: pCube69
+    3300244: pCube69 1
+    3300246: pCube69 2
+    3300248: pCube69 3
+    3300250: pCube69 4
+    3300252: pCube70
+    3300254: pCube70 1
+    3300256: pCube70 2
+    3300258: pCube70 3
+    3300260: pCube70 4
+    3300262: pCube71
+    3300264: polySurface16
+    3300266: polySurface36
+    3300268: polySurface37
+    3300270: polySurface39
+    3300272: polySurface40
+    3300274: polySurface41
+    3300276: polySurface42
+    3300278: polySurface45
+    3300280: polySurface46
+    3300282: polySurface48
+    3300284: polySurface50
+    3300286: polySurface51
+    3300288: polySurface53
+    3300290: pPlane10
+    3300292: pPlane11
+    3300294: pPlane12
+    3300296: pSphere5
+    3300298: pSphere6
+    3300300: pSphere7
+    3300302: VARIOS_OBJ2:Sphere002
+    3300304: VARIOS_OBJ2:Tube005
+    3300306: VARIOS_OBJ3:Sphere002
+    3300308: VARIOS_OBJ3:Tube005
+    4300000: CasaPiscina:polySurface7
+    4300002: CasaPiscina:polySurface37
+    4300004: CasaPiscina:polySurface14
+    4300006: CasaPiscina:pCube23
+    4300008: CasaPiscina:pTorus6
+    4300010: VARIOS_OBJ2:Tube005
+    4300012: VARIOS_OBJ2:Sphere002
+    4300014: VARIOS_OBJ3:Tube005
+    4300016: VARIOS_OBJ3:Sphere002
+    4300018: polySurface16
+    4300020: pCube40
+    4300022: pCube43
+    4300024: pCube41
+    4300026: pSphere7
+    4300028: pSphere6
+    4300030: pSphere5
+    4300032: pCube32
+    4300034: pCube33
+    4300036: pCube34
+    4300038: pCube35
+    4300040: pCube36
+    4300042: pCube37
+    4300044: pCube38
+    4300046: pCube31
+    4300048: pCube42
+    4300050: pCube45
+    4300052: pPlane10
+    4300054: pPlane11
+    4300056: pPlane12
+    4300058: CasaPiscina:pCylinder2
+    4300060: CasaPiscina:pCylinder2
+    4300062: polySurface36
+    4300064: polySurface37
+    4300066: pCube70
+    4300068: pCube69
+    4300070: pCube70
+    4300072: pCube69
+    4300074: pCube70
+    4300076: pCube69
+    4300078: pCube70
+    4300080: pCube69
+    4300082: polySurface40
+    4300084: polySurface39
+    4300086: pCube67
+    4300088: pCube66
+    4300090: pCube65
+    4300092: pCube71
+    4300094: pCube68
+    4300096: pCube64
+    4300098: polySurface41
+    4300100: polySurface42
+    4300102: CasaPiscina:CasaPiscina:polySurface57
+    4300104: CasaPiscina:CasaPiscina:polySurface94
+    4300106: CasaPiscina:CasaPiscina:polySurface89
+    4300108: CasaPiscina:CasaPiscina:polySurface7
+    4300110: CasaPiscina:CasaPiscina:polySurface9
+    4300112: CasaPiscina:CasaPiscina:polySurface15
+    4300114: CasaPiscina:CasaPiscina:polySurface24
+    4300116: CasaPiscina:CasaPiscina:polySurface26
+    4300118: CasaPiscina:CasaPiscina:polySurface39
+    4300120: CasaPiscina:CasaPiscina:polySurface35
+    4300122: CasaPiscina:CasaPiscina:polySurface51
+    4300124: CasaPiscina:CasaPiscina:polySurface48
+    4300126: CasaPiscina:CasaPiscina:polySurface53
+    4300128: CasaPiscina:CasaPiscina:polySurface46
+    4300130: CasaPiscina:CasaPiscina:polySurface43
+    4300132: CasaPiscina:CasaPiscina:polySurface75
+    4300134: CasaPiscina:CasaPiscina:polySurface72
+    4300136: CasaPiscina:CasaPiscina:polySurface96
+    4300138: CasaPiscina:CasaPiscina:polySurface101
+    4300140: CasaPiscina:CasaPiscina:polySurface31
+    4300142: CasaPiscina:CasaPiscina:polySurface66
+    4300144: CasaPiscina:CasaPiscina:polySurface99
+    4300146: CasaPiscina:CasaPiscina:polySurface104
+    4300148: CasaPiscina:CasaPiscina:polySurface92
+    4300150: CasaPiscina:CasaPiscina:polySurface60
+    4300152: CasaPiscina:CasaPiscina:polySurface34
+    4300154: CasaPiscina:CasaPiscina:polySurface29
+    4300156: CasaPiscina:CasaPiscina:polySurface22
+    4300158: CasaPiscina:CasaPiscina:polySurface19
+    4300160: pCube57
+    4300162: pCube58
+    4300164: polySurface45
+    4300166: CasaPiscina:CasaPiscina:polySurface55
+    4300168: CasaPiscina:CasaPiscina:polySurface105
+    4300170: CasaPiscina:CasaPiscina:polySurface41
+    4300172: pCube70
+    4300174: pCube69
+    4300176: CasaPiscina:pCube72
+    4300178: CasaPiscina:pCube73
+    4300180: CasaPiscina:polySurface39
+    4300182: pasted__pasted__Plane008
+    4300184: pasted__pasted__Plane002
+    4300186: pasted__pasted__Plane003
+    4300188: pasted__pasted__Plane006
+    4300190: pasted__pasted__Box001
+    4300192: pasted__pasted__Plane007
+    4300194: pasted__pasted__Plane001
+    4300196: pasted__pasted__Plane008
+    4300198: pasted__pasted__Plane002
+    4300200: pasted__pasted__Plane003
+    4300202: pasted__pasted__Plane006
+    4300204: pasted__pasted__Box001
+    4300206: pasted__pasted__Plane007
+    4300208: pasted__pasted__Plane001
+    4300210: CasaPiscina:pasted__pasted__Plane008
+    4300212: CasaPiscina:pasted__pasted__Plane002
+    4300214: CasaPiscina:pasted__pasted__Plane003
+    4300216: CasaPiscina:pasted__pasted__Plane006
+    4300218: CasaPiscina:pasted__pasted__Box001
+    4300220: CasaPiscina:pasted__pasted__Plane007
+    4300222: CasaPiscina:pasted__pasted__Plane001
+    4300224: CasaPiscina:pasted__pasted__Plane008
+    4300226: CasaPiscina:pasted__pasted__Plane002
+    4300228: CasaPiscina:pasted__pasted__Plane003
+    4300230: CasaPiscina:pasted__pasted__Plane006
+    4300232: CasaPiscina:pasted__pasted__Plane007
+    4300234: CasaPiscina:pasted__pasted__Plane001
+    4300236: pasted__pasted__Plane008
+    4300238: pasted__pasted__Plane002
+    4300240: pasted__pasted__Plane003
+    4300242: pasted__pasted__Plane006
+    4300244: pasted__pasted__Box001
+    4300246: pasted__pasted__Plane007
+    4300248: pasted__pasted__Plane001
+    4300250: pasted__pasted__Plane008
+    4300252: pasted__pasted__Plane002
+    4300254: pasted__pasted__Plane003
+    4300256: pasted__pasted__Plane006
+    4300258: pasted__pasted__Plane007
+    4300260: pasted__pasted__Plane001
+    4300262: pasted__pasted__Plane008
+    4300264: pasted__pasted__Plane002
+    4300266: pasted__pasted__Plane003
+    4300268: pasted__pasted__Plane006
+    4300270: pasted__pasted__Box001
+    4300272: pasted__pasted__Plane007
+    4300274: pasted__pasted__Plane001
+    4300276: pasted__pCube102
+    4300278: pasted__pCube101
+    4300280: pasted__pCube105
+    4300282: pasted__pCube106
+    4300284: pasted__pCube102
+    4300286: pasted__pCube101
+    4300288: pasted__pCube103
+    4300290: pasted__pCube104
+    4300292: pasted__pasted__polySurface15
+    4300294: polySurface46
+    4300296: polySurface48
+    4300298: polySurface50
+    4300300: polySurface51
+    4300302: polySurface53
+    4300304: CasaPiscina:pasted__pasted__Box001
+    4300306: CasaPiscina:CasaPiscina:polySurface17
+    4300308: pasted__pasted__Box001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    handles: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  additionalBone: 1
+  animationType: 2
+  userData: 

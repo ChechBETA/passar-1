@@ -20,8 +20,8 @@ public class ProjectItemDescriptor
 	public string sortDescription;
 	public string description;
 	public string thumbnailURL;
+	public Level level;
 	public List<AssetBundleFile> assetBundles;
-	public bool showMainLogo = false;
 }
 
 public class ProjectItem : UIListItemContainer {

@@ -1,7 +1,7 @@
 using UnityEngine;
 using System.Collections;
 
-[RequireComponent (typeof(MeshCollider))]
+[RequireComponent (typeof(BoxCollider))]
 public class DraggableItem : MonoBehaviour 
 {
 	public float horizontalLimit = 25F;

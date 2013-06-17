@@ -20,10 +20,10 @@ public class ProjectItemsMenu : MonoBehaviour , IUIDisplayObject
 		buttonBack.onPressDelegate = Close;
 	}
 	
-	public void Init(ProjectDescriptor project)
+	public void Init()
 	{
 		list.ClearList(true);
-		this.project = project;
+		this.project = AppManager.Instance.GetCurrentProject();
 		this.projectItems = project.items;
 		
 		foreach(ProjectItemDescriptor projectItem in this.projectItems)
@@ -82,7 +82,13 @@ public class ProjectItemsMenu : MonoBehaviour , IUIDisplayObject
 	private void OnSelectProduct(ProjectItemDescriptor project)
 	{
 		AppManager.Instance.CurrentProject = project;
-		LevelLoader.Instance.LoadScene(Level.Project);
+		
+		if(GlobalParams.Instance.IsApplicationDinamic)
+			LevelLoader.Instance.LoadScene(Level.Project);
+		else{
+			Debug.Log(project.level);
+			LevelLoader.Instance.LoadScene(project.level);
+		}
 	}
 	
 	public void Hide ()

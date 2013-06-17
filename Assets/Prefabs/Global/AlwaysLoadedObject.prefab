@@ -60,9 +60,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 30f013cf3f11e40d69430b96b03d847b, type: 3}
   m_Name: 
+  applicationType: 1
   connectionParameters:
-    domain: 1
-    connection: 1
+    domain: 0
+    connection: 2
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1

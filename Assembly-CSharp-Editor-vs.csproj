@@ -77,6 +77,7 @@
      <Compile Include="Assets\Editor\Passar\AssetBundleUtilities.cs" />
      <Compile Include="Assets\Editor\Passar\ClearCacheEditor.cs" />
      <Compile Include="Assets\Editor\Passar\GlobalParamsInspector.cs" />
+     <Compile Include="Assets\Editor\Passar\StaticDataInspector.cs" />
      <Compile Include="Assets\Editor\QCAR\SampleImport\SampleImport.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\AccessorFactory.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\CloudRecoEditor.cs" />

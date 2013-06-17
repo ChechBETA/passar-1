@@ -7,6 +7,7 @@ public class LocalizationMacadamia : MonoBehaviour
 	public Animation animationComponent;
 	public UIPanel popUp;
 	public UIPassarButton buttonPopup;
+	public Animation [] indicator;
 	
 	private bool isAnimate = false;
 	private Vector3 originalSize;
@@ -17,7 +18,6 @@ public class LocalizationMacadamia : MonoBehaviour
 	private bool hasBeenFinished;
 	private float timeToEndedScaleAnimation;
 	private float durationScaleAnimation = 3.0F;
-	
 	
 	private void Start()
 	{
@@ -62,13 +62,6 @@ public class LocalizationMacadamia : MonoBehaviour
 		}
 	}
 	
-	public void AnimateScaleCone()
-	{
-		timeToEndedScaleAnimation = Time.realtimeSinceStartup + durationScaleAnimation;
-		isAnimate = true;
-		hasBeenFinished = true;
-	}
-	
 	private void AnimationStarts()
 	{
 		isAnimate = false;
@@ -89,5 +82,17 @@ public class LocalizationMacadamia : MonoBehaviour
 	{
 		animationComponent.Play();
 		popUp.Dismiss();
+	}
+	
+	public void AnimateScaleCone()
+	{
+		timeToEndedScaleAnimation = Time.realtimeSinceStartup + durationScaleAnimation;
+		isAnimate = true;
+		hasBeenFinished = true;
+	}
+	
+	public void AnimationIndicator(int index)
+	{
+		indicator[index].Play();
 	}
 }

@@ -1,0 +1,174 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &100000
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 400000}
+  - 114: {fileID: 11400000}
+  m_Layer: 0
+  m_Name: StaticData
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400000
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 100000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39f19eff167664d1d93c7750dcc4a828, type: 3}
+  m_Name: 
+  projects:
+  - name: MACADAMIA
+    id: 1
+    portraitURL: macadamia/images/portrait.png
+    smallLogoURL: macadamia/images/small_logo.jpg
+    imageResources: {fileID: 11400000, guid: fc97bf7af7f264ad89f3b8b2bf59da5b, type: 2}
+    items:
+    - name: MACADAMIA
+      id: 1
+      subtitle: "LOCALIZACI\xD3N"
+      sortDescription: 
+      description: "Casas con la mejor ubicaci\xF3n"
+      thumbnailURL: macadamia/images/localizacion.png
+      level: 4
+      assetBundles: []
+    - name: ETAPA CIRUELOS
+      id: 2
+      subtitle: Exterior Vivienda
+      sortDescription: CASA TIPO
+      description: 
+      thumbnailURL: macadamia/images/etapa_ciruelos.png
+      level: 4
+      assetBundles: []
+    - name: ETAPA CIRUELOS
+      id: 3
+      subtitle: Interior Vivienda
+      sortDescription: Interior
+      description: 
+      thumbnailURL: macadamia/images/etapa_ciruelos_int.png
+      level: 4
+      assetBundles: []
+    - name: ETAPA AVELLANOS
+      id: 4
+      subtitle: Exterior vivienda
+      sortDescription: CASA TIPO
+      description: 
+      thumbnailURL: macadamia/images/etapa_avellanos.png
+      level: 4
+      assetBundles: []
+    - name: ETAPA AVELLANOS
+      id: 5
+      subtitle: Interior vivienda
+      sortDescription: Interior
+      description: 
+      thumbnailURL: macadamia/images/etapa_avellanos_int.png
+      level: 4
+      assetBundles: []
+  - name: ENCENILLOS
+    id: 2
+    portraitURL: encenillos/images/portrait.png
+    smallLogoURL: encenillos/images/small_logo.jpg
+    imageResources: {fileID: 11400000, guid: d27a5e98347c247f28d65cd57153505a, type: 2}
+    items:
+    - name: ENCENILLOS
+      id: 7
+      subtitle: "Localizaci\xF3n"
+      sortDescription: 
+      description: "Zona de valorizaci\xF3n y desarrollo"
+      thumbnailURL: encenillos/images/localizacion.png
+      level: 5
+      assetBundles: []
+    - name: SEDE SOCIAL
+      id: 8
+      subtitle: Exterior
+      sortDescription: SEDE SOCIAL
+      description: 
+      thumbnailURL: encenillos/images/sede_social.png
+      level: 5
+      assetBundles: []
+    - name: ETAPA SORRENTO
+      id: 9
+      subtitle: Vivienda
+      sortDescription: INTERIOR - EXTERIOR
+      description: 
+      thumbnailURL: encenillos/images/etapa_praga.png
+      level: 5
+      assetBundles: []
+    - name: ETAPA PRAGA
+      id: 10
+      subtitle: Vivienda
+      sortDescription: INTERIOR - EXTERIOR
+      description: 
+      thumbnailURL: encenillos/images/etapa_sorrento.png
+      level: 5
+      assetBundles: []
+  - name: SUMAPAZ
+    id: 3
+    portraitURL: sumapaz/images/portrait.png
+    smallLogoURL: sumapaz/images/small_logo.jpg
+    imageResources: {fileID: 11400000, guid: 94ddf7257e7d14547a478ffad20cc5a0, type: 2}
+    items:
+    - name: HACIENDA SUMAPAZ
+      id: 11
+      subtitle: "Localizaci\xF3n"
+      sortDescription: 
+      description: "Zona de valorizaci\xF3n y desarrollo"
+      thumbnailURL: sumapaz/images/localizacion.png
+      level: 6
+      assetBundles: []
+    - name: SEDE SOCIAL
+      id: 12
+      subtitle: Exterior
+      sortDescription: SEDE SOCIAL
+      description: 
+      thumbnailURL: sumapaz/images/sede_social.png
+      level: 6
+      assetBundles: []
+    - name: ETAPA CASA BAMBU
+      id: 13
+      subtitle: Vivienda
+      sortDescription: INTERIOR - EXTERIOR
+      description: 
+      thumbnailURL: sumapaz/images/casa_bambu.png
+      level: 6
+      assetBundles: []
+    - name: ETAPA CASA L
+      id: 14
+      subtitle: Vivienda
+      sortDescription: INTERIOR - EXTERIOR
+      description: 
+      thumbnailURL: sumapaz/images/casa_l.png
+      level: 6
+      assetBundles: []
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
+  m_IsExploded: 1

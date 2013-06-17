@@ -12,7 +12,12 @@ public class ProjectManager : MonoBehaviour
 	private ProjectDescriptor appProject;
 	private int assetsAlreadyDownload = 0;
 	
-	private void Start()
+	public ProjectDescriptor CurrentProject
+	{
+		get{ return appProject; }
+	}
+	
+	private void Awake()
 	{
 		project = AppManager.Instance.CurrentProject;
 		
@@ -67,7 +72,15 @@ public class ProjectManager : MonoBehaviour
 	{
 		logoProject.SetTexture(texture);
 		logoProject.UpdateUVs();
-		logoProject.SetUVsFromPixelCoords(new Rect(2,2,texture.width-5,texture.height-5));
+		
+		if(GlobalParams.Instance.IsApplicationDinamic)
+			logoProject.SetUVsFromPixelCoords(new Rect(2,2,texture.width-5,texture.height-5));
+		else
+		{
+			logoProject.SetLowerLeftPixel(1,256);
+			logoProject.SetPixelDimensions(256,256);
+			logoProject.SetUVsFromPixelCoords(new Rect(2,2,256,116));
+		}
 	}
 	
 	private IEnumerator DownloadAssetBundle(AssetBundleFile assetBundleFile)

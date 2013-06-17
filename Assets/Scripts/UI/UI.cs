@@ -6,7 +6,8 @@ public enum MenuState
 	Welcome = 0,
 	ProjectList = 1,
 	Contact = 2,
-	Help = 3
+	Help = 3,
+	ProjectElementsList = 4
 }
 
 public class UI : MonoBehaviour 
@@ -54,6 +55,8 @@ public class UI : MonoBehaviour
 		{
 			InitMenu();
 			welcomeMessage.Hide();
+			MenuState = MenuState.ProjectElementsList;
+			projectItems.Init();
 		}
 		else
 		{
@@ -80,6 +83,9 @@ public class UI : MonoBehaviour
 				break;
 			case MenuState.ProjectList:
 				projectList.Show();
+				break;
+			case MenuState.ProjectElementsList:
+				projectItems.Show();
 				break;
 			case MenuState.Contact:
 				contact.BringIn();
@@ -110,7 +116,8 @@ public class UI : MonoBehaviour
 	
 	private void OnProductSelect(ProjectDescriptor product)
 	{
-		projectItems.Init(product);
+		AppManager.Instance.CurrentProjectID = product.id;
+		projectItems.Init();
 	}
 	
 	private void OnDestroy()

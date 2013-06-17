@@ -4,6 +4,7 @@ using System.Collections;
 public class InteriorAvellana : MonoBehaviour {
 	
 	public UIStateToggleBtn button;
+	public SimpleSprite bgButton;
 	public SpriteText labelButton;
 	public GameObject floor1;
 	public GameObject floor2;
@@ -12,7 +13,7 @@ public class InteriorAvellana : MonoBehaviour {
 	private const int SECOND_FLOOR = 1;
 	private const int DISABLED = 2;
 	
-	private void Start () 
+	private void Awake () 
 	{
 		button.AddValueChangedDelegate((obj) => 
 		{
@@ -23,6 +24,16 @@ public class InteriorAvellana : MonoBehaviour {
 		});
 		button.transform.parent = null;
 		labelButton.Text = "Primer piso";
+	}
+	
+	private void Start()
+	{
+		if( !GlobalParams.Instance.IsApplicationDinamic )
+		{
+			button.Hide(false);
+			bgButton.Hide(false);
+			labelButton.Hide(false);
+		}
 	}
 	
 	private void OnFindObjectByFloorNumber(int floor)

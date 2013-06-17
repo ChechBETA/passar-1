@@ -50,8 +50,7 @@ public class UIProjectsList : UIScrollList , IUIDisplayObject
 			currentItemNum = ((UIProject)this.SnappedItem).Index;
 		
 		currentItemNum--;
-		OnControlsChange();
-		ScrollToItem(currentItemNum,scrollSpeed);
+		UpdatePosition();
 	}
 	
 	private void OnNext()
@@ -60,6 +59,11 @@ public class UIProjectsList : UIScrollList , IUIDisplayObject
 			return;
 		
 		currentItemNum++;
+		UpdatePosition();
+	}
+	
+	private void UpdatePosition()
+	{
 		OnControlsChange();
 		ScrollToItem(currentItemNum,scrollSpeed);
 	}
@@ -76,6 +80,9 @@ public class UIProjectsList : UIScrollList , IUIDisplayObject
 		this.ClearList(true);
 		
 		float dotWidth = 0F;
+		
+		ProjectDescriptor currentProject = AppManager.Instance.GetCurrentProject();
+		
 		foreach(ProjectDescriptor project in AppManager.Instance.projects)
 		{
 			UIProject projectObject = Instantiate(itemProjectPrefab) as UIProject;
@@ -87,6 +94,9 @@ public class UIProjectsList : UIScrollList , IUIDisplayObject
 			SimpleSprite dot = Instantiate(dotItem) as SimpleSprite;
 			dotWidth = dot.width;
 			dots.AddItem(dot.gameObject);
+			
+			if( currentProject != null && currentProject.id == project.id )
+				currentItemNum = projectObject.Index;
 		}
 		
 		float widthDotsContainer = (dotWidth + dots.itemSpacing) * dots.Count;
@@ -96,6 +106,8 @@ public class UIProjectsList : UIScrollList , IUIDisplayObject
 			StartCoroutine(DownloadImages());
 		else
 			StartCoroutine(GetImagesFromCache());
+		
+		UpdatePosition();
 	}
 	
 	private IEnumerator GetImagesFromCache()
