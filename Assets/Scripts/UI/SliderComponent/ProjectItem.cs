@@ -63,9 +63,14 @@ public class ProjectItem : UIListItemContainer {
 	
 	public void SetThumbnail(Texture2D image)
 	{
+		Rect uvImageConfig;
 		float xDimensions = thumbnail.pixelDimensions.x;
 		float yDimensions = thumbnail.pixelDimensions.y;
-		Rect uvImageConfig = new Rect(0F,0F,xDimensions,yDimensions); 
+		
+		if(GlobalParams.Instance.IsApplicationDinamic)
+			uvImageConfig = new Rect(0F,0F,xDimensions,yDimensions); 
+		else
+			uvImageConfig = new Rect(0F,0F,256F,256F); 
 		
 		thumbnail.SetTexture(image);
 		thumbnail.UpdateUVs();

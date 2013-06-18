@@ -131,6 +131,7 @@
      <Compile Include="Assets\Scripts\Global\AssetBundleManager.cs" />
      <Compile Include="Assets\Scripts\Global\LocalStorage.cs" />
      <Compile Include="Assets\Scripts\Global\PersistenObject.cs" />
+     <Compile Include="Assets\Scripts\Global\Pinch.cs" />
      <Compile Include="Assets\Scripts\Global\ServerImages.cs" />
      <Compile Include="Assets\Scripts\Global\StartLevel.cs" />
      <Compile Include="Assets\Scripts\Levels\Test.cs" />

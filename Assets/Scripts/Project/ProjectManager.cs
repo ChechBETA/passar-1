@@ -111,6 +111,6 @@ public class ProjectManager : MonoBehaviour
 	private void OnDrawGizmos()
 	{
 		Gizmos.color = Color.cyan;
-		Gizmos.DrawWireCube(transform.position,new Vector3(300F,60F,300F));
+		Gizmos.DrawWireCube(transform.position,new Vector3(250F,60F,250F));
 	}
 }

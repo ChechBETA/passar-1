@@ -71,7 +71,6 @@ public class MoveObjectsControl : MonoBehaviour {
 			{
 				Move( true );
 			}
-			
 		}
 	}
 	
@@ -99,12 +98,14 @@ public class MoveObjectsControl : MonoBehaviour {
 			isAnimationStart = false;
 			invert = !goInvert;
 			myTransform.Translate(finalPos.x,finalPos.y , finalPos.z );
+			myTransform.localPosition = new Vector3 (finalPos.x,finalPos.y , finalPos.z );
 		}
 		else if( myTransform.localPosition.z < initialPosition.z && goInvert )
 		{
 			isAnimationStart = false;
 			invert = !goInvert;
-			myTransform.Translate( initialPosition.x, initialPosition.y , initialPosition.z );
+			myTransform.Translate( 0.0F, 0.0F, 0.0F );
+			myTransform.localPosition = new Vector3(0.0F,0.0F,0.0F);
 		}
 	}
 	
@@ -112,18 +113,20 @@ public class MoveObjectsControl : MonoBehaviour {
 	{
 		float speedMoveDirection = goInvert ? -this.speedMove : this.speedMove;
 		
-		myTransform.Translate(Time.deltaTime * speedMoveDirection,myTransform.localPosition.y,myTransform.localScale.z);
+		myTransform.Translate(Time.deltaTime * speedMoveDirection , initialPosition.y , initialPosition.z );
 		if( myTransform.localPosition.x > finalPos.x && !goInvert )
 		{
 			isAnimationStart = false;
 			invert = !goInvert;
 			myTransform.Translate(finalPos.x,finalPos.y , finalPos.z );
+			myTransform.localPosition = new Vector3 (finalPos.x,finalPos.y , finalPos.z );
 		}
 		else if( myTransform.localPosition.x < initialPosition.x && goInvert )
 		{
 			isAnimationStart = false;
 			invert = !goInvert;
-			myTransform.Translate( initialPosition.x, initialPosition.y , initialPosition.z );
+			myTransform.Translate( 0.0F, 0.0F, 0.0F );
+			myTransform.localPosition = new Vector3(0.0F,0.0F,0.0F);
 		}
 	}
 }

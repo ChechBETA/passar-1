@@ -13,15 +13,9 @@ public class Pinch : MonoBehaviour {
 	private Vector2 curDist = new Vector2(0,0); 
 	private float speedTouch0 = 0.0F; 
 	private float speedTouch1 = 0.0F;
-
-	// Use this for initialization
-	void Start () 
-	{
-	 
-	}
 	 
 	// Update is called once per frame
-	void Update () 
+	private void Update () 
 	{
 	 
 	    if (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved) 

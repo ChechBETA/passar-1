@@ -2021,8 +2021,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: -.0522091389, y: -.70517683, z: .0522090904, w: .705176711}
-  m_LocalPosition: {x: -.444297254, y: .172547638, z: -.0984842554}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.291889012, y: .143042326, z: -.0928393602}
+  m_LocalScale: {x: .699999988, y: .699999988, z: .699999988}
   m_Children:
   - {fileID: 400234}
   - {fileID: 400130}
@@ -2047,9 +2047,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
-  m_LocalRotation: {x: 0, y: .70710659, z: 0, w: -.707106948}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.49011612e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 200.000015, y: 200, z: 200.000015}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400000}
   m_Father: {fileID: 0}
@@ -6332,6 +6332,7 @@ MonoBehaviour:
   m_Name: 
   speedMove: 300
   finalPos: {x: 0, y: 0, z: 1}
+  axisMove: 2
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -6344,6 +6345,7 @@ MonoBehaviour:
   m_Name: 
   speedMove: 300
   finalPos: {x: 0, y: 0, z: 1}
+  axisMove: 2
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
