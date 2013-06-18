@@ -129,9 +129,11 @@
      <Compile Include="Assets\Scripts\Global\GlobalParams.cs" />
      <Compile Include="Assets\Scripts\Global\LocalStorage.cs" />
      <Compile Include="Assets\Scripts\LevelLoader.cs" />
+     <Compile Include="Assets\Scripts\Levels\Test.cs" />
      <Compile Include="Assets\Scripts\LoadingScreen.cs" />
      <Compile Include="Assets\Scripts\PersistenObject.cs" />
      <Compile Include="Assets\Scripts\Project\Macadamia\BuildingFloor.cs" />
+     <Compile Include="Assets\Scripts\Project\Macadamia\InteriorAvellana.cs" />
      <Compile Include="Assets\Scripts\Project\Macadamia\InteriorCiruelos.cs" />
      <Compile Include="Assets\Scripts\Project\ProjectManager.cs" />
      <Compile Include="Assets\Scripts\Projects\DraggableItem.cs" />

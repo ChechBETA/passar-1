@@ -27,6 +27,7 @@ public class InteriorCiruelos : MonoBehaviour
 			
 			OnFindObjectByFloorNumber( button.StateNum + 1 );
 		});
+		button.transform.parent = null;
 	}
 	
 	public void AddChild(GameObject child)
