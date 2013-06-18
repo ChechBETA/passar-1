@@ -1,7 +1,7 @@
 using UnityEngine; 
 using System.Collections;
 
-public class Pintch : MonoBehaviour { 
+public class Pinch : MonoBehaviour { 
 	public int speed = 4; 
 	public Camera selectedCamera; 
 	public float MINSCALE = 2.0F; 
