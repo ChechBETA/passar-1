@@ -37,18 +37,15 @@ public class UIProject : UIListItemContainer
 	
 	public void SetPortrait(Texture2D image)
 	{
-		Rect configUVS = SetConfigUVS(image,portrait);			
+		Rect configUVS = SetConfigUVS( image );			
 		portrait.SetTexture(image);
 		portrait.UpdateUVs();
 		portrait.SetUVsFromPixelCoords(configUVS);
 		preloader.SetActive(false);
 	}
 	
-	private Rect SetConfigUVS(Texture2D image, SimpleSprite portrait)
+	private Rect SetConfigUVS( Texture2D image )
 	{
-		if(!GlobalParams.Instance.HasInternetConnection)
-			return new Rect(0,0,portrait.pixelDimensions.x,portrait.pixelDimensions.y);
-		
 		return new Rect(0,0,image.width,image.height);
 	}
 	

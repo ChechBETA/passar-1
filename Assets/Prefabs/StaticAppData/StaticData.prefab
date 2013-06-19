@@ -122,6 +122,14 @@ MonoBehaviour:
       thumbnailURL: encenillos/images/etapa_praga.png
       level: 5
       assetBundles: []
+    - name: VIDEO
+      id: 11
+      subtitle: 
+      sortDescription: 
+      description: 
+      thumbnailURL: encenillos/images/video.png
+      level: 5
+      assetBundles: []
   - name: SUMAPAZ
     id: 3
     portraitURL: sumapaz/images/portrait.png
@@ -129,7 +137,7 @@ MonoBehaviour:
     imageResources: {fileID: 11400000, guid: 94ddf7257e7d14547a478ffad20cc5a0, type: 2}
     items:
     - name: HACIENDA SUMAPAZ
-      id: 11
+      id: 12
       subtitle: "Localizaci\xF3n"
       sortDescription: 
       description: "Zona de valorizaci\xF3n y desarrollo"
@@ -150,6 +158,14 @@ MonoBehaviour:
       sortDescription: INTERIOR - EXTERIOR
       description: 
       thumbnailURL: sumapaz/images/casa_l.png
+      level: 6
+      assetBundles: []
+    - name: VIDEO
+      id: 15
+      subtitle: 
+      sortDescription: 
+      description: 
+      thumbnailURL: sumapaz/images/video.png
       level: 6
       assetBundles: []
 --- !u!1001 &100100000

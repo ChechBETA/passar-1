@@ -449,7 +449,7 @@ MonoBehaviour:
   slider: {fileID: 0}
   orientation: 1
   direction: 0
-  alignment: 0
+  alignment: 1
   viewableArea: {x: 360, y: 560}
   unitsInPixels: 0
   renderCamera: {fileID: 0}
@@ -493,48 +493,48 @@ MonoBehaviour:
     sortDescription: 
     description: "Casas con la mejor Ubicaci\xF3n."
     thumbnailURL: macadamia/images/localizacion.png
+    level: 0
     assetBundles: []
-    showMainLogo: 1
   - name: ETAPA CIRUELOS
     id: 0
     subtitle: Exterior vivienda
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos.png
+    level: 0
     assetBundles: []
-    showMainLogo: 0
   - name: ETAPA CIRUELOS
     id: 0
     subtitle: Interior vivienda
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos_int.png
+    level: 0
     assetBundles: []
-    showMainLogo: 0
   - name: ETAPA AVELLANOS
     id: 0
     subtitle: Exterior vivienda
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos.png
+    level: 0
     assetBundles: []
-    showMainLogo: 0
   - name: ETAPA AVELLANOS
     id: 0
     subtitle: Interior vivienda
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos_int.png
+    level: 0
     assetBundles: []
-    showMainLogo: 0
   - name: "\xC1REAS COMUNES"
     id: 0
     subtitle: (Interactivo)
     sortDescription: 
     description: 
     thumbnailURL: macadamia/images/areas_comunes.png
+    level: 0
     assetBundles: []
-    showMainLogo: 0
 --- !u!114 &11400006
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -881,7 +881,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1014, y: 1024}
+  pixelsPerUV: {x: 1024, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 516, y: 50}

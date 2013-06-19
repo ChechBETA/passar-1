@@ -52,6 +52,8 @@ MonoBehaviour:
     texture: {fileID: 2800000, guid: 7978d23f67ae949b28e4008ee0959093, type: 3}
   - name: sumapaz/images/casa_l.png
     texture: {fileID: 2800000, guid: be59869c72e4c40e4a312c1e953c73bd, type: 3}
+  - name: sumapaz/images/video.png
+    texture: {fileID: 2800000, guid: 48fbf53dc12bf4ea2a227ac6453ea6f6, type: 3}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

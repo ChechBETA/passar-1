@@ -13,6 +13,7 @@ public class ProjectItemsMenu : MonoBehaviour , IUIDisplayObject
 	public List<ProjectItemDescriptor> projectItems;
 	public event Action onClose;
 	private ProjectDescriptor project;
+
 	
 	private void Start()
 	{
@@ -37,12 +38,27 @@ public class ProjectItemsMenu : MonoBehaviour , IUIDisplayObject
 			list.AddItem(itemObj);
 		}
 		
+		list.transform.localPosition = UpdatePositionList();
+		list.UpdateCamera();
 		Show();
 		
 		if(GlobalParams.Instance.HasInternetConnection)
 			StartCoroutine(DownloadImages());
 		else
 			GetImagesFromCache();
+	}
+	
+	private Vector3 UpdatePositionList()
+	{
+		Vector3 currentPos = list.transform.localPosition;
+		switch(list.Count)
+		{
+			case 4:
+				return new Vector3(currentPos.x , -20F , currentPos.z);
+			
+			default:
+				return new Vector3(currentPos.x , 30F , currentPos.z);
+		}
 	}
 	
 	private void GetImagesFromCache()
