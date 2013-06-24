@@ -20,6 +20,8 @@ public class ProjectItemDescriptor
 	public string sortDescription;
 	public string description;
 	public string thumbnailURL;
+	public string videoURL;
+	public bool loadVideo = false;
 	public Level level;
 	public List<AssetBundleFile> assetBundles;
 }

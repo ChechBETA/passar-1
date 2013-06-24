@@ -1,9 +1,8 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/SliderComponent/ProjectItemsMenu.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/Controls/ScaleControlSlider.cs">
     <Files>
-      <File FileName="Assets/Scripts/UI/Controls/MoveObjectsControl.cs" Line="21" Column="13" />
-      <File FileName="Assets/Scripts/UI/SliderComponent/ProjectItemsMenu.cs" Line="125" Column="3" />
+      <File FileName="Assets/Scripts/UI/Controls/ScaleControlSlider.cs" Line="45" Column="2" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">

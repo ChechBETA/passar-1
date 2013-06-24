@@ -1,23 +1,23 @@
 using UnityEngine; 
 using System.Collections;
 
-public class Pinch : MonoBehaviour { 
-	public int speed = 4; 
-	public Camera selectedCamera; 
-	public float MINSCALE = 2.0F; 
-	public float MAXSCALE = 5.0F; 
+public class Pinch : MonoBehaviour 
+{ 
+	public float speed = 0.1F; 
+
+	public UISlider slider;
 	public float minPinchSpeed = 5.0F; 
 	public float varianceInDistances = 5.0F;
+	
 	private float touchDelta = 0.0F; 
 	private Vector2 prevDist = new Vector2(0,0); 
 	private Vector2 curDist = new Vector2(0,0); 
 	private float speedTouch0 = 0.0F; 
 	private float speedTouch1 = 0.0F;
 	 
-	// Update is called once per frame
+	
 	private void Update () 
 	{
-	 
 	    if (Input.touchCount == 2 && Input.GetTouch(0).phase == TouchPhase.Moved && Input.GetTouch(1).phase == TouchPhase.Moved) 
 	    {
 	 
@@ -30,14 +30,12 @@ public class Pinch : MonoBehaviour {
 	 
 	        if ((touchDelta + varianceInDistances <= 1) && (speedTouch0 > minPinchSpeed) && (speedTouch1 > minPinchSpeed))
 	        {
-	 
-	            selectedCamera.fieldOfView = Mathf.Clamp(selectedCamera.fieldOfView + (1 * speed),15,90);
+				slider.Value = Mathf.Clamp(slider.Value - ( 1* speed) , 0 , 1 );
 	        }
 	 
 	        if ((touchDelta +varianceInDistances > 1) && (speedTouch0 > minPinchSpeed) && (speedTouch1 > minPinchSpeed))
 	        {
-	 
-	            selectedCamera.fieldOfView = Mathf.Clamp(selectedCamera.fieldOfView - (1 * speed),15,90);
+	 			slider.Value = Mathf.Clamp(slider.Value + ( 1* speed) , 0 , 1 );
 	        }
 	 
 	    }       

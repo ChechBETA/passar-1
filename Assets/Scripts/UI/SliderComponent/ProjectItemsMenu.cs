@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
@@ -99,12 +100,20 @@ public class ProjectItemsMenu : MonoBehaviour , IUIDisplayObject
 	{
 		AppManager.Instance.CurrentProject = project;
 		
+#if UNITY_IPHONE
+		if(project.loadVideo)
+		{
+			string pathVideo = GlobalParams.Instance.VideosPath + project.videoURL;
+			Debug.Log("APP URL PATH ===== " + GlobalParams.Instance.AppPath);
+			Debug.Log("THIS IS THE PATH VIDEO ===== " + pathVideo);
+			Handheld.PlayFullScreenMovie (project.videoURL , Color.black, FullScreenMovieControlMode.Full);
+			return;
+		}
+#endif
 		if(GlobalParams.Instance.IsApplicationDinamic)
 			LevelLoader.Instance.LoadScene(Level.Project);
-		else{
-			Debug.Log(project.level);
+		else
 			LevelLoader.Instance.LoadScene(project.level);
-		}
 	}
 	
 	public void Hide ()

@@ -695,7 +695,7 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.49011612e-07}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2393,6 +2393,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa2d95e4cf3da40c4993dcf2965c6c30, type: 3}
   m_Name: 
+  mainAnimation: {fileID: 0}
   indicator:
   - {fileID: 11100008}
   - {fileID: 11100006}
@@ -2435,11 +2436,11 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 512, y: 512}
+  pixelsPerUV: {x: 256, y: 256}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 0, y: 512}
-  pixelDimensions: {x: 512, y: 512}
+  lowerLeftPixel: {x: 0, y: 256}
+  pixelDimensions: {x: 256, y: 256}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

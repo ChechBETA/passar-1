@@ -1,3 +1,4 @@
+using System.IO;
 using UnityEngine;
 using System.Collections;
 
@@ -28,6 +29,16 @@ public class GlobalParams : MonoBehaviour {
 	{
 		get;
 		private set;
+	}
+	
+	public string AppPath
+	{
+		get{ return Application.dataPath; }
+	}
+	
+	public string VideosPath
+	{
+		get{ return Application.streamingAssetsPath + "/Videos/"; }
 	}
 	
 	public string DomainPath

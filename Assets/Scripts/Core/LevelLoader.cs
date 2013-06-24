@@ -9,7 +9,8 @@ public enum Level
 	Project = 3,
 	Macadamia = 4,
 	Encenillos = 5,
-	Sumapaz = 6
+	Sumapaz = 6,
+	Refugio = 7
 }
 
 public enum SubLevel

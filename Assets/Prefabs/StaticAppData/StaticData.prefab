@@ -50,6 +50,8 @@ MonoBehaviour:
       sortDescription: 
       description: "Casas con la mejor ubicaci\xF3n"
       thumbnailURL: macadamia/images/localizacion.png
+      videoURL: 
+      loadVideo: 0
       level: 4
       assetBundles: []
     - name: ETAPA CIRUELOS
@@ -58,6 +60,8 @@ MonoBehaviour:
       sortDescription: CASA TIPO
       description: 
       thumbnailURL: macadamia/images/etapa_ciruelos.png
+      videoURL: 
+      loadVideo: 0
       level: 4
       assetBundles: []
     - name: ETAPA CIRUELOS
@@ -66,6 +70,8 @@ MonoBehaviour:
       sortDescription: Interior
       description: 
       thumbnailURL: macadamia/images/etapa_ciruelos_int.png
+      videoURL: 
+      loadVideo: 0
       level: 4
       assetBundles: []
     - name: ETAPA AVELLANOS
@@ -74,6 +80,8 @@ MonoBehaviour:
       sortDescription: CASA TIPO
       description: 
       thumbnailURL: macadamia/images/etapa_avellanos.png
+      videoURL: 
+      loadVideo: 0
       level: 4
       assetBundles: []
     - name: ETAPA AVELLANOS
@@ -82,6 +90,8 @@ MonoBehaviour:
       sortDescription: Interior
       description: 
       thumbnailURL: macadamia/images/etapa_avellanos_int.png
+      videoURL: 
+      loadVideo: 0
       level: 4
       assetBundles: []
   - name: ENCENILLOS
@@ -96,6 +106,8 @@ MonoBehaviour:
       sortDescription: 
       description: "Zona de valorizaci\xF3n y desarrollo"
       thumbnailURL: encenillos/images/localizacion.png
+      videoURL: 
+      loadVideo: 0
       level: 5
       assetBundles: []
     - name: SEDE SOCIAL
@@ -104,6 +116,8 @@ MonoBehaviour:
       sortDescription: SEDE SOCIAL
       description: 
       thumbnailURL: encenillos/images/sede_social.png
+      videoURL: 
+      loadVideo: 0
       level: 5
       assetBundles: []
     - name: ETAPA SORRENTO
@@ -112,6 +126,8 @@ MonoBehaviour:
       sortDescription: INTERIOR - EXTERIOR
       description: 
       thumbnailURL: encenillos/images/etapa_sorrento.png
+      videoURL: 
+      loadVideo: 0
       level: 5
       assetBundles: []
     - name: ETAPA PRAGA
@@ -120,6 +136,8 @@ MonoBehaviour:
       sortDescription: INTERIOR - EXTERIOR
       description: 
       thumbnailURL: encenillos/images/etapa_praga.png
+      videoURL: 
+      loadVideo: 0
       level: 5
       assetBundles: []
     - name: VIDEO
@@ -128,6 +146,8 @@ MonoBehaviour:
       sortDescription: 
       description: 
       thumbnailURL: encenillos/images/video.png
+      videoURL: encenillos.mov
+      loadVideo: 1
       level: 5
       assetBundles: []
   - name: SUMAPAZ
@@ -142,6 +162,8 @@ MonoBehaviour:
       sortDescription: 
       description: "Zona de valorizaci\xF3n y desarrollo"
       thumbnailURL: sumapaz/images/localizacion.png
+      videoURL: 
+      loadVideo: 0
       level: 6
       assetBundles: []
     - name: ETAPA CASA BAMBU
@@ -150,6 +172,8 @@ MonoBehaviour:
       sortDescription: INTERIOR - EXTERIOR
       description: 
       thumbnailURL: sumapaz/images/casa_bambu.png
+      videoURL: 
+      loadVideo: 0
       level: 6
       assetBundles: []
     - name: ETAPA CASA L
@@ -158,6 +182,8 @@ MonoBehaviour:
       sortDescription: INTERIOR - EXTERIOR
       description: 
       thumbnailURL: sumapaz/images/casa_l.png
+      videoURL: 
+      loadVideo: 0
       level: 6
       assetBundles: []
     - name: VIDEO
@@ -166,7 +192,35 @@ MonoBehaviour:
       sortDescription: 
       description: 
       thumbnailURL: sumapaz/images/video.png
+      videoURL: sumapaz.mp4
+      loadVideo: 1
       level: 6
+      assetBundles: []
+  - name: REFUGIO
+    id: 4
+    portraitURL: refugio/images/portrait.png
+    smallLogoURL: refugio/images/small_logo.jpg
+    imageResources: {fileID: 11400000, guid: 16766d8b70f1e4b0289b999f634ed1ee, type: 2}
+    items:
+    - name: REFUGIO-LA FELICIDAD
+      id: 16
+      subtitle: "Localizaci\xF3n"
+      sortDescription: 
+      description: Frente al gran parque central la felicidad
+      thumbnailURL: refugio/images/localizacion.png
+      videoURL: 
+      loadVideo: 0
+      level: 7
+      assetBundles: []
+    - name: REFUGIO-LA FELICIDAD
+      id: 17
+      subtitle: Exterior
+      sortDescription: Exterior
+      description: 
+      thumbnailURL: refugio/images/exterior.png
+      videoURL: 
+      loadVideo: 0
+      level: 7
       assetBundles: []
 --- !u!1001 &100100000
 Prefab:

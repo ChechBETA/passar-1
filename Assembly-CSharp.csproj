@@ -135,6 +135,7 @@
      <Compile Include="Assets\Scripts\Global\ServerImages.cs" />
      <Compile Include="Assets\Scripts\Global\StartLevel.cs" />
      <Compile Include="Assets\Scripts\Levels\Test.cs" />
+     <Compile Include="Assets\Scripts\Project\CR_Rotate.cs" />
      <Compile Include="Assets\Scripts\Project\Encenillos\Encenillos.cs" />
      <Compile Include="Assets\Scripts\Project\Encenillos\EncenillosAnimation.cs" />
      <Compile Include="Assets\Scripts\Project\Encenillos\LookAtCamera.cs" />
@@ -143,14 +144,16 @@
      <Compile Include="Assets\Scripts\Project\Macadamia\InteriorCiruelos.cs" />
      <Compile Include="Assets\Scripts\Project\Macadamia\Macadamia.cs" />
      <Compile Include="Assets\Scripts\Project\ProjectManager.cs" />
+     <Compile Include="Assets\Scripts\Project\Refugio\Refugio.cs" />
      <Compile Include="Assets\Scripts\Project\StaticDataManager.cs" />
-     <Compile Include="Assets\Scripts\Project\Sumapaz.cs" />
+     <Compile Include="Assets\Scripts\Project\Sumapaz\Sumapaz.cs" />
      <Compile Include="Assets\Scripts\Projects\DraggableItem.cs" />
      <Compile Include="Assets\Scripts\Projects\LocalizationMacadamia.cs" />
      <Compile Include="Assets\Scripts\Projects\ScalableSignMacadamia.cs" />
      <Compile Include="Assets\Scripts\Services\ServiceBase.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\AniSprite.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\MoveObjectsControl.cs" />
+     <Compile Include="Assets\Scripts\UI\Controls\ScaleControlSlider.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\UIButtonPassar3D.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\UICameraAreaRender.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\UIPassarButton.cs" />

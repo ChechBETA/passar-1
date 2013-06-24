@@ -440,7 +440,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!1 &100054
 GameObject:
   m_ObjectHideFlags: 1
@@ -1831,7 +1831,7 @@ Renderer:
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 936263340045345a6a48b456f1352187, type: 2}
+  - {fileID: 2100000, guid: 65af44de76eb5401a89979ca9e4961e1, type: 2}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -3102,6 +3102,7 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: aa2d95e4cf3da40c4993dcf2965c6c30, type: 3}
   m_Name: 
+  mainAnimation: {fileID: 11100000}
   indicator:
   - {fileID: 11100016}
   - {fileID: 11100014}

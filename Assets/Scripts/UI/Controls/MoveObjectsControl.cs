@@ -45,6 +45,9 @@ public class MoveObjectsControl : MonoBehaviour {
 	private void Update()
 	{
 #if UNITY_IPHONE
+		if( Input.touchCount != 1)
+			return;
+		
 		RaycastHit hit = new RaycastHit();
 		for(int i = 0; i < Input.touchCount; i++)
 		{
