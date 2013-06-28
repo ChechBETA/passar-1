@@ -12,7 +12,7 @@ public class CR_Rotate : MonoBehaviour {
 	private bool canRotate = false;
 	private bool canStartRotate = false;
 	private Transform myTransform;
-	
+	private Quaternion myInitialRotation;
 	
 	
 	public bool CanRotate
@@ -25,6 +25,7 @@ public class CR_Rotate : MonoBehaviour {
 	private void Start() 
 	{
 		myTransform = GetComponent<Transform>();
+		myInitialRotation = myTransform.localRotation;
 		//boxCollider.enabled = false;
 		rotateCam.enabled = false;
 		
@@ -108,24 +109,10 @@ public class CR_Rotate : MonoBehaviour {
 	private void ActiveRotateCam()
 	{
 		canStartRotate = !canStartRotate;
+		if(!canRotate)
+			myTransform.localRotation = myInitialRotation;
+		
 		return;
-		if(rotateCam.enabled)
-			return;
-		
-		
-		//CameraDevice.Instance.Stop();
-		
-		foreach(Camera cam in Camera.allCameras)
-		{
-			if(cam != rotateCam && cam != UIManager.instance.rayCamera)
-				cam.enabled = false;
-		}
-		
-		rotateCam.enabled = true;
-		boxCollider.enabled = true;
-		myTransform.parent = newContainer;
-		myTransform.localScale = Vector3.one;
-		//UIProjectScene.Instance.LoadRotateScene();
 	}
 	
 	

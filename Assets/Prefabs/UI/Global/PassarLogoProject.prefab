@@ -26,9 +26,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
-  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106709}
-  m_LocalPosition: {x: -1137.5, y: -472.499969, z: -19}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106709}
+  m_LocalPosition: {x: -481.25, y: -288.749969, z: -9}
+  m_LocalScale: {x: .600000024, y: .600000024, z: .600000024}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!23 &2300000
@@ -93,10 +93,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 914.5, y: 190}
+  lowerLeftPixel: {x: 904.099976, y: 190}
   pixelDimensions: {x: 109, y: 58}
 --- !u!114 &11400004
 MonoBehaviour:
@@ -109,11 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33ab2e5fa354ca7893ab42268701a6, type: 3}
   m_Name: 
   renderCamera: {fileID: 0}
-  screenPos: {x: -20, y: -30, z: 1}
+  screenPos: {x: 45, y: 75, z: 1}
   ignoreZ: 1
   relativeTo:
-    horizontal: 2
-    vertical: 1
+    horizontal: 1
+    vertical: 2
   relativeObject: {fileID: 0}
   alwaysRecursive: 0
   allowTransformDrag: 0
