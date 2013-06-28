@@ -1,12 +1,13 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Project/VirtualButtonEventHandler.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/UI/MainMenu/UIProject.cs">
     <Files>
       <File FileName="../Julian/testbuttons/Assets/Scripts/VirtualButtonEventHandler.cs" Line="46" Column="10" />
       <File FileName="Assets/Scripts/UI/Controls/ScaleControlSlider.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Project/CR_Rotate.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Project/ProjectManager.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/Project/VirtualButtonEventHandler.cs" Line="17" Column="12" />
+      <File FileName="Assets/Scripts/UI/MainMenu/UIProject.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ClassPad">

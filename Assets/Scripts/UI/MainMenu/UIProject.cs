@@ -29,6 +29,8 @@ public class UIProject : UIListItemContainer
 	public GameObject preloader;
 	public Action onPressDelegate;
 	
+	private float delayExecute = 0.4F;
+	
 	public string TextureURL
 	{
 		get; 
@@ -63,6 +65,9 @@ public class UIProject : UIListItemContainer
 	
 	private void OnPressDelegate()
 	{
+		if(button.TimeLapsePressed < delayExecute)
+			return;
+		
 		AppManager.Instance.CurrentProjectID = projectId;
 		
 		if(onPressDelegate != null)

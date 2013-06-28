@@ -63,7 +63,9 @@ public class LevelLoader : MonoBehaviour
 
 		yield return Resources.UnloadUnusedAssets();
 		
-		yield return Application.LoadLevelAsync ( (int) PendingScene);
+//		yield return Application.LoadLevelAsync ( (int) PendingScene);
+		Debug.LogWarning("please remember change to LoadlevelAsync when have license pro");
+		Application.LoadLevel ( (int) PendingScene);
 	}
 	
 	public void LoadScene(Level level)

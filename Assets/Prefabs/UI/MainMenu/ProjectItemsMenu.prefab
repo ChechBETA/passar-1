@@ -150,7 +150,7 @@ Transform:
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 25.8209229, z: 1}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .850000024, y: .850000024, z: .850000024}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400002
@@ -176,7 +176,7 @@ Transform:
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 25.8209229, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .850000024, y: .850000024, z: .850000024}
   m_Children: []
   m_Father: {fileID: 400002}
 --- !u!4 &400006
@@ -186,7 +186,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6, y: -30, z: .00999999978}
+  m_LocalPosition: {x: 18.4446144, y: 23.6318207, z: .00999450684}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -197,7 +197,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 10, z: 0}
+  m_LocalPosition: {x: 15.5625153, y: 21.52771, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -208,7 +208,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100010}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 180, y: 305.820923, z: 0}
+  m_LocalPosition: {x: 150, y: 270, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -231,7 +231,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -240, y: -280, z: .0999755859}
+  m_LocalPosition: {x: -161.063202, y: -293.765076, z: .0999755859}
   m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400006}
@@ -425,7 +425,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 0, y: 767}
@@ -493,6 +493,8 @@ MonoBehaviour:
     sortDescription: 
     description: "Casas con la mejor Ubicaci\xF3n."
     thumbnailURL: macadamia/images/localizacion.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
   - name: ETAPA CIRUELOS
@@ -501,6 +503,8 @@ MonoBehaviour:
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
   - name: ETAPA CIRUELOS
@@ -509,6 +513,8 @@ MonoBehaviour:
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_ciruelos_int.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
   - name: ETAPA AVELLANOS
@@ -517,6 +523,8 @@ MonoBehaviour:
     sortDescription: CASA TIPO
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
   - name: ETAPA AVELLANOS
@@ -525,6 +533,8 @@ MonoBehaviour:
     sortDescription: PISOS
     description: 
     thumbnailURL: macadamia/images/etapa_avellanos_int.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
   - name: "\xC1REAS COMUNES"
@@ -533,6 +543,8 @@ MonoBehaviour:
     sortDescription: 
     description: 
     thumbnailURL: macadamia/images/areas_comunes.png
+    videoURL: 
+    loadVideo: 0
     level: 0
     assetBundles: []
 --- !u!114 &11400006
@@ -642,7 +654,7 @@ MonoBehaviour:
   characterSize: 18
   characterSpacing: .850000024
   lineSpacing: .800000012
-  anchor: 4
+  anchor: 0
   alignment: 1
   tabSize: 4
   font: {fileID: 4900000, guid: 23fcda6a07b20422d8d233c411c7047c, type: 3}
@@ -681,17 +693,17 @@ MonoBehaviour:
   width: 57
   height: 61
   bleedCompensation: {x: 0, y: 0}
-  anchor: 9
+  anchor: 6
   pixelPerfect: 0
   autoResize: 0
   billboarded: 0
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 734, y: 264}
+  lowerLeftPixel: {x: 727.450012, y: 264}
   pixelDimensions: {x: 58, y: 61}
 --- !u!114 &11400012
 MonoBehaviour:
@@ -881,10 +893,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 516, y: 50}
+  lowerLeftPixel: {x: 511.160004, y: 50}
   pixelDimensions: {x: 50, y: 50}
 --- !u!114 &11400016
 MonoBehaviour:
@@ -905,7 +917,7 @@ MonoBehaviour:
   width: 90
   height: 90
   bleedCompensation: {x: 0, y: 0}
-  anchor: 4
+  anchor: 6
   pixelPerfect: 0
   autoResize: 0
   billboarded: 0

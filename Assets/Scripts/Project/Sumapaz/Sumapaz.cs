@@ -14,10 +14,10 @@ public class Sumapaz : MonoBehaviour {
 	{
 		int currentProject = AppManager.Instance.CurrentProject.id;
 		project.preloader.gameObject.SetActive(false);
-		
+	
 		switch(currentProject)
 		{
-			case 11:
+			case 12:
 				project.logo.Hide(false);
 				localizacion.SetActive(true);
 				break;

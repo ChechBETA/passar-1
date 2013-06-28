@@ -314,8 +314,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100004}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 80, z: 0}
+  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400008}
   - {fileID: 400006}
@@ -411,7 +411,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -200, z: 0}
+  m_LocalPosition: {x: 0, y: -120, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400022}
@@ -434,8 +434,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100024}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 80, z: 0}
+  m_LocalScale: {x: .800000012, y: .800000012, z: .800000012}
   m_Children:
   - {fileID: 400016}
   - {fileID: 400018}
@@ -472,7 +472,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100030}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -314.999969, z: -9}
+  m_LocalPosition: {x: 0, y: -367.499969, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400014}
@@ -913,7 +913,7 @@ MonoBehaviour:
         easing: 0
         color: {r: 1, g: 1, b: 1, a: 1}
         color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 1, y: 1, z: 1}
+        vec: {x: .800000012, y: .800000012, z: .800000012}
         vec2: {x: 0, y: 0, z: 0}
         axis: {x: 0, y: 0, z: 0}
         floatVal: 0
@@ -932,7 +932,7 @@ MonoBehaviour:
         easing: 0
         color: {r: 1, g: 1, b: 1, a: 1}
         color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 1, y: 1, z: 1}
+        vec: {x: .800000012, y: .800000012, z: .800000012}
         vec2: {x: 0, y: 0, z: 0}
         axis: {x: 0, y: 0, z: 0}
         floatVal: 0
@@ -970,7 +970,7 @@ MonoBehaviour:
         easing: 0
         color: {r: 1, g: 1, b: 1, a: 1}
         color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 1, y: 1, z: 1}
+        vec: {x: .800000012, y: .800000012, z: .800000012}
         vec2: {x: 0, y: 0, z: 0}
         axis: {x: 0, y: 0, z: 0}
         floatVal: 0
@@ -1467,7 +1467,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 749, y: 193}
@@ -1500,7 +1500,7 @@ MonoBehaviour:
         easing: 0
         color: {r: 1, g: 1, b: 1, a: 1}
         color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 1, y: 1, z: 1}
+        vec: {x: .800000012, y: .800000012, z: .800000012}
         vec2: {x: 0, y: 0, z: 0}
         axis: {x: 0, y: 0, z: 0}
         floatVal: 0
@@ -1519,7 +1519,7 @@ MonoBehaviour:
         easing: 0
         color: {r: 1, g: 1, b: 1, a: 1}
         color2: {r: 1, g: 1, b: 1, a: 1}
-        vec: {x: 1, y: 1, z: 1}
+        vec: {x: .800000012, y: .800000012, z: .800000012}
         vec2: {x: 0, y: 0, z: 0}
         axis: {x: 0, y: 0, z: 0}
         floatVal: 0
@@ -1660,7 +1660,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 590, y: 124}
@@ -1687,7 +1687,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33ab2e5fa354ca7893ab42268701a6, type: 3}
   m_Name: 
   renderCamera: {fileID: 0}
-  screenPos: {x: 0, y: 60, z: 1}
+  screenPos: {x: 0, y: 30, z: 1}
   ignoreZ: 0
   relativeTo:
     horizontal: 3

@@ -10,8 +10,19 @@ public class UIPassarButton : UIButton
 	protected Vector3 originalSize;
 	protected float growScale = 0.85F;
 	private bool wasPressed;
+	private float startTimePressed;
+	private float finishTimePressed;
 	
 	private SimpleSprite [] images;
+	
+	public float TimeLapsePressed
+	{
+		get
+		{ 
+			float timeLapse = finishTimePressed - startTimePressed;
+			return timeLapse < 0F ? 0F : timeLapse; 
+		}
+	}
 	
 	protected override void Awake ()
 	{
@@ -56,6 +67,7 @@ public class UIPassarButton : UIButton
 		}
 		else if(ptr.evt == POINTER_INFO.INPUT_EVENT.RELEASE)
 		{
+			
 			ActivatePressedState(false,true);
 		}
 		else if(ptr.evt == POINTER_INFO.INPUT_EVENT.RELEASE_OFF)
@@ -68,12 +80,13 @@ public class UIPassarButton : UIButton
 	{
 		if(bPressed)
 		{
+			startTimePressed = Time.realtimeSinceStartup;
 			myTransform.localScale = originalSize * growScale;
 		}
 		else
 		{
 			myTransform.localScale = originalSize;
-			
+			finishTimePressed = Time.realtimeSinceStartup;
 			if(executeDelegate && wasPressed)
 			{
 				wasPressed = false;

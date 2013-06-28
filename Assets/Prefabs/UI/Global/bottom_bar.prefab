@@ -203,7 +203,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100000}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -389.374969, z: -9}
+  m_LocalPosition: {x: .177906901, y: -438.961578, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400020}
@@ -215,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100002}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 8, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 400020}
@@ -237,7 +237,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100006}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 148.513184, y: 20, z: 0}
+  m_LocalPosition: {x: 148.513184, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400004}
@@ -249,7 +249,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.890274, y: 20, z: 0}
+  m_LocalPosition: {x: 60.890274, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400010}
@@ -283,7 +283,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -50.4947891, y: 20, z: 0}
+  m_LocalPosition: {x: -50.4947891, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400012}
@@ -295,7 +295,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 100016}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -145.543396, y: 20, z: 0}
+  m_LocalPosition: {x: -145.543396, y: 60, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 400018}
@@ -563,7 +563,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e33ab2e5fa354ca7893ab42268701a6, type: 3}
   m_Name: 
   renderCamera: {fileID: 0}
-  screenPos: {x: 0, y: 17.5, z: 1}
+  screenPos: {x: 0, y: -10, z: 1}
   ignoreZ: 0
   relativeTo:
     horizontal: 3
@@ -602,14 +602,14 @@ MonoBehaviour:
   width: 1400
   height: 100
   bleedCompensation: {x: 0, y: 0}
-  anchor: 9
+  anchor: 7
   pixelPerfect: 0
   autoResize: 0
   billboarded: 0
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
   lowerLeftPixel: {x: 948, y: 396}
@@ -640,10 +640,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 882, y: 384}
+  lowerLeftPixel: {x: 876.700012, y: 384}
   pixelDimensions: {x: 50, y: 53}
 --- !u!114 &11400008
 MonoBehaviour:
@@ -995,10 +995,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 802, y: 384}
+  lowerLeftPixel: {x: 795, y: 384}
   pixelDimensions: {x: 78, y: 53}
 --- !u!114 &11400014
 MonoBehaviour:
@@ -1026,10 +1026,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 726, y: 384}
+  lowerLeftPixel: {x: 715.400024, y: 384}
   pixelDimensions: {x: 78, y: 53}
 --- !u!114 &11400016
 MonoBehaviour:
@@ -1381,10 +1381,10 @@ MonoBehaviour:
   offset: {x: 0, y: 0, z: 0}
   color: {r: 1, g: 1, b: 1, a: 1}
   renderCamera: {fileID: 0}
-  pixelsPerUV: {x: 1024, y: 1024}
+  pixelsPerUV: {x: 1014, y: 1024}
   hideAtStart: 0
   ignoreClipping: 0
-  lowerLeftPixel: {x: 734, y: 324}
+  lowerLeftPixel: {x: 725.900024, y: 324}
   pixelDimensions: {x: 37, y: 53}
 --- !u!114 &11400022
 MonoBehaviour:
