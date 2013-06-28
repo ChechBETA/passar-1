@@ -3,18 +3,18 @@ using System.Collections;
 
 
                                         
-public class VirtualButtonEventHandler : MonoBehaviour
+public class VirtualButtonEventHandler : MonoBehaviour, IVirtualButtonEventHandler
 {
 	public ScaleControlSlider sliderControl;
 	public GameObject [] projects;
 	
 	private void Start()
 	{
-		/*VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
+		VirtualButtonBehaviour[] vbs = GetComponentsInChildren<VirtualButtonBehaviour>();
         for (int i = 0; i < vbs.Length; ++i)
         {
             vbs[i].RegisterEventHandler(this);
-        }*/
+        }
 	}	
 	/*Assets/Scripts/Project/VirtualButtonsController.cs(6,14): error CS0738: `VirtualButtonsController
 		' does not implement interface member `IVirtualButtonEventHandler.OnButtonReleased(VirtualButtonBehaviour)' 
@@ -49,6 +49,11 @@ public class VirtualButtonEventHandler : MonoBehaviour
 				projects[4].SetActive( true );
 			break;
 		}
+	}
+	
+	public void OnButtonReleased (VirtualButtonBehaviour vb)
+	{
+		Debug.Log("OnButtonPressed");
 	}
 	
 	private void DisabledProjects()

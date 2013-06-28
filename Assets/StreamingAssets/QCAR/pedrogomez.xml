@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
   <Tracking>
-    <ImageTarget name="encenillos" size="5000.000000 5000.000000" />
     <ImageTarget name="refugio" size="5000.000000 5000.000000" />
-    <ImageTarget name="macadamia_square" size="5000.000000 5000.000000" />
-    <ImageTarget name="sumapaz" size="5000.000000 4573.459473" />
+    <ImageTarget name="sumapaz_bubble" size="5000.000000 5000.000000" />
+    <ImageTarget name="encenillos_bubble" size="5000.000000 5000.000000" />
+    <ImageTarget name="macadamia_bubble" size="5000.000000 5000.000000" />
   </Tracking>
 </QCARConfig>
