@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -91,7 +91,7 @@ public class ImageTargetImpl : TrackableImpl, ImageTarget
     /// Creates a new virtual button and adds it to the ImageTarget
     /// Returns NULL if the corresponding DataSet is currently active.
     /// </summary>
-    public VirtualButton CreateVirtualButton(string name, VirtualButton.RectangleData area)
+    public VirtualButton CreateVirtualButton(string name, RectangleData area)
     {
         VirtualButton virtualButton = CreateNewVirtualButtonInNative(name, area);
 
@@ -181,7 +181,7 @@ public class ImageTargetImpl : TrackableImpl, ImageTarget
     #region PRIVATE_METHODS
 
     // Registers a Virtual Button at native code.
-    private VirtualButton CreateNewVirtualButtonInNative(string name, VirtualButton.RectangleData rectangleData)
+    private VirtualButton CreateNewVirtualButtonInNative(string name, RectangleData rectangleData)
     {
         // virtual buttons cannot be registered for user defined targets:
         if (ImageTargetType != ImageTargetType.PREDEFINED)
@@ -193,7 +193,7 @@ public class ImageTargetImpl : TrackableImpl, ImageTarget
 
 
         IntPtr rectPtr = Marshal.AllocHGlobal(
-            Marshal.SizeOf(typeof(VirtualButton.RectangleData)));
+            Marshal.SizeOf(typeof(RectangleData)));
         Marshal.StructureToPtr(rectangleData, rectPtr, false);
 
         bool registerWorked =
@@ -256,53 +256,56 @@ public class ImageTargetImpl : TrackableImpl, ImageTarget
     {
         // Allocate array for all Image Targets.
         int numVirtualButtons = QCARWrapper.Instance.ImageTargetGetNumVirtualButtons(mDataSet.DataSetPtr, Name);
-        IntPtr virtualButtonDataPtr =
-            Marshal.AllocHGlobal(Marshal.SizeOf(typeof(QCARManagerImpl.VirtualButtonData)) * numVirtualButtons);
-        IntPtr rectangleDataPtr =
-            Marshal.AllocHGlobal(Marshal.SizeOf(typeof(VirtualButton.RectangleData)) * numVirtualButtons);
-
-        // Copy Virtual Button data from native.
-        QCARWrapper.Instance.ImageTargetGetVirtualButtons(virtualButtonDataPtr,
-                                     rectangleDataPtr,
-                                     numVirtualButtons,
-                                     mDataSet.DataSetPtr,
-                                     Name);
-
-        for (int i = 0; i < numVirtualButtons; ++i)
+        if (numVirtualButtons > 0)
         {
-            IntPtr vbPtr = new IntPtr(virtualButtonDataPtr.ToInt32() + i *
-                    Marshal.SizeOf(typeof(QCARManagerImpl.VirtualButtonData)));
-            QCARManagerImpl.VirtualButtonData vbData = (QCARManagerImpl.VirtualButtonData)
-                    Marshal.PtrToStructure(vbPtr, typeof(QCARManagerImpl.VirtualButtonData));
+            IntPtr virtualButtonDataPtr =
+                Marshal.AllocHGlobal(Marshal.SizeOf(typeof(QCARManagerImpl.VirtualButtonData)) * numVirtualButtons);
+            IntPtr rectangleDataPtr =
+                Marshal.AllocHGlobal(Marshal.SizeOf(typeof(RectangleData)) * numVirtualButtons);
 
-            // Do not overwrite existing Virtual Buttons.
-            if (mVirtualButtons.ContainsKey(vbData.id))
+            // Copy Virtual Button data from native.
+            QCARWrapper.Instance.ImageTargetGetVirtualButtons(virtualButtonDataPtr,
+                                         rectangleDataPtr,
+                                         numVirtualButtons,
+                                         mDataSet.DataSetPtr,
+                                         Name);
+
+            for (int i = 0; i < numVirtualButtons; ++i)
             {
-                continue;
+                IntPtr vbPtr = new IntPtr(virtualButtonDataPtr.ToInt32() + i *
+                        Marshal.SizeOf(typeof(QCARManagerImpl.VirtualButtonData)));
+                QCARManagerImpl.VirtualButtonData vbData = (QCARManagerImpl.VirtualButtonData)
+                        Marshal.PtrToStructure(vbPtr, typeof(QCARManagerImpl.VirtualButtonData));
+
+                // Do not overwrite existing Virtual Buttons.
+                if (mVirtualButtons.ContainsKey(vbData.id))
+                {
+                    continue;
+                }
+
+                IntPtr rectPtr = new IntPtr(rectangleDataPtr.ToInt32() + i *
+                        Marshal.SizeOf(typeof(RectangleData)));
+                RectangleData rectData = (RectangleData)
+                        Marshal.PtrToStructure(rectPtr, typeof(RectangleData));
+
+                // QCAR support names up to 64 characters in length, but here we allocate 
+                // a slightly larger buffer:
+                int nameLength = 128;
+                System.Text.StringBuilder vbName = new System.Text.StringBuilder(nameLength);
+                if (QCARWrapper.Instance.ImageTargetGetVirtualButtonName(mDataSet.DataSetPtr, Name,
+                        i, vbName, nameLength) == 0)
+                {
+                    Debug.LogError("Failed to get virtual button name.");
+                    continue;
+                }
+
+                VirtualButton virtualButton = new VirtualButtonImpl(vbName.ToString(), vbData.id, rectData, this, mDataSet);
+                mVirtualButtons.Add(vbData.id, virtualButton);
             }
 
-            IntPtr rectPtr = new IntPtr(rectangleDataPtr.ToInt32() + i *
-                    Marshal.SizeOf(typeof(VirtualButton.RectangleData)));
-            VirtualButton.RectangleData rectData = (VirtualButton.RectangleData)
-                    Marshal.PtrToStructure(rectPtr, typeof(VirtualButton.RectangleData));
-
-            // QCAR support names up to 64 characters in length, but here we allocate 
-            // a slightly larger buffer:
-            int nameLength = 128;
-            System.Text.StringBuilder vbName = new System.Text.StringBuilder(nameLength);
-            if (QCARWrapper.Instance.ImageTargetGetVirtualButtonName(mDataSet.DataSetPtr, Name,
-                    i, vbName, nameLength) == 0)
-            {
-                Debug.LogError("Failed to get virtual button name.");
-                continue;
-            }
-
-            VirtualButton virtualButton = new VirtualButtonImpl(vbName.ToString(), vbData.id, rectData, this, mDataSet);
-            mVirtualButtons.Add(vbData.id, virtualButton);
+            Marshal.FreeHGlobal(virtualButtonDataPtr);
+            Marshal.FreeHGlobal(rectangleDataPtr);
         }
-
-        Marshal.FreeHGlobal(virtualButtonDataPtr);
-        Marshal.FreeHGlobal(rectangleDataPtr);
     }
 
     #endregion // PRIVATE_METHODS

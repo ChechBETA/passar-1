@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;UNITY_IPHONE_API;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE;ENABLE_DUCK_TYPING</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;UNITY_IPHONE_API;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;ENABLE_DUCK_TYPING</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -97,11 +97,15 @@
      <Compile Include="Assets\Editor\QCAR\Scripts\SceneManager.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\SetBGCameraLayerEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\TargetDataPostprocessor.cs" />
+     <Compile Include="Assets\Editor\QCAR\Scripts\TextConfigData.cs" />
+     <Compile Include="Assets\Editor\QCAR\Scripts\TextRecoEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\TrackableAccessor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\TrackerEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\UserDefinedTargetBuilderEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\VirtualButtonEditor.cs" />
      <Compile Include="Assets\Editor\QCAR\Scripts\WebCamEditor.cs" />
+     <Compile Include="Assets\Editor\QCAR\Scripts\WordEditor.cs" />
+     <Compile Include="Assets\Editor\QCAR\VideoPlaybackScripts\VideoPlaybackEditor.cs" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
      <None Include="Assets\Shaders\UnlitTransparentColor.shader" />
@@ -112,8 +116,10 @@
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Cutout.shader" />
      <None Include="Assets\StreamingAssets\QCAR\unity.txt" />
      <None Include="Assets\license.txt" />
+     <None Include="Assets\readme.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Shaders\VertexLitEmissiveTwoSided.shader" />
+     <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\Shaders\VertexLitEmissiveHeight.shader" />
      <None Include="Assets\Fonts\CenturyGothicRegular\century_gothic_regular_50.txt" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
@@ -122,6 +128,7 @@
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Fonts\CenturyGothicBold\century_gothic_60.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored.shader" />
+     <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />
  <Reference Include="Assets\Editor\Prime31\Prime31MenuItem">
  <HintPath>Assets\Editor\Prime31\Prime31MenuItem.dll</HintPath>
  </Reference>

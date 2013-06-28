@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Collections.Generic;
@@ -49,6 +49,24 @@ public class MultiTargetEditor : Editor
         }
         else
         {
+            var planeMesh = new Mesh
+                {
+                    vertices =
+                        new[]
+                            {
+                                new Vector3(-0.5f, 0f, -0.5f), new Vector3(-0.5f, 0f, 0.5f),
+                                new Vector3(0.5f, 0f, -0.5f), new Vector3(0.5f, 0f, 0.5f)
+                            },
+                    uv = new[]
+                        {
+                            new Vector2(1, 1), new Vector2(1, 0),
+                            new Vector2(0, 1), new Vector2(0, 0)
+                        },
+                    normals = new Vector3[4],
+                    triangles = new[] {0, 1, 2, 2, 1, 3}
+                };
+            planeMesh.RecalculateNormals();
+
             int numParts = prtConfigs.Length;
             for (int i = 0; i < numParts; ++i)
             {
@@ -63,10 +81,12 @@ public class MultiTargetEditor : Editor
                 dataSetData.GetImageTarget(prtConfigs[i].name, out itConfig);
 
                 Vector2 size = itConfig.size;
-                Vector3 scale = new Vector3(size.x * 0.1f, 1, size.y * 0.1f);
+                Vector3 scale = new Vector3(size.x, 1, size.y);
 
-                GameObject plane = GameObject.CreatePrimitive(PrimitiveType.Plane);
-                plane.name = prtConfigs[i].name;
+                GameObject plane = new GameObject(prtConfigs[i].name);
+                plane.AddComponent<MeshRenderer>();
+                var filter = plane.AddComponent<MeshFilter>();
+                filter.sharedMesh = planeMesh;
                 plane.transform.parent = childTargets.transform;
 
                 plane.transform.localPosition = prtConfigs[i].translation;
@@ -216,7 +236,7 @@ public class MultiTargetEditor : Editor
             if (GUILayout.Button("No targets defined. Press here for target " +
                                  "creation!"))
             {
-                SceneManager.Instance.GoToARPage();
+                SceneManager.Instance.GoToTargetManagerPage();
             }
         }
 

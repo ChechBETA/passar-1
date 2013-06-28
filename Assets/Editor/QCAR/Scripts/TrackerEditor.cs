@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEditor;
@@ -30,13 +30,24 @@ public class TrackerEditor : Editor
                 tb.WorldCenterModeSetting));
 
         bool allowSceneObjects = !EditorUtility.IsPersistent(target);
-        if (tb.WorldCenterModeSetting == QCARBehaviour.WorldCenterMode.USER)
+        if (tb.WorldCenterModeSetting == QCARBehaviour.WorldCenterMode.SPECIFIC_TARGET)
         {
-            tb.SetWorldCenter((TrackableBehaviour)
-                EditorGUILayout.ObjectField("World Center", tb.WorldCenter,
-                typeof(TrackableBehaviour),
-                allowSceneObjects));
-        }        
+            var trackable = (TrackableBehaviour)
+                            EditorGUILayout.ObjectField("World Center", tb.WorldCenter,
+                            typeof (TrackableBehaviour),
+                            allowSceneObjects);
+
+
+            // Word Behaviours cannot be selected as world center
+            if (trackable is WordBehaviour)
+            {
+                trackable = null;
+                EditorWindow.focusedWindow.ShowNotification(
+                    new GUIContent("Word behaviours cannot be selected as world center."));
+            }
+
+            tb.SetWorldCenter(trackable);
+        }
 
         if (GUI.changed)
         {

@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEditor;
@@ -21,8 +21,8 @@ public class CloudRecoEditor : Editor
             "These are read-only access keys for accessing the image database specific to this sample application - the keys should be replaced " +
             "by your own access keys. You should be very careful how you share your credentials, especially with untrusted third parties, and should " +
             "take the appropriate steps to protect them within your application code.", MessageType.Info);
-        crb.AccessKey = EditorGUILayout.TextField("Access Key", crb.AccessKey);
-        crb.SecretKey = EditorGUILayout.TextField("Secret Key", crb.SecretKey);
+        crb.AccessKey = EditorGUILayout.TextField("Access Key", crb.AccessKey).Trim();
+        crb.SecretKey = EditorGUILayout.TextField("Secret Key", crb.SecretKey).Trim();
 
         EditorGUILayout.HelpBox("You can use these color fields to configure the scanline UI to match the color scheme of your app.", MessageType.None);
         crb.ScanlineColor = EditorGUILayout.ColorField("Scanline", crb.ScanlineColor);

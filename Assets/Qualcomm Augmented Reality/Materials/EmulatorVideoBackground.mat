@@ -7,8 +7,7 @@ Material:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: EmulatorVideoBackground
-  m_Shader: {fileID: 4800000, guid: 4fc05163cdd47154bb7c41f2db29c165, type: 3}
-  m_ShaderKeywords: []
+  m_Shader: {fileID: 4800000, guid: 4fc05163cdd47154bb7c41f2db29c165, type: 1}
   m_SavedProperties:
     serializedVersion: 2
     m_TexEnvs:

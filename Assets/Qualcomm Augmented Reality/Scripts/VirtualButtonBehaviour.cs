@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -210,7 +210,7 @@ public class VirtualButtonBehaviour : MonoBehaviour, IEditorVirtualButtonBehavio
     /// </summary>
     public bool UpdateAreaRectangle()
     {
-        VirtualButton.RectangleData rectData = new VirtualButton.RectangleData();
+        RectangleData rectData = new RectangleData();
 
         rectData.leftTopX = mLeftTop.x;
         rectData.leftTopY = mLeftTop.y;

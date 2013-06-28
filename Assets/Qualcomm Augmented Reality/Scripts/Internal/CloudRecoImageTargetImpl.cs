@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -71,7 +71,7 @@ public class CloudRecoImageTargetImpl : TrackableImpl, ImageTarget
     /// Creates a new virtual button and adds it to the ImageTarget
     /// This is not supported for CloudReco targets.
     /// </summary>
-    public VirtualButton CreateVirtualButton(string name, VirtualButton.RectangleData area)
+    public VirtualButton CreateVirtualButton(string name, RectangleData area)
     {
         Debug.LogError("Virtual buttons are currently not supported for cloud reco targets.");
         return null;

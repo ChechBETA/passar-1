@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -43,13 +43,47 @@ public class QCARManagerImpl : QCARManager
         public int isPressed;
     }
 
+    // This struct stores information for a 2D oriented bounding box
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct Obb2D
+    {
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+        public Vector2 center;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+        public Vector2 halfExtents;
+        public float rotation;
+    }
+
+    // This struct stores general data about a word trackable result like its 3D pose, 
+    // its status, oriented bounding box and its unique id.
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct WordResultData
+    {
+        public PoseData pose;
+        public TrackableBehaviour.Status status;
+        public int id;
+        public Obb2D orientedBoundingBox;
+    }
+
+    // This struct encapsulates data for a single word, like its string, the size of 
+    // its bounding box
+    [StructLayout(LayoutKind.Sequential, Pack = 1)]
+    public struct WordData
+    {
+        public int id;
+        [MarshalAs(UnmanagedType.ByValArray, SizeConst = 2)]
+        public Vector2 size;
+        public IntPtr stringValue;
+    }
+
+
     // This struct stores data of an image header. It includes the width and
     // height of the image, the byte stride in the buffer, the buffer size
     // (which can differ from the image size e.g. when image is converted to a
     // power of two size) and the format of the image
     // (e.g. RGB565, grayscale, etc.).
     [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    private struct ImageHeaderData
+    public struct ImageHeaderData
     {
         public int width;
         public int height;
@@ -71,6 +105,20 @@ public class QCARManagerImpl : QCARManager
         public int frameIndex;
         public IntPtr trackableDataArray;
         public IntPtr vbDataArray;
+        public int numWordResults;
+        public IntPtr wordResultArray;
+        public int numNewWords;
+        public IntPtr newWordDataArray;
+        public IntPtr videoModeData;
+    }
+
+    private struct AutoRotationState
+    {
+        public bool setOnPause;
+        public bool autorotateToPortrait;
+        public bool autorotateToPortraitUpsideDown;
+        public bool autorotateToLandscapeLeft;
+        public bool autorotateToLandscapeRight;
     }
 
     #endregion // NESTED
@@ -127,6 +175,8 @@ public class QCARManagerImpl : QCARManager
     private TrackableBehaviour mWorldCenter = null;
     private Camera mARCamera = null;
     private TrackableResultData[] mTrackableResultDataArray = null;
+    private WordData[] mWordDataArray = null;
+    private WordResultData[] mWordResultDataArray = null;
 
     private LinkedList<int> mTrackableFoundQueue = new LinkedList<int>();
 
@@ -142,6 +192,13 @@ public class QCARManagerImpl : QCARManager
     private IntPtr mLastProcessedFrameStatePtr = IntPtr.Zero;
 
     private bool mInitialized = false;
+    private bool mPaused = false;
+
+    // the current frame state holding info about trackables results etc.
+    private FrameState mFrameState;
+
+    // auto rotation state set when background is frozen and orientation is locked
+    private AutoRotationState mAutoRotationState;
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -153,6 +210,8 @@ public class QCARManagerImpl : QCARManager
     public override bool Init()
     {
         mTrackableResultDataArray = new TrackableResultData[0];
+        mWordDataArray = new WordData[0];
+        mWordResultDataArray = new WordResultData[0];
 
         mTrackableFoundQueue = new LinkedList<int>();
 
@@ -171,50 +230,102 @@ public class QCARManagerImpl : QCARManager
 
 
     // Process the camera image and tracking data for this frame
-    public void Update(ScreenOrientation counterRotation)
+    public void Update(ScreenOrientation counterRotation, CameraDevice.CameraDeviceMode deviceMode, ref CameraDevice.VideoModeData videoMode)
     {
-        // enable "fake tracking" if running in the free editor version 
-        // that does not support native plugins
-        if (!QCARRuntimeUtilities.IsQCAREnabled())
+        if (mPaused)
         {
-            UpdateTrackablesEditor();
-            return;
+            // set the last frame again, do not update the state
+            QCARWrapper.Instance.PausedUpdateQCAR();
         }
-
-        // Prepare the camera image container
-        UpdateImageContainer();
-
-        if (QCARRuntimeUtilities.IsPlayMode())
+        else
         {
-            CameraDeviceImpl cameraDeviceImpl = (CameraDeviceImpl)CameraDevice.Instance;
-            if (cameraDeviceImpl.WebCam.DidUpdateThisFrame)
+            // enable "fake tracking" if running in the free editor version 
+            // that does not support native plugins
+            if (!QCARRuntimeUtilities.IsQCAREnabled())
             {
-                InjectCameraFrame();
+                UpdateTrackablesEditor();
+                return;
             }
+
+            // Prepare the camera image container
+            UpdateImageContainer();
+
+            if (QCARRuntimeUtilities.IsPlayMode())
+            {
+                CameraDeviceImpl cameraDeviceImpl = (CameraDeviceImpl) CameraDevice.Instance;
+                if (cameraDeviceImpl.WebCam.DidUpdateThisFrame)
+                {
+                    InjectCameraFrame();
+                }
+            }
+
+            // Draw the video background or update the video texture
+            // Also retrieve registered camera images for this frame
+            QCARWrapper.Instance.UpdateQCAR(mImageHeaderData, mNumImageHeaders,
+                                            mLastProcessedFrameStatePtr, (int) counterRotation,
+                                            (int)deviceMode);
+
+            mFrameState = (FrameState)Marshal.PtrToStructure(mLastProcessedFrameStatePtr, typeof(FrameState));
         }
 
-        // Draw the video background or update the video texture
-        // Also retrieve registered camera images for this frame
-        QCARWrapper.Instance.UpdateQCAR(mImageHeaderData, mNumImageHeaders,
-            mDrawVideobackground ? 0 : 1,
-            mLastProcessedFrameStatePtr, (int)counterRotation);
 
-        FrameState frameState = (FrameState)Marshal.PtrToStructure(mLastProcessedFrameStatePtr, typeof(FrameState));
+        // Get video mode data
+        if (QCARRuntimeUtilities.IsPlayMode())
+            videoMode = CameraDevice.Instance.GetVideoMode(deviceMode);
+        else
+        {
+            var videoModePtr = mFrameState.videoModeData;
+            videoMode =
+                (CameraDevice.VideoModeData)
+                Marshal.PtrToStructure(videoModePtr, typeof (CameraDevice.VideoModeData));
+        }
+        
+
         // Reinitialize the trackable data container if required:
-        InitializeTrackableContainer(frameState.numTrackableResults);
+        InitializeTrackableContainer(mFrameState.numTrackableResults);
 
         // Handle the camera image data
         UpdateCameraFrame();
 
         // Handle the trackable data
-        UpdateTrackers(frameState);
+        UpdateTrackers(mFrameState);
 
         if (QCARRuntimeUtilities.IsPlayMode())
         {
             // read out the index of the last processed frame
             CameraDeviceImpl cameraDeviceImpl = (CameraDeviceImpl)CameraDevice.Instance;
-            cameraDeviceImpl.WebCam.SetFrameIndex(frameState.frameIndex);
+            cameraDeviceImpl.WebCam.SetFrameIndex(mFrameState.frameIndex);
         }
+
+        // if native video background rendering is disabled, we need to call the method to draw into the
+        // offscreen texture here in the update loop.
+        // rendering the video background into the texture in the PrepareRendering callback will result 
+        // in the texture updated in the next frame, which results in a lag between augmentations and the 
+        // video background
+        if (!mDrawVideobackground)
+        {
+            RenderVideoBackgroundOrDrawIntoTextureInNative();
+        }
+    }
+
+    /// <summary>
+    /// Renders the video background in the native plugin.
+    /// Does nothing if internal state is set to draw the background into an offscreen texture
+    /// </summary>
+    public void PrepareRendering()
+    {
+        // only call the render function here if native video background rendering is enabled.
+        // for background texture access, the texture is drawn into in the update function.
+        if (mDrawVideobackground)
+        {
+            RenderVideoBackgroundOrDrawIntoTextureInNative();
+        }
+    }
+
+    public void FinishRendering()
+    {
+        // call renderer.end() in native to invalidate rendering resources
+        QCARWrapper.Instance.RendererEnd();
     }
 
 
@@ -228,7 +339,47 @@ public class QCARManagerImpl : QCARManager
             Marshal.FreeHGlobal(mLastProcessedFrameStatePtr);
 
             mInitialized = false;
+            mPaused = false;
         }
+    }
+
+    /// <summary>
+    /// Turns pausing on or off.
+    /// Pausing will freeze the camera video and all trackables will remain in their current state.
+    /// Autorotation will be disabled during video background freezing.
+    /// </summary>
+    public void Pause(bool pause)
+    {
+        if (pause)
+        {
+            // lock orientation
+            mAutoRotationState = new AutoRotationState
+                {
+                    autorotateToLandscapeLeft = Screen.autorotateToLandscapeLeft,
+                    autorotateToLandscapeRight = Screen.autorotateToLandscapeRight,
+                    autorotateToPortrait = Screen.autorotateToPortrait,
+                    autorotateToPortraitUpsideDown = Screen.autorotateToPortraitUpsideDown,
+                    setOnPause = true
+                };
+
+            Screen.autorotateToLandscapeLeft = false;
+            Screen.autorotateToLandscapeRight = false;
+            Screen.autorotateToPortrait = false;
+            Screen.autorotateToPortraitUpsideDown = false;
+        }
+        else
+        {
+            // enable autorotation again if it was disabled before:
+            if (mAutoRotationState.setOnPause)
+            {
+                Screen.autorotateToLandscapeLeft = mAutoRotationState.autorotateToLandscapeLeft;
+                Screen.autorotateToLandscapeRight = mAutoRotationState.autorotateToLandscapeRight;
+                Screen.autorotateToPortrait = mAutoRotationState.autorotateToPortrait;
+                Screen.autorotateToPortraitUpsideDown = mAutoRotationState.autorotateToPortraitUpsideDown;
+            }
+        }
+
+        mPaused = pause;
     }
 
     #endregion // PUBLIC_METHODS
@@ -310,12 +461,12 @@ public class QCARManagerImpl : QCARManager
         // The "scene origin" is only used in world center mode auto or user.
         int originTrackableID = -1;
 
-        if (mWorldCenterMode == QCARBehaviour.WorldCenterMode.USER &&
+        if (mWorldCenterMode == QCARBehaviour.WorldCenterMode.SPECIFIC_TARGET &&
             mWorldCenter != null)
         {
             originTrackableID = mWorldCenter.Trackable.ID;
         }
-        else if (mWorldCenterMode == QCARBehaviour.WorldCenterMode.AUTO)
+        else if (mWorldCenterMode == QCARBehaviour.WorldCenterMode.FIRST_TARGET)
         {
             stateManager.RemoveDisabledTrackablesFromQueue(ref mTrackableFoundQueue);
             if (mTrackableFoundQueue.Count > 0)
@@ -324,11 +475,17 @@ public class QCARManagerImpl : QCARManager
             }
         }
 
+        // Unmarshal words and word results
+        UpdateWordTrackables(frameState);
+
         // Update the Camera pose before Trackable poses are updated.
         stateManager.UpdateCameraPose(mARCamera, mTrackableResultDataArray, originTrackableID);
 
         // Update the Trackable poses.
         stateManager.UpdateTrackablePoses(mARCamera, mTrackableResultDataArray, originTrackableID);
+
+        // Update Word Trackables
+        stateManager.UpdateWords(mARCamera, mWordDataArray, mWordResultDataArray);
 
         // Update Virtual Button states.
         stateManager.UpdateVirtualButtons(frameState.numVirtualButtonResults, frameState.vbDataArray);
@@ -347,8 +504,36 @@ public class QCARManagerImpl : QCARManager
         {
             if (trackable.enabled)
             {
+                // Word trackables have to be created for all word behaviours as these are
+                // created dynamically otherwise
+                if (trackable is WordBehaviour)
+                {
+                    var ewb = (IEditorWordBehaviour) trackable;
+                    ewb.SetNameForTrackable(ewb.IsSpecificWordMode ? ewb.SpecificWord : "AnyWord");
+                    ewb.InitializeWord(new WordImpl(0, ewb.TrackableName, new Vector2(500, 100)));
+                }
                 trackable.OnTrackerUpdate(TrackableBehaviour.Status.TRACKED);
             }
+        }
+    }
+
+    private void UpdateWordTrackables(FrameState frameState)
+    {
+        // Unmarshal new word data
+        mWordDataArray = new WordData[frameState.numNewWords];
+        for (int i = 0; i < frameState.numNewWords; i++)
+        {
+            IntPtr trackablePtr = new IntPtr(frameState.newWordDataArray.ToInt32() + i *
+                    Marshal.SizeOf(typeof(WordData)));
+            mWordDataArray[i] = (WordData)Marshal.PtrToStructure(trackablePtr, typeof(WordData));
+        }
+        // Unmarshal word result data
+        mWordResultDataArray = new WordResultData[frameState.numWordResults];
+        for (int i = 0; i < frameState.numWordResults; i++)
+        {
+            IntPtr trackablePtr = new IntPtr(frameState.wordResultArray.ToInt32() + i *
+                Marshal.SizeOf(typeof(WordResultData)));
+            mWordResultDataArray[i] = (WordResultData)Marshal.PtrToStructure(trackablePtr, typeof(WordResultData));
         }
     }
 
@@ -456,6 +641,15 @@ public class QCARManagerImpl : QCARManager
         mInjectedFrameIdx++;
         pixelPointer = IntPtr.Zero;
         pixelHandle.Free();
+    }
+
+    private void RenderVideoBackgroundOrDrawIntoTextureInNative()
+    {
+        // Render the video background
+        QCARWrapper.Instance.RendererRenderVideoBackground(mDrawVideobackground ? 0 : 1);
+
+        // Tell Unity that we may have changed the OpenGL state behind the scenes
+        GL.InvalidateState();
     }
 
     #endregion // PRIVATE_METHODS

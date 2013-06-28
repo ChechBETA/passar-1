@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -445,6 +445,17 @@ public class ImageTargetEditor : Editor
                                                             currentTrackableIndex,
                                                             namesList);
 
+
+            //Expose editors for setting size
+            //these values are not really stored, but instead the scale-factor is updated
+            var width = EditorGUILayout.FloatField("Width", itb.GetSize().x);
+            if (width != itb.GetSize().x)
+                itb.SetWidth(width);
+
+            float height = EditorGUILayout.FloatField("Height ", itb.GetSize().y);
+            if (height != itb.GetSize().y)
+                itb.SetHeight(height);
+            
             // Draw check box to de-/activate "preserve child size" mode.
             itb.SetPreserveChildSize(EditorGUILayout.Toggle("Preserve child size", itb.PreserveChildSize));
 
@@ -463,6 +474,9 @@ public class ImageTargetEditor : Editor
                     // Update the aspect ratio and mesh used for visualisation:
                     UpdateAspectRatio(itb, itConfig.size);
 
+                    // Update the scale as defined in the config file
+                    UpdateScale(itb, itConfig.size);
+
                     // Update the material:
                     UpdateMaterial(itb);
                 }
@@ -473,7 +487,7 @@ public class ImageTargetEditor : Editor
             if (GUILayout.Button("No targets defined. Press here for target " +
                                     "creation!"))
             {
-                SceneManager.Instance.GoToARPage();
+                SceneManager.Instance.GoToTargetManagerPage();
             }
         }
     }

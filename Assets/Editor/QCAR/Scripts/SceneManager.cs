@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -70,7 +70,9 @@ public class SceneManager
     // Since it is not possible to open up the QCAR web page from a button press
     // in the Unity editor directly this is handled in the EditorUpdate
     // callback.
-    private bool mGoToARPage = false;
+    private bool mGoToTargetManagerPage = false;
+    // Open sample app web page in the next EditorUpdate callback
+    private bool mGoToSampleAppPage = false;
     // The path used for exporting the data set.
     private string mDataSetExportPath = "";
 
@@ -202,17 +204,27 @@ public class SceneManager
             // Check if there are duplicate trackables in the scene.
             CheckForDuplicates(trackables);
 
+            //check for duplicate word trackables in the scene
+            WordEditor.CheckForDuplicates();
+
             // Validate all Virtual Buttons in the scene.
             VirtualButtonEditor.Validate();
 
             mValidateScene = false;
         }
 
-        if (mGoToARPage)
+        if (mGoToTargetManagerPage)
         {
-            mGoToARPage = false;
+            mGoToTargetManagerPage = false;
             System.Diagnostics.Process.Start(
                 "https://developer.vuforia.com/target-manager");
+        }
+
+        if (mGoToSampleAppPage)
+        {
+            mGoToSampleAppPage = false;
+            System.Diagnostics.Process.Start(
+                "https://developer.vuforia.com/resources/sample-apps");
         }
 
         if (mLastUpdate.Add(UPDATE_INTERVAL) < DateTime.Now)
@@ -326,9 +338,17 @@ public class SceneManager
 
 
     // This is function enables an asynchronous call to open the QCAR help page.
-    public void GoToARPage()
+    public void GoToTargetManagerPage()
     {
-        mGoToARPage = true;
+        mGoToTargetManagerPage = true;
+    }
+
+    /// <summary>
+    /// This function enables an asynchronous call to open the QCAR sample apps page.
+    /// </summary>
+    public void GoToSampleAppPage()
+    {
+        mGoToSampleAppPage = true;
     }
 
     #endregion // PUBLIC_METHODS

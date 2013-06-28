@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -41,7 +41,7 @@ public class VirtualButtonImpl : VirtualButton
         get { return mIsEnabled; } 
     }
 
-    public override VirtualButton.RectangleData Area
+    public override RectangleData Area
     {
         get { return mArea; }
     }
@@ -73,7 +73,7 @@ public class VirtualButtonImpl : VirtualButton
     {
 
         IntPtr rectPtr = Marshal.AllocHGlobal(Marshal.SizeOf(
-                                typeof(VirtualButton.RectangleData)));
+                                typeof(RectangleData)));
         Marshal.StructureToPtr(area, rectPtr, false);
         int success = QCARWrapper.Instance.VirtualButtonSetAreaRectangle(mParentDataSet.DataSetPtr,
             mParentImageTarget.Name, this.Name, rectPtr);

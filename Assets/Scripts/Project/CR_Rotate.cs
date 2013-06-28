@@ -1,12 +1,19 @@
 using UnityEngine;
 using System.Collections;
 
+[RequireComponent(typeof(BoxCollider))]
 public class CR_Rotate : MonoBehaviour {
 
+	public Camera rotateCam;
+	public BoxCollider boxCollider;
+	public Transform newContainer;
 	
-	private float speed = 1f;
-	private Transform myTransform;
+	private float speed = 0.1f;
 	private bool canRotate = false;
+	private bool canStartRotate = false;
+	private Transform myTransform;
+	
+	
 	
 	public bool CanRotate
 	{
@@ -18,20 +25,45 @@ public class CR_Rotate : MonoBehaviour {
 	private void Start() 
 	{
 		myTransform = GetComponent<Transform>();
+		//boxCollider.enabled = false;
+		rotateCam.enabled = false;
+		
 	}
 	
 	private void Update () 
 	{
-		if(Input.touchCount > 0)
+		if(Application.isEditor)
+		{
+			if(Input.GetKeyDown(KeyCode.A))
+			{
+				if(!canStartRotate)
+				{
+					canStartRotate = true;
+					ActiveRotateCam();
+				}
+			}
+		}
+		
+		
+#if UNITY_IPHONE
+		//startRotate = (Input.touchCount >=4);
+		
+		/*if( !startRotate && !rotateCam.enabled)
+			return;
+		*/
+		if(Input.touchCount >=4)
+			ActiveRotateCam();
+		
+		if(Input.touchCount == 1 && canStartRotate)
 		{
 			Touch touch = Input.GetTouch(0);
-
+			
 			switch(Input.GetTouch(0).phase)
-
 			{
 				case TouchPhase.Began:	
 					if(VerifyTouch(touch))
 						CanRotate = true;
+					Debug.Log(CanRotate);
 				break;
 
 				case TouchPhase.Moved:	
@@ -45,12 +77,15 @@ public class CR_Rotate : MonoBehaviour {
 			}
  
 		}
+#endif
+			
 
 	}
 	
 	private bool VerifyTouch(Touch touch)
 	{
-		Ray ray = Camera.main.ScreenPointToRay(touch.position);
+		Camera  cam = QCARManager.Instance.ARCamera;
+		Ray ray = cam.ScreenPointToRay(touch.position);
         	RaycastHit hit ;
 		
 		if(collider == null)
@@ -66,6 +101,32 @@ public class CR_Rotate : MonoBehaviour {
 	
 	private void RotateObject(Touch touch)
 	{
+		Debug.Log("starts Rotate");
 		myTransform.Rotate(new Vector3(touch.deltaPosition.y, -touch.deltaPosition.x,0)*speed, Space.World);
 	}
+	
+	private void ActiveRotateCam()
+	{
+		canStartRotate = !canStartRotate;
+		return;
+		if(rotateCam.enabled)
+			return;
+		
+		
+		//CameraDevice.Instance.Stop();
+		
+		foreach(Camera cam in Camera.allCameras)
+		{
+			if(cam != rotateCam && cam != UIManager.instance.rayCamera)
+				cam.enabled = false;
+		}
+		
+		rotateCam.enabled = true;
+		boxCollider.enabled = true;
+		myTransform.parent = newContainer;
+		myTransform.localScale = Vector3.one;
+		//UIProjectScene.Instance.LoadRotateScene();
+	}
+	
+	
 }

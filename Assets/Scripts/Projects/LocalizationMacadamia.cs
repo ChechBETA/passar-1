@@ -3,10 +3,7 @@ using System.Collections;
 
 public class LocalizationMacadamia : MonoBehaviour 
 {
-	public UIButtonPassar3D buttonMacadamia;
 	public Animation animationComponent;
-	public UIPanel popUp;
-	public UIPassarButton buttonPopup;
 	public Animation [] indicator;
 	
 	private bool isAnimate = false;
@@ -20,23 +17,11 @@ public class LocalizationMacadamia : MonoBehaviour
 	private float durationScaleAnimation = 3.0F;
 	
 	private void Start()
-	{
-		CreatePopup();
-		
+	{	
 		coneTransform = animationComponent.transform;
 		originalSize = coneTransform.localScale;
 		minSize = originalSize * growScale;
 		
-		buttonMacadamia.onPressDelegate = OnShowPopUp;
-		buttonPopup.onPressDelegate = Reset;
-	}
-	
-	private void CreatePopup()
-	{
-		GameObject tempButton = Instantiate(Resources.Load("popup_localization")) as GameObject;
-		buttonPopup = tempButton.GetComponent<UIPassarButton>();
-		popUp = tempButton.GetComponent<UIPanel>();
-		popUp.Dismiss();
 	}
 	
 	private void Update()
@@ -75,13 +60,11 @@ public class LocalizationMacadamia : MonoBehaviour
 		
 		isAnimate = false;
 		coneTransform.localScale = originalSize;
-		popUp.BringIn();
 	}
 	
 	private void Reset()
 	{
 		animationComponent.Play();
-		popUp.Dismiss();
 	}
 	
 	public void AnimateScaleCone()

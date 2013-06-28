@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Runtime.InteropServices;
@@ -29,19 +29,7 @@ public abstract class VirtualButton
         LOW             // Robust detection.
     }
 
-    /// <summary>
-    /// This struct defines the 2D coordinates of a rectangle. It is used for
-    /// rectangular Virtual Button definitions.
-    /// The struct is used internally by the VirtualButtonBehaviour.
-    /// </summary>
-    [StructLayout(LayoutKind.Sequential, Pack = 1)]
-    public struct RectangleData
-    {
-        public float leftTopX;
-        public float leftTopY;
-        public float rightBottomX;
-        public float rightBottomY;
-    }
+
 
     #endregion // NESTED
 

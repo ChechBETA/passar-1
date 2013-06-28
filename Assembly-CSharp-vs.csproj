@@ -18,7 +18,7 @@
 	<DebugType>full</DebugType>
 	<Optimize>false</Optimize>
 	<OutputPath>Temp\bin\Debug\</OutputPath>
-	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;UNITY_IPHONE_API;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR;UNITY_TEAM_LICENSE</DefineConstants>
+	<DefineConstants>DEBUG;TRACE;UNITY_IPHONE;UNITY_IPHONE_API;ENABLE_MICROPHONE;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;ENABLE_AUDIO_FMOD;ENABLE_NETWORK;ENABLE_MONO;ENABLE_PHYSICS;ENABLE_TERRAIN;ENABLE_CACHING;ENABLE_SUBSTANCE;ENABLE_GENERICS;ENABLE_CLOTH;ENABLE_GAMECENTER;UNITY_IOS;ENABLE_AUDIO;ENABLE_WWW;ENABLE_SHADOWS;UNITY_4_1_2;UNITY_4_1;ENABLE_PROFILER;UNITY_EDITOR</DefineConstants>
 	<ErrorReport>prompt</ErrorReport>
 	<WarningLevel>4</WarningLevel>
 	<NoWarn>0169</NoWarn>
@@ -52,7 +52,9 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultInitializationErrorHandler.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\GLErrorHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\GeometryStructs.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ICloudRecoEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ITextRecoEventHandler.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ITrackableEventHandler.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ITrackerEventHandler.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\IUserDefinedTargetEventHandler.cs" />
@@ -71,8 +73,10 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorImageTargetBehaviours.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorMarkerBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorMultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorTextRecoBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorTrackableBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorVirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\IEditorWordBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageTargetBuilderImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ImageTargetImpl.cs" />
@@ -87,6 +91,7 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\QCARUnityImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\StateManagerImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TargetFinderImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TextTrackerImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TextureRenderer.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TrackableImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\TrackableSourceImpl.cs" />
@@ -96,6 +101,10 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamProfile.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamTexAdaptor.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WebCamTexAdaptorImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WordImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WordListImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WordManagerImpl.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\WordResultImpl.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\IQCARWrapper.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\QCARNativeWrapper.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\Wrapper\QCARNullWrapper.cs" />
@@ -114,16 +123,24 @@
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\SetBGCameraLayerBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\StateManager.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TargetFinder.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TextRecoBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TextTracker.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Trackable.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackableBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackableSource.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Tracker.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TrackerManager.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffWordBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButton.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
      <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WebCamBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Word.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordList.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordManager.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordResult.cs" />
      <Compile Include="Assets\Scripts\Core\AppManager.cs" />
      <Compile Include="Assets\Scripts\Core\GlobalParams.cs" />
      <Compile Include="Assets\Scripts\Core\LevelLoader.cs" />
@@ -134,6 +151,7 @@
      <Compile Include="Assets\Scripts\Global\Pinch.cs" />
      <Compile Include="Assets\Scripts\Global\ServerImages.cs" />
      <Compile Include="Assets\Scripts\Global\StartLevel.cs" />
+     <Compile Include="Assets\Scripts\InstructionalScreen.cs" />
      <Compile Include="Assets\Scripts\Levels\Test.cs" />
      <Compile Include="Assets\Scripts\Project\CR_Rotate.cs" />
      <Compile Include="Assets\Scripts\Project\Encenillos\Encenillos.cs" />
@@ -147,10 +165,12 @@
      <Compile Include="Assets\Scripts\Project\Refugio\Refugio.cs" />
      <Compile Include="Assets\Scripts\Project\StaticDataManager.cs" />
      <Compile Include="Assets\Scripts\Project\Sumapaz\Sumapaz.cs" />
+     <Compile Include="Assets\Scripts\Project\VirtualButtonEventHandler.cs" />
      <Compile Include="Assets\Scripts\Projects\DraggableItem.cs" />
      <Compile Include="Assets\Scripts\Projects\LocalizationMacadamia.cs" />
      <Compile Include="Assets\Scripts\Projects\ScalableSignMacadamia.cs" />
      <Compile Include="Assets\Scripts\Services\ServiceBase.cs" />
+     <Compile Include="Assets\Scripts\TrackableEventHandler.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\AniSprite.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\MoveObjectsControl.cs" />
      <Compile Include="Assets\Scripts\UI\Controls\ScaleControlSlider.cs" />
@@ -170,6 +190,9 @@
      <Compile Include="Assets\Scripts\UI\core\DisplayObject.cs" />
      <Compile Include="Assets\Scripts\UI\core\EZScreenPlacementHelper.cs" />
      <Compile Include="Assets\Scripts\UI\core\IUIDisplayObject.cs" />
+     <Compile Include="Assets\Scripts\VideoPlaybackController.cs" />
+     <Compile Include="Assets\Vuforia Video Playback\Scripts\VideoPlaybackBehaviour.cs" />
+     <Compile Include="Assets\Vuforia Video Playback\Scripts\VideoPlayerHelper.cs" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Font\Arial, Fancy.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored, Fast.shader" />
      <None Include="Assets\Shaders\UnlitTransparentColor.shader" />
@@ -180,8 +203,10 @@
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Cutout.shader" />
      <None Include="Assets\StreamingAssets\QCAR\unity.txt" />
      <None Include="Assets\license.txt" />
+     <None Include="Assets\readme.txt" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
      <None Include="Assets\Shaders\VertexLitEmissiveTwoSided.shader" />
+     <None Include="Assets\readme_SDK.txt" />
      <None Include="Assets\Shaders\VertexLitEmissiveHeight.shader" />
      <None Include="Assets\Fonts\CenturyGothicRegular\century_gothic_regular_50.txt" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
@@ -190,6 +215,7 @@
      <None Include="Assets\license_3rdpartynotice.txt" />
      <None Include="Assets\Fonts\CenturyGothicBold\century_gothic_60.txt" />
      <None Include="Assets\Plugins\AnBSoft Common\Standard Shaders\Sprite Vertex Colored.shader" />
+     <None Include="Assets\Qualcomm Augmented Reality\Shaders\Text3D.shader" />
  <Reference Include="Assets\Plugins\P31RestKit">
  <HintPath>Assets\Plugins\P31RestKit.dll</HintPath>
  </Reference>

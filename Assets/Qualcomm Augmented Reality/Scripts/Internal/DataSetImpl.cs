@@ -1,16 +1,13 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Runtime.InteropServices;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 public class DataSetImpl : DataSet
 {
@@ -298,45 +295,49 @@ public class DataSetImpl : DataSet
         int numMultiTargets = QCARWrapper.Instance.DataSetGetNumTrackableType(
             (int)TrackableType.MULTI_TARGET,
             mDataSetPtr);
-        IntPtr multiTargetDataPtr =
-            Marshal.AllocHGlobal(Marshal.SizeOf(typeof(SimpleTargetData)) * numMultiTargets);
 
-        // Copy Multi Target properties from native.
-        if (QCARWrapper.Instance.DataSetGetTrackablesOfType((int)TrackableType.MULTI_TARGET,
-                                       multiTargetDataPtr, numMultiTargets,
-                                       mDataSetPtr) == 0)
+        if (numMultiTargets > 0)
         {
-            Debug.LogError("Could not create Multi Targets");
-            return;
-        }
+            IntPtr multiTargetDataPtr =
+                Marshal.AllocHGlobal(Marshal.SizeOf(typeof (SimpleTargetData))*numMultiTargets);
 
-        // Create Multi Target Behaviours.
-        for (int i = 0; i < numMultiTargets; ++i)
-        {
-            IntPtr trackablePtr = new IntPtr(multiTargetDataPtr.ToInt32() + i *
-                    Marshal.SizeOf(typeof(SimpleTargetData)));
-            SimpleTargetData trackableData = (SimpleTargetData)
-                    Marshal.PtrToStructure(trackablePtr, typeof(SimpleTargetData));
-
-            // Do not overwrite existing Trackables.
-            if (mTrackablesDict.ContainsKey(trackableData.id))
+            // Copy Multi Target properties from native.
+            if (QCARWrapper.Instance.DataSetGetTrackablesOfType((int) TrackableType.MULTI_TARGET,
+                                                                multiTargetDataPtr, numMultiTargets,
+                                                                mDataSetPtr) == 0)
             {
-                continue;
+                Debug.LogError("Could not create Multi Targets");
+                return;
             }
 
-            // QCAR support names up to 64 characters in length, but here we allocate 
-            // a slightly larger buffer:
-            int nameLength = 128;
-            System.Text.StringBuilder trackableName = new System.Text.StringBuilder(nameLength);
-            QCARWrapper.Instance.DataSetGetTrackableName(mDataSetPtr, trackableData.id, trackableName, nameLength);
+            // Create Multi Target Behaviours.
+            for (int i = 0; i < numMultiTargets; ++i)
+            {
+                IntPtr trackablePtr = new IntPtr(multiTargetDataPtr.ToInt32() + i*
+                                                 Marshal.SizeOf(typeof (SimpleTargetData)));
+                SimpleTargetData trackableData = (SimpleTargetData)
+                                                 Marshal.PtrToStructure(trackablePtr, typeof (SimpleTargetData));
 
-            MultiTarget multiTarget = new MultiTargetImpl(trackableName.ToString(), trackableData.id);
+                // Do not overwrite existing Trackables.
+                if (mTrackablesDict.ContainsKey(trackableData.id))
+                {
+                    continue;
+                }
 
-            // Add newly created Multi Target to dictionary.
-            mTrackablesDict[trackableData.id] = multiTarget;
+                // QCAR support names up to 64 characters in length, but here we allocate 
+                // a slightly larger buffer:
+                int nameLength = 128;
+                System.Text.StringBuilder trackableName = new System.Text.StringBuilder(nameLength);
+                QCARWrapper.Instance.DataSetGetTrackableName(mDataSetPtr, trackableData.id, trackableName, nameLength);
+
+                MultiTarget multiTarget = new MultiTargetImpl(trackableName.ToString(), trackableData.id);
+
+                // Add newly created Multi Target to dictionary.
+                mTrackablesDict[trackableData.id] = multiTarget;
+            }
+
+            Marshal.FreeHGlobal(multiTargetDataPtr);
         }
-
-        Marshal.FreeHGlobal(multiTargetDataPtr);
     }
 
     #endregion // PRIVATE_METHODS

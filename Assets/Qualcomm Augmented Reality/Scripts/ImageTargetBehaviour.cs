@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Collections.Generic;
@@ -230,6 +230,28 @@ public class ImageTargetBehaviour : DataSetTrackableBehaviour, IEditorImageTarge
         }
     }
 
+
+    /// <summary>
+    /// Set the width (x-dimension) of the target in scene units.
+    /// This will scale the target uniformly.
+    /// </summary>
+    public void SetWidth(float width)
+    {
+        var scale = (mAspectRatio <= 1.0f) ? width : width/mAspectRatio;
+        transform.localScale = new Vector3(scale, scale, scale);
+    }
+
+
+    /// <summary>
+    /// Set the height (y-dimension) of the target in scene units.
+    /// This will scale the target uniformly.
+    /// </summary>
+    public void SetHeight(float height)
+    {
+        var scale = (mAspectRatio <= 1.0f) ? height / mAspectRatio : height;
+        transform.localScale = new Vector3(scale, scale, scale);
+    }
+
     #endregion // PUBLIC_METHODS
 
 
@@ -319,13 +341,13 @@ public class ImageTargetBehaviour : DataSetTrackableBehaviour, IEditorImageTarge
         {
             Vector2 leftTop, rightBottom;
             virtualButtonBehaviour.CalculateButtonArea(out leftTop, out rightBottom);
-            VirtualButton.RectangleData area = new VirtualButton.RectangleData
-                                                {
-                                                    leftTopX = leftTop.x,
-                                                    leftTopY = leftTop.y,
-                                                    rightBottomX = rightBottom.x,
-                                                    rightBottomY = rightBottom.y
-                                                };
+            var area = new RectangleData
+                {
+                    leftTopX = leftTop.x,
+                    leftTopY = leftTop.y,
+                    rightBottomX = rightBottom.x,
+                    rightBottomY = rightBottom.y
+                };
             virtualButton = mImageTarget.CreateVirtualButton(virtualButtonBehaviour.VirtualButtonName, area);
 
             // Create the virtual button
@@ -432,7 +454,7 @@ public class ImageTargetBehaviour : DataSetTrackableBehaviour, IEditorImageTarge
         // Calculate the button area:
         Vector2 leftTop, rightBottom;
         newVBB.CalculateButtonArea(out leftTop, out rightBottom);
-        VirtualButton.RectangleData area = new VirtualButton.RectangleData
+        RectangleData area = new RectangleData
         {
             leftTopX = leftTop.x,
             leftTopY = leftTop.y,

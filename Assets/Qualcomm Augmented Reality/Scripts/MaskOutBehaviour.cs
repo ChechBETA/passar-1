@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -23,7 +23,10 @@ public class MaskOutBehaviour : MonoBehaviour
 
     void Start ()
     {
-        this.renderer.sharedMaterial = maskMaterial;
+        if (QCARRuntimeUtilities.IsQCAREnabled())
+        {
+            this.renderer.sharedMaterial = maskMaterial;
+        }
     }
 
     #endregion // UNITY_MONOBEHAVIOUR_METHODS

@@ -8,6 +8,8 @@ public class Encenillos : MonoBehaviour {
 	public GameObject sedesocial;
 	public GameObject sorrento;
 	public GameObject praga;
+	public GameObject video;
+	
 	
 	private void Start () 
 	{
@@ -34,6 +36,10 @@ public class Encenillos : MonoBehaviour {
 			case 10:
 				praga.SetActive(true);
 				project.logo.Hide(true);
+			break;
+			
+			default:
+				video.SetActive(true);
 			break;
 		}
 	}

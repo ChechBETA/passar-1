@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -242,13 +242,27 @@ public class QCARNullWrapper : IQCARWrapper
     {
     }
 
+    public int PausedUpdateQCAR()
+    {
+        return 1;
+    }
+
     public void UpdateQCAR([In, Out]IntPtr imageHeaderDataArray,
                                     int imageHeaderArrayLength,
-                                    int bindVideoBackground,
                                     [In, Out]IntPtr frameIndex,
-                                    int screenOrientation)
+                                    int screenOrientation,
+                                    int videoModeIdx)
     {
     }
+
+    public void RendererRenderVideoBackground(int bindVideoBackground)
+    {
+    }
+
+    public void RendererEnd()
+    {
+    }
+
 
     public int QcarGetBufferSize(int width, int height,
                                     int format)
@@ -366,6 +380,106 @@ public class QCARNullWrapper : IQCARWrapper
 
     public void TargetFinderClearTrackables()
     {
+    }
+
+    public int TextTrackerStart()
+    {
+        return 0;
+    }
+
+    public void TextTrackerStop()
+    {
+    }
+
+    public int TextTrackerSetRegionOfInterest(int detectionLeftTopX, int detectionLeftTopY, int detectionRightBottomX, int detectionRightBottomY,
+                                              int trackingLeftTopX, int trackingLeftTopY, int trackingRightBottomX, int trackingRightBottomY, int upDirection)
+    {
+        return 0;
+    }
+
+    public void TextTrackerGetRegionOfInterest([In, Out] IntPtr detectionROI, [In, Out] IntPtr trackingROI)
+    {
+        
+    }
+
+    public int WordListLoadWordList(string path, int storageType)
+    {
+        return 0;
+    }
+
+    public int WordListAddWordsFromFile(string path, int storagetType)
+    {
+        return 0;
+    }
+
+    public int WordListAddWordU(IntPtr word)
+    {
+        return 0;
+    }
+
+    public int WordListRemoveWordU(IntPtr word)
+    {
+        return 0;
+    }
+
+    public int WordListContainsWordU(IntPtr word)
+    {
+        return 0;
+    }
+
+    public int WordListUnloadAllLists()
+    {
+        return 0;
+    }
+
+    public int WordListSetFilterMode(int mode)
+    {
+        return 0;
+    }
+
+    public int WordListGetFilterMode()
+    {
+        return 0;
+    }
+
+    public int WordListLoadFilterList(string path, int storageType)
+    {
+        return 0;
+    }
+
+    public int WordListAddWordToFilterListU(IntPtr word)
+    {
+        return 0;
+    }
+
+    public int WordListRemoveWordFromFilterListU(IntPtr word)
+    {
+        return 0;
+    }
+
+    public int WordListClearFilterList()
+    {
+        return 0;
+    }
+
+    public int WordListGetFilterListWordCount()
+    {
+        return 0;
+    }
+
+    public IntPtr WordListGetFilterListWordU(int i)
+    {
+        return new IntPtr(0);
+    }
+
+    public int WordGetLetterMask(int wordID, [In, Out] IntPtr letterMaskImage)
+    {
+        return 0;
+    }
+    
+    public int WordGetLetterBoundingBoxes(int wordID, [In, Out] IntPtr letterBoundingBoxes)
+    {
+        return 0;
     }
 
     public int TrackerManagerInitTracker(int trackerType)

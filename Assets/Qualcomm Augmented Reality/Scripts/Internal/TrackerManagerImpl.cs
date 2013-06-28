@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -14,6 +14,8 @@ public class TrackerManagerImpl : TrackerManager
     private ImageTracker mImageTracker = null;
 
     private MarkerTracker mMarkerTracker = null;
+
+    private TextTracker mTextTracker = null;
 
     private StateManager mStateManager = new StateManagerImpl();
 
@@ -36,6 +38,10 @@ public class TrackerManagerImpl : TrackerManager
         else if (trackerType == Tracker.Type.MARKER_TRACKER)
         {
             return mMarkerTracker;
+        }
+        else if (trackerType == Tracker.Type.TEXT_TRACKER)
+        {
+            return mTextTracker;
         }
         else
         {
@@ -78,6 +84,14 @@ public class TrackerManagerImpl : TrackerManager
             }
             return mMarkerTracker;
         }
+        else if (trackerType == Tracker.Type.TEXT_TRACKER)
+        {
+            if (mTextTracker == null)
+            {
+                mTextTracker = new TextTrackerImpl();
+            }
+            return mTextTracker;
+        }
         else
         {
             Debug.LogError("Could not initialize tracker. Unknown tracker type.");
@@ -107,6 +121,10 @@ public class TrackerManagerImpl : TrackerManager
         else if (trackerType == Tracker.Type.MARKER_TRACKER)
         {
             mMarkerTracker = null;
+        }
+        else if (trackerType == Tracker.Type.TEXT_TRACKER)
+        {
+            mTextTracker = null;
         }
         else
         {

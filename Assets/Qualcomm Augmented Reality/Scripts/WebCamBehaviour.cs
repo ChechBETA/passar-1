@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -122,8 +122,12 @@ public class WebCamBehaviour : MonoBehaviour
             Application.runInBackground = true;
 
             Camera arCamera = gameObject.GetComponent<Camera>();
-            mBackgroundCameraInstance = Instantiate(BackgroundCameraPrefab) as Camera;
-            mWebCamImpl = new WebCamImpl(arCamera, mBackgroundCameraInstance, RenderTextureLayer, mDeviceNameSetInEditor, mFlipHorizontally);
+
+            if (BackgroundCameraPrefab != null)
+                mBackgroundCameraInstance = Instantiate(BackgroundCameraPrefab) as Camera;
+
+            mWebCamImpl = new WebCamImpl(arCamera, mBackgroundCameraInstance, RenderTextureLayer,
+                             mDeviceNameSetInEditor, mFlipHorizontally);
         }
     }
 

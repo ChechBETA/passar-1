@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -176,5 +176,54 @@ public class ImageImpl : Image
         mDataSet = true;
     }
 
+    public override void CopyToTexture(Texture2D texture2D)
+    {
+        var format = ConvertPixelFormat(mPixelFormat);
+        if (texture2D.width != mWidth || texture2D.height != mHeight || format != texture2D.format)
+        {
+            texture2D.Resize(mWidth, mHeight, format, false);
+        }
+        var channels = 1;
+        switch (mPixelFormat)
+        {
+            case PIXEL_FORMAT.RGBA8888:
+                channels = 4;
+                break;
+            case PIXEL_FORMAT.RGB565:
+            case PIXEL_FORMAT.RGB888:
+                channels = 3;
+                break;
+        }
+        var colors = texture2D.GetPixels();
+        var c = 0;
+        for (var i = 0; i < colors.Length; i++)
+        {
+            for (var j = 0; j < channels; j++)
+                colors[i][j] = mData[c++]/255.0f;
+            for (var j = channels; j < 4; j++)
+                colors[i][j] = colors[i][j - 1];
+        }
+
+        texture2D.SetPixels(colors);
+    }
+
     #endregion // PUBLIC_METHODS
+
+    #region PRIVATE_METHODS
+
+    private TextureFormat ConvertPixelFormat(PIXEL_FORMAT input)
+    {
+        switch (mPixelFormat)
+        {
+            case PIXEL_FORMAT.RGBA8888:
+                return TextureFormat.RGBA32;
+            case PIXEL_FORMAT.RGB888:
+                return TextureFormat.RGB24;
+            case PIXEL_FORMAT.RGB565:
+                return TextureFormat.RGB565;
+            default:
+                return TextureFormat.Alpha8;
+        }
+    }
+    #endregion // PRIVATE_METHODS
 }

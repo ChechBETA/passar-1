@@ -1,7 +1,7 @@
 /*==============================================================================
             Copyright (c) 2012-2013 Qualcomm Austria Research Center GmbH.
             All Rights Reserved.
-            Qualcomm Confidential and Proprietary
+            Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -37,8 +37,8 @@ public class BGRenderingBehaviour : MonoBehaviour
         // turn on and off camera and  depending if Background Rendering has been enabled or not
         // not a redundant check, since enabling gameobjects does a lot internally, so we should not do it every frame.
         // ReSharper disable RedundantCheckBeforeAssignment
-        if (Camera.gameObject.activeSelf != isActive)
-            Camera.gameObject.SetActive(isActive);
+        if (Camera.gameObject.active != isActive)
+            Camera.gameObject.SetActiveRecursively(isActive);
         // ReSharper restore RedundantCheckBeforeAssignment
     }
 

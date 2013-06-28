@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -29,13 +29,13 @@ public class QCARBehaviour : MonoBehaviour
     public enum WorldCenterMode
     {
         // User defines a single Trackable that defines the world center.
-        USER,
+        SPECIFIC_TARGET,
         // Tracker uses the first Trackable that comes into view as the world
         // center (world center changes during runtime).
-        AUTO,
+        FIRST_TARGET,
         // Do not define a world center but only move Trackables with respect
         // to a fixed camera.
-        NONE
+        CAMERA
     }
 
     /// <summary>
@@ -78,6 +78,15 @@ public class QCARBehaviour : MonoBehaviour
     public bool VideoBackGroundMirrored
     { get; private set; }
 
+    /// <summary>
+    /// This property is used to query the currently set camera device mode
+    /// (DEFAULT, SPEED or QUALITY)
+    /// </summary>
+    public CameraDevice.CameraDeviceMode CameraDeviceMode
+    {
+        get { return CameraDeviceModeSetting; }
+    }
+
     #endregion // PROPERTIES
 
 
@@ -97,7 +106,7 @@ public class QCARBehaviour : MonoBehaviour
 
     [SerializeField]
     [HideInInspector]
-    private WorldCenterMode mWorldCenterMode = WorldCenterMode.AUTO;
+    private WorldCenterMode mWorldCenterMode = WorldCenterMode.FIRST_TARGET;
 
     [SerializeField]
     [HideInInspector]
@@ -121,6 +130,7 @@ public class QCARBehaviour : MonoBehaviour
     private Material mClearMaterial;
     private Rect mViewportRect;
     private int mClearBuffers;
+    private CameraDevice.VideoModeData mVideoMode;
 
     private bool mHasStartedOnce = false;
 
@@ -223,6 +233,13 @@ public class QCARBehaviour : MonoBehaviour
         return QCARRuntimeUtilities.ScreenOrientation;
     }
 
+    /// <summary>
+    ///  Get the video mode data queried with the latest qcar update.
+    /// </summary>
+    public CameraDevice.VideoModeData GetVideoMode()
+    {
+        return mVideoMode;
+    }
 
     /// <summary>
     /// Configure the size and position of the video background rendered
@@ -339,6 +356,9 @@ public class QCARBehaviour : MonoBehaviour
         mCachedCameraClearFlags = this.camera.clearFlags;
         mCachedCameraBackgroundColor = this.camera.backgroundColor;
 
+        // keep the device's screen turned on and bright.
+        Screen.sleepTimeout = SleepTimeout.NeverSleep;
+
         // Reset the camera clear flags and create a simple material
         ResetCameraClearFlags();
         mClearMaterial = new Material(Shader.Find("Diffuse"));
@@ -414,10 +434,7 @@ public class QCARBehaviour : MonoBehaviour
             mClearMaterial.SetPass(0);
 
             // QCARManager renders the camera image and updates the trackables
-            ((QCARManagerImpl)QCARManager.Instance).Update(mProjectionOrientation);
-
-            // Tell Unity that we may have changed the OpenGL state behind the scenes
-            GL.InvalidateState();
+            ((QCARManagerImpl)QCARManager.Instance).Update(mProjectionOrientation, CameraDeviceMode, ref mVideoMode);
 
             // Update the camera clear flags
             UpdateCameraClearFlags();
@@ -440,6 +457,13 @@ public class QCARBehaviour : MonoBehaviour
         }
     }
 
+    // Called before the camera culls the scene and OGL is finally set up
+    void OnPreCull()
+    {
+        // render video background
+        ((QCARManagerImpl)QCARManager.Instance).PrepareRendering();
+    }
+
     // Called before the scene is rendered
     void OnPreRender()
     {
@@ -451,6 +475,9 @@ public class QCARBehaviour : MonoBehaviour
     // Called after the scene has been rendered
     void OnPostRender()
     {
+        // invalidate native rendering resources
+        ((QCARManagerImpl)QCARManager.Instance).FinishRendering();
+
         // Clear the framebuffer as many times as defined upon init
         if (mClearBuffers > 0)
         {
@@ -507,6 +534,7 @@ public class QCARBehaviour : MonoBehaviour
         if (imageTracker != null)
         {
             imageTracker.DestroyAllDataSets(false);
+            imageTracker.Stop();
         }
 
         // Destroy all the markers
@@ -514,6 +542,13 @@ public class QCARBehaviour : MonoBehaviour
         if (markerTracker != null)
         {
             markerTracker.DestroyAllMarkers(false);
+            markerTracker.Stop();
+        }
+
+        TextTracker textTracker = (TextTracker)TrackerManager.Instance.GetTracker(Tracker.Type.TEXT_TRACKER);
+        if (textTracker != null)
+        {
+            textTracker.Stop();
         }
 
         // Deinit the QCARManager
@@ -528,6 +563,11 @@ public class QCARBehaviour : MonoBehaviour
         if (TrackerManager.Instance.GetTracker(Tracker.Type.IMAGE_TRACKER) != null)
         {
             TrackerManager.Instance.DeinitTracker(Tracker.Type.IMAGE_TRACKER);
+        }
+        
+        if (TrackerManager.Instance.GetTracker(Tracker.Type.TEXT_TRACKER) != null)
+        {
+            TrackerManager.Instance.DeinitTracker(Tracker.Type.TEXT_TRACKER);
         }
 
         if (QCARRuntimeUtilities.IsPlayMode())
@@ -582,6 +622,10 @@ public class QCARBehaviour : MonoBehaviour
             TrackerManager.Instance.GetTracker(Tracker.Type.IMAGE_TRACKER).Stop();
         }
 
+        if (TrackerManager.Instance.GetTracker(Tracker.Type.TEXT_TRACKER) != null)
+        {
+            TrackerManager.Instance.GetTracker(Tracker.Type.TEXT_TRACKER).Stop();
+        }
         CameraDevice.Instance.Stop();
         CameraDevice.Instance.Deinit();
 

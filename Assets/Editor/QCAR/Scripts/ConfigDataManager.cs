@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.IO;
@@ -55,6 +55,9 @@ public class ConfigDataManager
     // file.
     private Dictionary<string, ConfigData> mConfigData = null;
 
+    //The text config data object contains all word list files
+    private TextConfigData mTextConfigData = null;
+
     // Singleton: Still uses lazy initialization:
     // Private static variables initialized on first reference to class.
     private static ConfigDataManager mInstance;
@@ -69,6 +72,7 @@ public class ConfigDataManager
     private ConfigDataManager()
     {
         mConfigData = new Dictionary<string, ConfigData>();
+        mTextConfigData = new TextConfigData();
     }
 
     #endregion // CONSTRUCTION
@@ -95,6 +99,9 @@ public class ConfigDataManager
         {
             ReadConfigData(xmlFile);
         }
+
+        //Read Text Config File
+        ReadTextConfigData();
     }
 
 
@@ -157,6 +164,16 @@ public class ConfigDataManager
     {
         return mConfigData.ContainsKey(configDataName);
     }
+
+
+    /// <summary>
+    /// Get config-data for text recognition
+    /// </summary>
+    public TextConfigData GetTextConfigData()
+    {
+        return mTextConfigData;
+    }
+
 
     #endregion // PUBLIC_METHODS
 
@@ -308,6 +325,48 @@ public class ConfigDataManager
         prts.Add(btmPart);
 
         return prts;
+    }
+
+    private void ReadTextConfigData()
+    {
+        const string dictionaryExt = "vwl";
+        const string filterListExt = "lst";
+
+        var dictFiles = GetFilePaths(QCARUtilities.GlobalVars.DATA_SET_PATH, dictionaryExt);
+        var filterFiles = GetFilePaths(QCARUtilities.GlobalVars.DATA_SET_PATH, filterListExt);
+
+        var configData = new TextConfigData();
+
+        // set default dictionary
+        configData.SetDictionaryData(new TextConfigData.DictionaryData(), QCARUtilities.GlobalVars.DEFAULT_DATA_SET_NAME);
+
+        foreach (var file in dictFiles)
+        {
+            var name = Path.GetFileNameWithoutExtension(file);
+            var dictFile = "QCAR/" + name + "." + dictionaryExt;
+            configData.SetDictionaryData(new TextConfigData.DictionaryData()
+            {
+                BinaryFile = dictFile,
+            }, name);
+        }
+
+        //Create default word lists
+        //it is possible to select an empty filter list, so we add a default data set
+        //it is not possible to have an empty dictionary
+        configData.SetWordListData(new TextConfigData.WordListData(), QCARUtilities.GlobalVars.DEFAULT_DATA_SET_NAME);
+
+        foreach (var file in filterFiles)
+        {
+            var name = Path.GetFileNameWithoutExtension(file);
+            var txtFile = "QCAR/" + name + "." + filterListExt;
+
+            configData.SetWordListData(new TextConfigData.WordListData()
+            {
+                TextFile = txtFile
+            }, name);
+        }
+
+        mTextConfigData = configData;
     }
 
     #endregion // PRIVATE_METHODS

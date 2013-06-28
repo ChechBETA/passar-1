@@ -7,6 +7,7 @@ public class Sumapaz : MonoBehaviour {
 	public GameObject localizacion;
 	public GameObject casabambu;
 	public GameObject casal;
+	public GameObject video;
 	
 	// Use this for initialization
 	private void Start () 
@@ -29,6 +30,9 @@ public class Sumapaz : MonoBehaviour {
 			case 14:
 				project.logo.Hide(true);
 				casal.SetActive(true);
+				break;
+			default:
+				video.SetActive(true);	
 				break;
 		}
 	}

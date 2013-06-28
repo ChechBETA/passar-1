@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -81,12 +81,14 @@ public interface IQCARWrapper
     int MarkerTrackerDestroyMarker(int trackableId);
     void InitFrameState([In, Out] IntPtr frameIndex);
     void DeinitFrameState([In, Out] IntPtr frameIndex);
-
+    int PausedUpdateQCAR();
     void UpdateQCAR([In, Out]IntPtr imageHeaderDataArray,
                                     int imageHeaderArrayLength,
-                                    int bindVideoBackground,
                                     [In, Out]IntPtr frameIndex,
-                                    int screenOrientation);
+                                    int screenOrientation,
+                                    int videoModeIdx);
+    void RendererRenderVideoBackground(int bindVideoBackground);
+    void RendererEnd();
 
     int QcarGetBufferSize(int width, int height,
                                           int format);
@@ -119,6 +121,30 @@ public interface IQCARWrapper
     int TargetFinderEnableTracking(IntPtr searchResult, [In, Out] IntPtr trackableData);
     void TargetFinderGetImageTargets([In, Out] IntPtr trackableIdArray, int trackableIdArrayLength);
     void TargetFinderClearTrackables();
+    int TextTrackerStart();
+    void TextTrackerStop();
+
+    int TextTrackerSetRegionOfInterest(int detectionLeftTopX, int detectionLeftTopY, int detectionRightBottomX, int detectionRightBottomY,
+                                       int trackingLeftTopX, int trackingLeftTopY, int trackingRightBottomX, int trackingRightBottomY, int upDirection);
+
+    void TextTrackerGetRegionOfInterest([In, Out] IntPtr detectionROI, [In, Out] IntPtr trackingROI);
+    int WordListLoadWordList(string path, int storageType);
+    int WordListAddWordsFromFile(string path, int storagetType);
+    int WordListAddWordU(IntPtr word);
+    int WordListRemoveWordU(IntPtr word);
+    int WordListContainsWordU(IntPtr word);
+    int WordListUnloadAllLists();
+    int WordListSetFilterMode(int mode);
+    int WordListGetFilterMode();
+    int WordListLoadFilterList(string path, int storageType);
+    int WordListAddWordToFilterListU(IntPtr word);
+    int WordListRemoveWordFromFilterListU(IntPtr word);
+    int WordListClearFilterList();
+    int WordListGetFilterListWordCount();
+    IntPtr WordListGetFilterListWordU(int index);
+    int WordGetLetterMask(int wordID, [In, Out] IntPtr letterMaskImage);
+    int WordGetLetterBoundingBoxes(int wordID, [In, Out] IntPtr letterBoundingBoxes);
+
     int TrackerManagerInitTracker(int trackerType);
     int TrackerManagerDeinitTracker(int trackerType);
 

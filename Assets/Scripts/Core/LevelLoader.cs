@@ -10,7 +10,8 @@ public enum Level
 	Macadamia = 4,
 	Encenillos = 5,
 	Sumapaz = 6,
-	Refugio = 7
+	Refugio = 7,
+	RotateObjects=8
 }
 
 public enum SubLevel

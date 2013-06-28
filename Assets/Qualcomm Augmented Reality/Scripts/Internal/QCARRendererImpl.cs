@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -158,6 +158,16 @@ public class QCARRendererImpl : QCARRenderer
 
             return info;
         }
+    }
+
+    /// <summary>
+    /// Turns pausing on or off.
+    /// Pausing will freeze the camera video and all trackables will remain in their current state.
+    /// Autorotation will be disabled during video background freezing.
+    /// </summary>
+    public override void Pause(bool pause)
+    {
+        ((QCARManagerImpl)QCARManager.Instance).Pause(pause);
     }
 
     #endregion // PUBLIC_METHODS

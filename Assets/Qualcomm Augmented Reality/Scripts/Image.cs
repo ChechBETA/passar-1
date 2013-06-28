@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -94,9 +94,14 @@ public abstract class Image
 
     /// <summary>
     /// Returns true if this image has been fully initiailzed with valid data.
-    // False otherwise.
+    /// False otherwise.
     /// </summary>
     public abstract bool IsValid();
+
+    /// <summary>
+    /// Copies the image into the given texture. The texture will be resized if necessary.
+    /// </summary>
+    public abstract void CopyToTexture(Texture2D texture2D);
 
     #endregion // PUBLIC_METHODS
 }

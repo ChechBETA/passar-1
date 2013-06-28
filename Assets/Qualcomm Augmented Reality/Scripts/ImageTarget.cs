@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Collections.Generic;
@@ -64,7 +64,7 @@ public interface ImageTarget : Trackable
     /// Creates a new virtual button and adds it to the ImageTarget
     /// Returns NULL if the corresponding DataSet is currently active.
     /// </summary>
-    VirtualButton CreateVirtualButton(string name, VirtualButton.RectangleData area);
+    VirtualButton CreateVirtualButton(string name, RectangleData area);
 
     /// <summary>
     /// Returns a virtual button by its name

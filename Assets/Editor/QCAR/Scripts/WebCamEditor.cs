@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -55,6 +55,14 @@ public class WebCamEditor : Editor
             WebCamBehaviour webCam = (WebCamBehaviour)target;
             if (QCARUtilities.GetPrefabType(webCam) != PrefabType.Prefab)
             {
+                // check if background camera is setup properly
+                if (webCam.BackgroundCameraPrefab == null)
+                {
+                    var prefab = AssetDatabase.LoadAssetAtPath(QCARUtilities.GlobalVars.PREFABS_PATH + "Internal/BackgroundCamera.prefab", typeof(Camera));
+                    if(prefab != null)
+                        webCam.BackgroundCameraPrefab = prefab as Camera;
+                }
+
                 webCam.TurnOffWebCam = EditorGUILayout.Toggle("Don't use for Play Mode", webCam.TurnOffWebCam);
 
                 if (!webCam.TurnOffWebCam)

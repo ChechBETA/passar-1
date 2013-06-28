@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -111,6 +111,7 @@ public abstract class TrackableBehaviour : MonoBehaviour, IEditorTrackableBehavi
                                 ITrackableEventHandler trackableEventHandler)
     {
         mTrackableEventHandlers.Add(trackableEventHandler);
+        trackableEventHandler.OnTrackableStateChanged(Status.UNKNOWN, mStatus);
     }
 
 

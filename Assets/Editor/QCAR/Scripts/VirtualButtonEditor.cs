@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEditor;
@@ -220,20 +220,25 @@ public class VirtualButtonEditor : Editor
         // Create the virtual button mesh and update pose:
         VirtualButtonBehaviour vb = (VirtualButtonBehaviour)target;
 
-        // Update the pose if required:
-        if (!vb.HasUpdatedPose)
-        {
-            vb.UpdatePose();
-        }
 
-        // Create the mesh for visualization if required:
-        if (!IsVBMeshCreated(vb))
+        // Only setup target if not in play mode
+        if (!EditorApplication.isPlaying)
         {
-            CreateVBMesh(vb);
-        }
+            // Update the pose if required:
+            if (!vb.HasUpdatedPose)
+            {
+                vb.UpdatePose();
+            }
 
-        // Validate virtual buttons:
-        Validate();
+            // Create the mesh for visualization if required:
+            if (!IsVBMeshCreated(vb))
+            {
+                CreateVBMesh(vb);
+            }
+
+            // Validate virtual buttons:
+            Validate();
+        }
     }
 
 

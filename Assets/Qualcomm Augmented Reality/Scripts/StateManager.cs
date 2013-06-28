@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -25,6 +25,14 @@ public abstract class StateManager
     /// Returns all currently instantiated TrackableBehaviours
     /// </summary>
     public abstract IEnumerable<TrackableBehaviour> GetTrackableBehaviours();
+
+
+
+    /// <summary>
+    /// Returns the word manager instance that can be used to access
+    /// all currently tracked words from TextRecognition
+    /// </summary>
+    public abstract WordManager GetWordManager();
 
     #endregion // PUBLIC_METHODS
 }

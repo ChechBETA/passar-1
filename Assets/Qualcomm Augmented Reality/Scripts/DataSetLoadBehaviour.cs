@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Collections.Generic;
@@ -50,12 +50,6 @@ public class DataSetLoadBehaviour : MonoBehaviour
         if (TrackerManager.Instance.GetTracker(Tracker.Type.IMAGE_TRACKER) == null)
         {
             TrackerManager.Instance.InitTracker(Tracker.Type.IMAGE_TRACKER);
-        }
-
-        if (mDataSetsToLoad.Count <= 0)
-        {
-            Debug.LogWarning("No data sets defined. Not loading any data sets.");
-            return;
         }
 
         foreach (string dataSetName in mDataSetsToLoad)

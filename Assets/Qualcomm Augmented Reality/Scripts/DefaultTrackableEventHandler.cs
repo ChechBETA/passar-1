@@ -1,7 +1,7 @@
 /*==============================================================================
-            Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
-            All Rights Reserved.
-            Qualcomm Confidential and Proprietary
+Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
+All Rights Reserved.
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -29,8 +29,6 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
         {
             mTrackableBehaviour.RegisterTrackableEventHandler(this);
         }
-
-        OnTrackingLost();
     }
 
     #endregion // UNTIY_MONOBEHAVIOUR_METHODS
@@ -43,7 +41,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
     /// Implementation of the ITrackableEventHandler function called when the
     /// tracking state changes.
     /// </summary>
-    public void OnTrackableStateChanged( TrackableBehaviour.Status previousStatus, TrackableBehaviour.Status newStatus)
+    public void OnTrackableStateChanged(
+                                    TrackableBehaviour.Status previousStatus,
+                                    TrackableBehaviour.Status newStatus)
     {
         if (newStatus == TrackableBehaviour.Status.DETECTED ||
             newStatus == TrackableBehaviour.Status.TRACKED)
@@ -65,8 +65,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingFound()
     {
-        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>();
+        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Enable rendering:
         foreach (Renderer component in rendererComponents)
@@ -86,8 +86,8 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
     private void OnTrackingLost()
     {
-        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>();
-        Collider[] colliderComponents = GetComponentsInChildren<Collider>();
+        Renderer[] rendererComponents = GetComponentsInChildren<Renderer>(true);
+        Collider[] colliderComponents = GetComponentsInChildren<Collider>(true);
 
         // Disable rendering:
         foreach (Renderer component in rendererComponents)

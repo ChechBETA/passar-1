@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -19,7 +19,8 @@ public abstract class Tracker
     public enum Type
     {
         IMAGE_TRACKER,    // Tracks ImageTargets and MultiTargets
-        MARKER_TRACKER    // Tracks Markers
+        MARKER_TRACKER,   // Tracks Markers
+        TEXT_TRACKER      // Tracks Words
     }
 
     #endregion // NESTED

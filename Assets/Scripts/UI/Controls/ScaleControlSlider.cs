@@ -14,10 +14,20 @@ public class ScaleControlSlider : MonoBehaviour
 	private const float MAX_SCALE_FACTOR = 1F;
 	private const float MIN_SCALE_FACTOR = 0F;
 	private Vector3 currentObjectScale;
+	private float defaultScale = 0.25F;
+	
+	public float DefaultScale
+	{
+		get
+		{
+			return defaultScale;
+		}
+	}
+	
 	
 	private void Awake () 
 	{
-		slider.defaultValue = 0.25F;
+		slider.defaultValue = DefaultScale;
 		slider.SetValueChangedDelegate(UpdateScale);
 		
 		buttonZoomIn.AddInputDelegate(UpdateZoomIn);

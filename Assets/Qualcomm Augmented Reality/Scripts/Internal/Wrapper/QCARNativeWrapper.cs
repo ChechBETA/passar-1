@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -268,13 +268,28 @@ public class QCARNativeWrapper : IQCARWrapper
         deinitFrameState(frameIndex);
     }
 
+    public int PausedUpdateQCAR()
+    {
+        return pausedUpdateQCAR();
+    }
+
     public void UpdateQCAR([In, Out]IntPtr imageHeaderDataArray,
                                     int imageHeaderArrayLength,
-                                    int bindVideoBackground,
                                     [In, Out]IntPtr frameIndex,
-                                    int screenOrientation)
+                                    int screenOrientation,
+                                    int videoModeIdx)
     {
-        updateQCAR(imageHeaderDataArray, imageHeaderArrayLength, bindVideoBackground, frameIndex, screenOrientation);
+        updateQCAR(imageHeaderDataArray, imageHeaderArrayLength, frameIndex, screenOrientation, videoModeIdx);
+    }
+
+    public void RendererRenderVideoBackground(int bindVideoBackground)
+    {
+        rendererRenderVideoBackground(bindVideoBackground);
+    }
+
+    public void RendererEnd()
+    {
+        rendererEnd();
     }
 
     public int QcarGetBufferSize(int width, int height,
@@ -405,6 +420,108 @@ public class QCARNativeWrapper : IQCARWrapper
     public void TargetFinderClearTrackables()
     {
         targetFinderClearTrackables();
+    }
+
+    public int TextTrackerStart()
+    {
+        return textTrackerStart();
+    }
+
+    public void TextTrackerStop()
+    {
+        textTrackerStop();
+    }
+
+    public int TextTrackerSetRegionOfInterest(int detectionLeftTopX, int detectionLeftTopY, int detectionRightBottomX, int detectionRightBottomY,
+                                              int trackingLeftTopX, int trackingLeftTopY, int trackingRightBottomX, int trackingRightBottomY, int upDirection)
+    {
+        return textTrackerSetRegionOfInterest(detectionLeftTopX, detectionLeftTopY, detectionRightBottomX, detectionRightBottomY,
+                                              trackingLeftTopX, trackingLeftTopY, trackingRightBottomX, trackingRightBottomY, upDirection);
+    }
+
+    public void TextTrackerGetRegionOfInterest([In, Out] IntPtr detectionROI, [In, Out] IntPtr trackingROI)
+    {
+        textTrackerGetRegionOfInterest(detectionROI, trackingROI);
+    }
+
+    public int WordListLoadWordList(string path, int storageType)
+    {
+        return wordListLoadWordList(path, storageType);
+    }
+
+    public int WordListAddWordsFromFile(string path, int storagetType)
+    {
+        return wordListAddWordsFromFile(path, storagetType);
+    }
+
+    public int WordListAddWordU(IntPtr word)
+    {
+        return wordListAddWordU(word);
+    }
+
+    public int WordListRemoveWordU(IntPtr word)
+    {
+        return wordListRemoveWordU(word);
+    }
+
+    public int WordListContainsWordU(IntPtr word)
+    {
+        return wordListContainsWordU(word);
+    }
+
+    public int WordListUnloadAllLists()
+    {
+        return wordListUnloadAllLists();
+    }
+
+    public int WordListSetFilterMode(int mode)
+    {
+        return wordListSetFilterMode(mode);
+    }
+
+    public int WordListGetFilterMode()
+    {
+        return wordListGetFilterMode();
+    }
+
+    public int WordListLoadFilterList(string path, int storageType)
+    {
+        return wordListLoadFilterList(path, storageType);
+    }
+
+    public int WordListAddWordToFilterListU(IntPtr word)
+    {
+        return wordListAddWordToFilterListU(word);
+    }
+
+    public int WordListRemoveWordFromFilterListU(IntPtr word)
+    {
+        return wordListRemoveWordFromFilterListU(word);
+    }
+
+    public int WordListClearFilterList()
+    {
+        return wordListClearFilterList();
+    }
+
+    public int WordListGetFilterListWordCount()
+    {
+        return wordListGetFilterListWordCount();
+    }
+
+    public IntPtr WordListGetFilterListWordU(int i)
+    {
+        return wordListGetFilterListWordU(i);
+    }
+
+    public int WordGetLetterMask(int wordID, [In, Out] IntPtr letterMaskImage)
+    {
+        return wordGetLetterMask(wordID, letterMaskImage);
+    }
+
+    public int WordGetLetterBoundingBoxes(int wordID, [In, Out] IntPtr letterBoundingBoxes)
+    {
+        return wordGetLetterBoundingBoxes(wordID, letterBoundingBoxes);
     }
 
     public int TrackerManagerInitTracker(int trackerType)
@@ -611,11 +728,20 @@ public class QCARNativeWrapper : IQCARWrapper
     private static extern void deinitFrameState([In, Out] IntPtr frameIndex);
 
     [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int pausedUpdateQCAR();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
     private static extern void updateQCAR([In, Out]IntPtr imageHeaderDataArray,
                                     int imageHeaderArrayLength,
-                                    int bindVideoBackground,
                                     [In, Out]IntPtr frameIndex,
-                                    int screenOrientation);
+                                    int screenOrientation,
+                                    int videoModeIdx);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern void rendererRenderVideoBackground(int bindVideoBackground);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern void rendererEnd();
 
     [DllImport(QCARMacros.PLATFORM_DLL)]
     private static extern int qcarGetBufferSize(int width, int height,
@@ -708,6 +834,67 @@ public class QCARNativeWrapper : IQCARWrapper
 
     [DllImport(QCARMacros.PLATFORM_DLL)]
     private static extern void targetFinderClearTrackables();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int textTrackerStart();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern void textTrackerStop();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int textTrackerSetRegionOfInterest(int detectionLeftTopX, int detectionLeftTopY, int detectionRightBottomX, int detectionRightBottomY,
+                                                             int trackingLeftTopX, int trackingLeftTopY, int trackingRightBottomX, int trackingRightBottomY, int upDirection);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int textTrackerGetRegionOfInterest([In, Out] IntPtr detectionROI, [In, Out] IntPtr trackingROI);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListLoadWordList(string path, int storageType);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListAddWordsFromFile(string path, int storageType);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListAddWordU(IntPtr word);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListRemoveWordU(IntPtr word);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListContainsWordU(IntPtr word);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListUnloadAllLists();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListSetFilterMode(int mode);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListGetFilterMode();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListAddWordToFilterListU(IntPtr word);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListRemoveWordFromFilterListU(IntPtr word);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListClearFilterList();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListLoadFilterList(string path, int storageType);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordListGetFilterListWordCount();
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern IntPtr wordListGetFilterListWordU(int i);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordGetLetterMask(int wordID, [In, Out] IntPtr letterMaskImage);
+
+    [DllImport(QCARMacros.PLATFORM_DLL)]
+    private static extern int wordGetLetterBoundingBoxes(int wordID, [In, Out] IntPtr letterBoundingBoxes);
 
     [DllImport(QCARMacros.PLATFORM_DLL)]
     private static extern int trackerManagerInitTracker(int trackerType);

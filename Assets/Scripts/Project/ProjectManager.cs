@@ -8,9 +8,12 @@ public class ProjectManager : MonoBehaviour
 	public SpriteText subtitle;
 	public ImageTargetBehaviour target;
 	public UIPanel preloader;
+
+	
 	private ProjectItemDescriptor project = new ProjectItemDescriptor();
 	private ProjectDescriptor appProject;
 	private int assetsAlreadyDownload = 0;
+	
 	
 	public ProjectDescriptor CurrentProject
 	{

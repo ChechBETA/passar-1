@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2012-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System;
@@ -21,6 +21,8 @@ public class StateManagerImpl : StateManager
     private readonly Dictionary<int, TrackableBehaviour> mTrackableBehaviours = new Dictionary<int, TrackableBehaviour>();
 
     private readonly List<TrackableBehaviour> mActiveTrackableBehaviours = new List<TrackableBehaviour>();
+
+    private readonly WordManagerImpl mWordManager = new WordManagerImpl();
 
     #endregion // PRIVATE_MEMBER_VARIABLES
 
@@ -43,7 +45,14 @@ public class StateManagerImpl : StateManager
     {
         return mTrackableBehaviours.Values;
     }
-
+    
+    /// <summary>
+    /// Returns the word manager which is used to access all currently tracked words
+    /// </summary>
+    public override WordManager GetWordManager()
+    {
+        return mWordManager;
+    }
 
     #region INTERNAL_METHODS - rethink what should be exposed publicly!!
 
@@ -289,11 +298,11 @@ public class StateManagerImpl : StateManager
     /// </summary>
     public void SetTrackableBehavioursForTrackableToNotFound(Trackable trackable)
     {
-            TrackableBehaviour trackableBehaviour;
-            if (mTrackableBehaviours.TryGetValue(trackable.ID, out trackableBehaviour))
-            {
-                trackableBehaviour.OnTrackerUpdate(TrackableBehaviour.Status.NOT_FOUND);
-            }
+        TrackableBehaviour trackableBehaviour;
+        if (mTrackableBehaviours.TryGetValue(trackable.ID, out trackableBehaviour))
+        {
+            trackableBehaviour.OnTrackerUpdate(TrackableBehaviour.Status.NOT_FOUND);
+        }
     }
 
 
@@ -484,6 +493,12 @@ public class StateManagerImpl : StateManager
             }
         }
     }
+
+    public void UpdateWords(Camera arCamera, QCARManagerImpl.WordData[] wordData, QCARManagerImpl.WordResultData[] wordResultData)
+    {
+        mWordManager.UpdateWords(arCamera, wordData, wordResultData);
+    }
+
 
     #endregion // INTERNAL_METHODS
 

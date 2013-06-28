@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -154,6 +154,13 @@ public abstract class QCARRenderer
     /// Returns the texture info associated with the current video background
     /// </summary>
     public abstract VideoTextureInfo GetVideoTextureInfo();
+
+    /// <summary>
+    /// Turns pausing on or off.
+    /// Pausing will freeze the camera video and all trackables will remain in their current state.
+    /// Autorotation will be disabled during video background freezing.
+    /// </summary>
+    public abstract void Pause(bool pause);
 
     #endregion // PUBLIC_METHODS
 }

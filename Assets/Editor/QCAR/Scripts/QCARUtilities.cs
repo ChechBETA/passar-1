@@ -1,7 +1,7 @@
 /*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using UnityEngine;
@@ -38,6 +38,10 @@ public class QCARUtilities
             "Assets/Qualcomm Augmented Reality/Materials/UserDefinedTarget.mat";
         public const string CL_MATERIAL_PATH =
             "Assets/Qualcomm Augmented Reality/Materials/CloudRecoTarget.mat";
+        public const string FONT_PATH =
+            "Assets/Qualcomm Augmented Reality/Fonts/";
+        public const string PREFABS_PATH =
+            "Assets/Qualcomm Augmented Reality/Prefabs/";
 
         // Default name used for Trackables that are not part of the config.xml
         // file yet.

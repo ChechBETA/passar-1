@@ -1,7 +1,7 @@
 ﻿/*==============================================================================
 Copyright (c) 2010-2013 QUALCOMM Austria Research Center GmbH.
 All Rights Reserved.
-Qualcomm Confidential and Proprietary
+Confidential and Proprietary - QUALCOMM Austria Research Center GmbH.
 ==============================================================================*/
 
 using System.Runtime.InteropServices;
@@ -15,6 +15,7 @@ public enum TrackableType
     IMAGE_TARGET,       ///< A trackable of ImageTarget type
     MULTI_TARGET,       ///< A trackable of MultiTarget type
     MARKER,             ///< A trackable of Marker type
+    WORD,               ///< A trackable of Word type
 }
 
 /// <summary>
